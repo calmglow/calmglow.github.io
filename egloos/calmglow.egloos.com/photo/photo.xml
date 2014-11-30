@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
+	<channel>
+		<title>Calmglow의 포토로그</title>
+		<link>http://calmglow.egloos.com/photo/</link>
+		<description>Calmglow의 포토로그</description>
+		<lastBuildDate>Sat, 06 May 2006 03:51:12 GMT</lastBuildDate>
+								
+		<item>
+			<title><![CDATA[수채화]]></title>
+			<link>http://calmglow.egloos.com/photo/2689</link>
+			<description>
+				<![CDATA[
+				<p>오기렌이 찍어주는 수채화</p>
+								
+			<p>
+				<a href="http://pds1.egloos.com/pmf/200605/06/06/b0015706_12493622.jpg" >
+					<img src="http://thumbnail.egloos.net/70x70/http://pds1.egloos.com/pmf/200605/06/06/b0015706_12493622.jpg" width="70" height="70" border="0" alt="썸네일 이미지 입니다.">
+				</a>
+			</p>
+			<p>
+				Author: <a href="http://calmglow.egloos.com/photo/">Yozz</a><br/>
+				Keywords: <a href="http://calmglow.egloos.com/photo/tag/2006%EB%85%84+05%EC%9B%94">2006년 05월</a> <a href="http://calmglow.egloos.com/photo/tag/PENTAX+%2Aist+DS">PENTAX *ist DS</a> <a href="http://calmglow.egloos.com/photo/tag/"></a> <br/>
+				Added: Sat, 06 May 2006 03:50:39 GMT			</p>
+				
+			<p>
+				<a href="http://pds2.egloos.com/pmf/200605/06/06/b0015706_12495348.jpg" >
+					<img src="http://thumbnail.egloos.net/70x70/http://pds2.egloos.com/pmf/200605/06/06/b0015706_12495348.jpg" width="70" height="70" border="0" alt="썸네일 이미지 입니다.">
+				</a>
+			</p>
+			<p>
+				Author: <a href="http://calmglow.egloos.com/photo/">Yozz</a><br/>
+				Keywords: <a href="http://calmglow.egloos.com/photo/tag/2006%EB%85%84+05%EC%9B%94">2006년 05월</a> <a href="http://calmglow.egloos.com/photo/tag/PENTAX+%2Aist+DS">PENTAX *ist DS</a> <a href="http://calmglow.egloos.com/photo/tag/"></a> <br/>
+				Added: Sat, 06 May 2006 03:50:52 GMT			</p>
+				
+			<p>
+				<a href="http://pds1.egloos.com/pmf/200605/06/06/b0015706_1250746.jpg" >
+					<img src="http://thumbnail.egloos.net/70x70/http://pds1.egloos.com/pmf/200605/06/06/b0015706_1250746.jpg" width="70" height="70" border="0" alt="썸네일 이미지 입니다.">
+				</a>
+			</p>
+			<p>
+				Author: <a href="http://calmglow.egloos.com/photo/">Yozz</a><br/>
+				Keywords: <a href="http://calmglow.egloos.com/photo/tag/2006%EB%85%84+05%EC%9B%94">2006년 05월</a> <a href="http://calmglow.egloos.com/photo/tag/PENTAX+%2Aist+DS">PENTAX *ist DS</a> <a href="http://calmglow.egloos.com/photo/tag/"></a> <br/>
+				Added: Sat, 06 May 2006 03:51:08 GMT			</p>
+				]]>
+			</description>
+	    	<pubDate>Sat, 06 May 2006 03:51:12 GMT</pubDate>
+	    	<media:group>
+	    						
+				<media:content url="http://pds1.egloos.com/pmf/200605/06/06/b0015706_12493622.jpg"  type="image/jpeg" height="427" width="640">
+					<media:thumbnail url="http://thumbnail.egloos.net/70x70/http://pds1.egloos.com/pmf/200605/06/06/b0015706_12493622.jpg" height="70" width="70" />
+					<media:keywords><![CDATA[2006년 05월,PENTAX *ist DS]]></media:keywords>
+					<media:credit role="photographer"><![CDATA[Yozz]]></media:credit>
+				</media:content>
+				
+				<media:content url="http://pds2.egloos.com/pmf/200605/06/06/b0015706_12495348.jpg"  type="image/jpeg" height="427" width="640">
+					<media:thumbnail url="http://thumbnail.egloos.net/70x70/http://pds2.egloos.com/pmf/200605/06/06/b0015706_12495348.jpg" height="70" width="70" />
+					<media:keywords><![CDATA[2006년 05월,PENTAX *ist DS]]></media:keywords>
+					<media:credit role="photographer"><![CDATA[Yozz]]></media:credit>
+				</media:content>
+				
+				<media:content url="http://pds1.egloos.com/pmf/200605/06/06/b0015706_1250746.jpg"  type="image/jpeg" height="427" width="640">
+					<media:thumbnail url="http://thumbnail.egloos.net/70x70/http://pds1.egloos.com/pmf/200605/06/06/b0015706_1250746.jpg" height="70" width="70" />
+					<media:keywords><![CDATA[2006년 05월,PENTAX *ist DS]]></media:keywords>
+					<media:credit role="photographer"><![CDATA[Yozz]]></media:credit>
+				</media:content>
+	    	</media:group>
+	    	<guid isPermaLink="false">http://calmglow.egloos.com/photo/2689</guid>
+		</item>
+	</channel>
+</rss>

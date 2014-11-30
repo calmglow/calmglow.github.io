@@ -1,0 +1,129 @@
+/*----------  영역별 크기  ----------*/
+.wrap {width:100%;}
+.header {}
+.container {}
+.content_wrap {width:100%;}
+.content {}
+.post_content {}
+.widemenu {}
+#section_sidebar1 {width:250px;}
+.column {width:250px;}
+.column .widget {width:200px;}
+.column .widget .widget_content {width:200px;}
+.footer {}
+/*----------  영역별 배경색 & 배경이미지  ----------*/
+.body {background:#87adb0;}
+.wrap {background:#fff;}
+.header {
+	background:#667d78;
+	border-bottom:7px solid #3d5c57;
+	}
+.footer {
+	background:#667d78;
+	border-top:5px solid #3d5c57;
+	}
+/*---------- 영역별 글자크기/글자색/링크색 & 세부설정 ----------*/
+.body {
+	font:normal 14px/1.7em 'Malgun Gothic','돋움',sans-serif;
+	color:#333;
+	margin:0 auto;
+	padding:0;
+	text-align:center;
+	}
+.body a:link,.body a:visited {color:#999;text-decoration:none;}
+.body a:hover,.body a:active {color:#3d5c57;text-decoration:none;}
+.wrap {margin:0 auto;text-align:center;}
+/*--- 헤더 영역 ---*/
+.header {
+	color:#fff;
+	margin:0 auto 30px auto;
+	padding:35px 25px 5px 25px;
+	text-align:left;
+	}
+.header a:link,.header a:visited {color:#fff;text-decoration:none;}
+.header a:hover,.header a:active {color:#3d5c57;text-decoration:underline;}
+.header h1 {
+	font-size:20px;
+	margin:0;
+	padding:1px 0;
+	}
+.header .url {
+	font:normal .8em verdana,sans-serif;
+	letter-spacing:1px;
+	margin:0 0 7px 0;
+	padding-left:5px;
+	}
+.header .topmenu {text-align:right;}
+.header .topmenu a {padding-left:10px;}
+/*--- 콘텐츠 영역 ---*/
+.container {margin:0 auto;text-align:center;position:relative;}
+.content_wrap {margin:0;padding-top:15px;display:inline;}
+.content {margin:0 auto;padding-left:50px;padding-right:300px;text-align:left;overflow:hidden;_word-break:break-all;}
+.content a:link {color:#667d78;text-decoration:none;}
+.content a:visited {color:#87adb0;text-decoration:none;}
+.content a:hover,
+.content a:active {color:#87adb0;text-decoration:underline;}
+.post_view,.post_oneview {margin-bottom:60px;}
+.post_summary,.post_magazine,.post_tagcloud {margin-bottom:20px;}
+.post_view .post_title h2 {
+	font:bold 16px 'Malgun Gothic','돋움',sans-serif;
+	letter-spacing:-1px; margin-top:13px;
+	border-bottom:1px solid #333;
+	}
+.post_view .post_title h2 a:link,
+.post_view .post_title h2 a:visited {color:#333;text-decoration:none;}
+.post_view .post_title h2 a:hover,
+.post_view .post_title h2 a:active {color:#667d78;text-decoration:none;}
+.post_view .post_title span {color:#999;}
+.post_view .post_title span a:link,
+.post_view .post_title span a:visited {color:#999;}
+.post_view .post_title span a:hover,
+.post_view .post_title span a:active {color:#999;text-decoration:underline;}
+.post_content {overflow:hidden;_word-break:break-all;}
+.post_titlelist h2,.post_summary h2,.post_simplelist h2,.post_tagcloud h2 {
+	font:bold 12px 'Malgun Gothic','돋움',sans-serif;
+	border-bottom:1px solid #333;
+	color:#333;
+	}
+.post_summary h2 {border-bottom:0;}
+.post_titlelist h2 a:link,.post_summary h2 a:link,.post_simplelist h2 a:link,.post_tagcloud h2 a:link,
+.post_titlelist h2 a:visited,.post_summary h2 a:visited,.post_simplelist h2 a:visited,.post_tagcloud h2 a:visited {color:#333;text-decoration:none;}
+.post_titlelist h2 a:hover,.post_summary h2 a:hover,.post_simplelist h2 a:hover,.post_tagcloud h2 a:hover,
+.post_titlelist h2 a:active,.post_summary h2 a:active,.post_simplelist h2 a:active,.post_tagcloud h2 a:active {color:#667d78;text-decoration:none;}
+.post_info {color:#999;}
+.post_meta_area ul.post_meta_content em.date {color:#999;}
+.post_footer_area {font-size:.9em;}
+.widemenu {margin:0 auto;padding-left:50px;padding-right:300px;text-align:left;}
+.widemenu .wide_blank {display:none;}
+.widemenu h3 {font-size:12px;color:#333;}
+/*--- 덧글/트랙백 영역 ---*/
+.post_link {color:#666;}
+.post_link h3 {
+	font-size:13px;
+	letter-spacing:-1px;
+	border-bottom:1px solid #ccc;
+	}
+.post_trackback .trackback_help {
+	border-bottom:1px solid #ccc;
+	}
+.post_link h4 {font-size:1em;}
+/*--- 하단 메뉴 영역 ---*/
+#section_sidebar1 {margin:0;position:absolute;top:0;right:0;display:inline;text-align:center;}
+.column {color:#666;}
+.column .widget {margin:1px auto;padding:15px 0;text-align:left;}
+.column .widget h3 {
+	font-size:12px;
+	color:#333;
+	border-bottom:1px solid #333;
+	}
+.column .widget .widget_content {padding-top:10px;overflow:hidden;_word-break:break-all;}
+/*--- 푸터 영역 ---*/
+.footer {
+	font:normal .8em verdana,sans-serif;
+	color:#fff;
+	margin:0 auto;
+	padding:10px 0 20px 0;
+	}
+.footer a:link,.footer a:visited {color:#fff;text-decoration:none;}
+.footer a:hover,.footer a:active {color:#3d5c57;text-decoration:none;}
+

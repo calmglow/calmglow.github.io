@@ -1,0 +1,526 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv='pragma' content='no-cache' />
+<meta http-equiv='cache-control' content='no-cache' />
+<meta http-equiv='Content-type' content='text/html; charset=utf-8' />
+<meta name="author" content="Calmglow" />
+<meta name="keywords" content="calmglow (최진호)" />
+  <link rel="shortcut icon" href="http://profile.egloos.net/b0015706.ico" />
+
+<link rel="pingback" href="http://rpc.egloos.com/rpc1" />
+<link rel="alternate" type="application/rss+xml" title="calmglow (최진호)" href="http://rss.egloos.com/blog/calmglow" />
+<title>calmglow (최진호) : 웹 2.x시대의 서버측 웹 개발 환경: 2. URI 패턴</title>
+	<script type="text/javascript" src="../md.egloos.com/js/ap757c.js?ver=1.043"></script>
+	<script type="text/javascript" src="../md.egloos.com/js/gdba6c.js?ver=1.002"></script>
+	<script type="text/javascript" src="../md.egloos.com/js/eg961f.js?ver=1.020"></script>
+	<script type="text/javascript" src="../md.egloos.com/js/eg_new961f.js?ver=1.020"></script>
+	<script type="text/javascript" src="../md.egloos.com/js/crba6c.js?ver=1.002"></script>
+    <script type="text/javascript" src="../md.egloos.com/js/page/insad05.js?ver=1.4"></script>
+
+	<script type="text/javascript" src="../md.egloos.com/js/lib/prototype_v1511.js"></script>
+	<script type="text/javascript" src="../md.egloos.com/js/control/Control.js"></script>
+	<script type="text/javascript" src="../md.egloos.com/js/control/Control.ImgModal4eee.js?ver=1.004"></script>
+	<script type="text/javascript" src="../md.egloos.com/js/page/blog/compatible.js"></script>
+	
+<link type="text/css" rel="stylesheet" href="../logo21.egloos.com/skin/css/b/001/57/b0015706_t.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../md.egloos.com/css/style_comment4963.css?ver=1.1" media="screen" />
+<link type="text/css" rel="stylesheet" href="../md.egloos.com/css/skin2_common.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../logo21.egloos.com/skin/css/b/001/57/b0015706_1_s.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../md.egloos.com/css/egloo_navibar62ea.css?ver=1.2" media="screen" />
+<link type="text/css" rel="stylesheet" href="../md.egloos.com/css/common/popup34c0.css?ver=2.00" />
+<link type="text/css" rel="stylesheet" href="../md.egloos.com/css/common/button.css" />
+<script type="text/javascript" src="../md.egloos.com/js/modal/Modal.js"></script>
+<script type="text/javascript" src="../md.egloos.com/js/modal/Modal.Center.js"></script>
+<script type="text/javascript" src="../md.egloos.com/js/page/blog/Modal.BookmarkDlgba6c.js?ver=1.002"></script>
+
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function() {
+    new Modal.BookmarkDlg('egloo_bookmark', {overlay: true,
+                'groupURL'     : "/exec/egloo_bookmark_group.php",
+                'remoteURL'    : "/exec/egloo_insbookmark_exec.php"});
+    if(''==''){
+	    	copy_contents('calmglow.egloos.com','Calmglow','0');
+    }
+    var hash = window.location.hash; 
+    if(!hash.empty() ) {
+        var name  = hash.substr(1, hash.length -1 );
+        var search = $$('[name="'+name+'"]');
+        if(search.length == 0 ) {
+             feedbackview('post_trackback_hash', 'b0015706', 4140550, 0, 0);
+        }
+    }
+
+
+});
+
+      
+//]]>
+</script><script type="text/javascript">
+//<![CDATA[
+// function ndrclick2(pndrpageid, pndrregionid) { 
+// i = new Image(); 
+// i.src = "http://statclick.egloos.com/stat/statclick.tiff?cp_url=[click_ndr.nate.com/??ndrpageid="+pndrpageid+"&ndrregionid="+pndrregionid+"]";
+// }
+//]]>
+</script> 
+</head>
+<body>
+<iframe name="cmtviewfrm" id="cmtviewfrm" src="about:blank" width="0" height="0" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" style="display:block;border:0px;"></iframe>
+<div id="navibar_login"><a href="http://www.egloos.com/">이글루스</a> | <a href="http://sec.egloos.com/login.php?returnurl=http%3A%2F%2Fcalmglow.egloos.com%2F4140550">로그인</a></div>
+<div class="body">
+  <div class="wrap">
+    
+    <div class="header">
+      <h1>
+        <a href="index.html" title="calmglow (최진호)">calmglow (최진호)</a>
+      </h1>
+      <div class="url">
+        <a href="index.html" title="http://calmglow.egloos.com">calmglow.egloos.com</a>
+      </div>
+      <div class="topmenu">
+        <a href="photo/index.html" title="포토로그">포토로그</a> 
+      </div>
+    </div>
+    <hr class="line" />
+    
+    <div class="container f_clear">
+      
+      <div class="content_wrap f_clear">
+        
+        <div id="section_widemenu1" class="widemenu">
+          <div>
+            <div class="widget widget_M00000004">
+   <h3 style="display:none;">adsense(728_90)</h3>
+   <div class="widget_content">
+    <script type="text/javascript">
+google_ad_client = "ca-pub-0991130978851223";
+
+google_ad_slot = "6315573320";
+google_ad_width = 728;
+google_ad_height = 90;
+
+</script>
+<script type="text/javascript"
+src="../pagead2.googlesyndication.com/pagead/f.txt">
+</script>
+    </div>
+</div>
+          </div>
+        </div>
+        <hr class="line" />
+        
+        <div id="section_content" class="content">
+          
+          <div>
+            <div class="post_view">
+              
+                
+                <div class="post_title_area">
+                  <div class="post_title">
+                    <h2 class="entry-title" title="#">
+                      <a href="4140550.html" name="4140550" title="웹 2.x시대의 서버측 웹 개발 환경: 2. URI 패턴">웹 2.x시대의 서버측 웹 개발 환경: 2. URI 패턴</a> <span class="post_title_category"><a href="category/IT.html">IT</a></span>
+                    </h2>
+                  </div>
+                  <ul class="post_info">
+                    <li class="post_info_author">
+                      <span class="by">by</span> Yozz
+                    </li>
+                    <li class="post_info_date"><abbr class="published" title="2009/05/16 01:36">2009/05/16 01:36</abbr>
+                    </li>
+                    <li class="post_info_link"><a href="4140550.html">calmglow.egloos.com/4140550</a>
+                    </li>
+                    <li class="post_info_cmtcount">
+                      <span class="txt">덧글수 :</span> 1
+                    </li>
+                  </ul>
+                </div>
+                <div class="post_content entry-content">
+                  <div class='hentry'><span class='copyright_entry' style='display:block;' title='웹 2.x시대의 서버측 웹 개발 환경: 2. URI 패턴@@**@@http://calmglow.egloos.com/4140550'></span>그동안 BMT로 인하여 정신없이 보내어 본 '웹 2.x시대의 서버측 웹 개발 환경' 시리즈의 세번째 글이 늦어졌습니다.매일 꼬박꼬박 블로그에 글을 올리는 분들이 정말로 존경스럽습니다. 회사에선 업무보랴, 서핑하랴 집에선 노느라 블로깅 하기가 정말 쉽지가 않으니까요. 각설하고 <a href="4116238.html">두번째 글</a>에서 RESTful 서비스는 크게 자원과 행위와 컨텐츠의 타입으로 이루어진다고 언급했습니다. 아울러 REST 서비스를 만들기 위한 절차 등을 간단하게 살펴보았습니다. 무엇보다 가장 중요한 핵심은 REST는 자원 중심의 아키텍처다라는 겁니다. 이 '자원'이라는 것부터 오늘의 글을 시작하도록 하겠습니다.<br/><br/><h1 style="color: rgb(0, 0, 0);">웹의 자원은 어떻게 이루어져있나.</h1><br/>일단 범위를 좁혀서 이 '자원'을 웹상의 자원이라고 구체화시켜봅시다. 이 자원은 동영상이나 일반 문서 혹은 이미지 등등이 될수있습니다. 이러한 웹상의 자원은 무엇으로 이루어져있을까요? 아래와 같이 크게 4가지로 이루어져있다고 보겠습니다.<br/><ul><li>URI: 예) http://calmglow.egloos.com/4119223<br/></li><li>액션: 예) GET, PUT, POST, DELETE</li><li>응답코드: HTTP 403</li><li>표현 코드: 예) application/xml, text/x-json, application/atom+xml</li></ul><br/><h1 style="color: rgb(0, 0, 0);">URI의 패턴들</h1><br/>그 중에서도 먼저 웹의 자원 중 첫번째 가장 중요한 URI를 살펴보겠습니다.<br/>웹상의 자원을 그 특징별로 분류하고 구분하는 작업이 REST기반의 서비스에서는 꼭 필요합니다. 그래야 웹에 자원들을 빠짐없이 일목요연하게 서비스할 수 있기 때문입니다. 자, 우리가 웹상에 뭔가 서비스하려는 그 자원은 대체 어떠한 특징이 있을것이며 어떤패턴을 보일까요? 자원의 특징별로 한번 구분해보기로 합시다.<br/><ul><li>일반 자원들</li><ul><li>간단한 자원</li><li>복잡한 자원</li></ul><li>집합 자원들</li><ul><li>멤버 자원</li><li>질의 자원</li><li>페이징 자원</li><li>정렬 자원</li></ul><li>알고리즘 기반 자원</li></ul>생각보다 자원의 종류는 다양합니다. 또한 REST는 이러한 다양한 자원들을 서비스할 수 있습니다. '일반적인 자원들'은 비교적 이해하기 쉽습니다. 그 중에서도 '간단한 자원'은 그저 /학생 처럼 명사단위로 정의가 가능한 자원입니다. 본 블로그는 모든 글의접근 URL을 http://calmglow.egloos.com/숫자 로 서비스하고 있습니다. 이러한 자원을 '간단한 자원'이라고 부를 수 있습니다. '간단한 자원'에는 계층화된 자원도 포함됩니다. 즉 /1장/1절 처럼 계층화되어 두 단어 이상이 복합적으로 관계를 이루는 경우도 간단한 자원의 일부라고 볼 수 있습니다. 주로 자원이 어떤 데이타의 부분 집합을 가리킬 경우 이렇게 계층적으로 쓸 수 있습니다. '복잡한 자원'들은 뒤이어 설명하게 될 자원들을 통칭하여 부릅니다.<br/><br/>집합 자원들은 하나 이상의 멤버들로 이루어진 자원들입니다. 서재를 예로 들어보면 /서재 라고 질의하면 아마도 무수한 책의 리스트가 나오겠죠. 보통 REST에서는 이러한 집합 자원들을 표현할 때 복수형으로 질의하는 경우가 많으므로 /책들 혹은 /books 라고 표현하기도 합니다. 집합 자원들의 멤버들은 저마다 고유의 ID값을 가지게 됩니다. 그런데 이 ID값은 자원 제공자가 생성할 수도 있겠고 아니면 클라이언트가 만들기도 합니다. 전자의 경우를 예로 들면 GET으로 /고객계정 과 같이 질의를 하는 경우일테고 후자의경우는 POST방식으로 /고객계정/새ID 와 같이 고객을 등록하는 경우일 겁니다.<br/><br/><h2>멤버 자원</h2>REST에서는 이러한 집합 자원들 속의 멤버들에 접근하기 위한 URI 정의가 필요합니다. 즉 집합 자원속의 '멤버 자원'을 접근하는 규칙을 정의해야 합니다. 이를테면 계정 중에서 id가 1234인 것을 접근하고자 할 때 /Account/1234 일 수도 있겠고&nbsp; /Account?id=1234 일 수도 있겠지요. 또한 어떤 방식은 입력을 위해서, 어떤 방식은 정보를 얻기 위해 별도로 정의되어야 할 수도 있을 것입니다.<br/><br/>만약 집합 자원들 중에서 하나 이상의 자원들을 가져와야할 때의 규칙도 정의해야만 합니다. 예를 들어 /Account?members=all 은 집합 내의 모든 자원을 가져옵니다. 또한 /Account?members=[1234,1235,1236] 은 ID가 1234,1235,1236인 멤버를 가져옵니다.<br/><br/><h2>질의 자원</h2>자원을 웹으로 서비스하면서 이제까지의 방법만으로는 불충분한 경우가 많습니다. 결국 제대로 서비스하려면 보다 유연한 질의 기능이 필요합니다. 때문에 '질의 자원'을 정의하게 됩니다. 보통 '질의 자원'을 정의할 때 정의하기 가장 쉬운 방법은 /Account?name="최진호"&amp;age="34" 와 같이 몇 가지 속성값을 통해서 정의하는 방식입니다. 보다 직관적이기는 하지만 유연성이 많이 떨어집니다. 이보다 더 유연하고 고급화된 방법은 필터 개념을 두는 겁니다. 즉 /Account?filter="논리 표현식" 처럼 보다 다양하고 복잡한 질의를 수행할 수 있도록 하는 것이죠. 여기서 '논리표현식'은 보통 이 논리 표현식을 그대로 알아먹을 수 있는 내부 데이타 표현 시스템의 형식을 그대로 따르는 편이 좋습니다. 즉 SQL 언어나 JPA 질의등이 예가 될 수 있습니다. 이 필터를 쓰는 방식의 예를 좀 더 들어보면 /제품?filter=단가 gt2000 : '제품 단가 2000보다 큰 것들', /고객?filter=name in ('김','이','박') : '이름속에 김,이,박이 있는 고객' 등등이 있습니다.<br/><br/><h2>페이징 자원</h2>아까 /books 와 같이 서재 안의 모든 책을 가져오는 무식한 질의를 예로 들었지만 현실적으로는 적절치 않은 방식이겠죠. 성능이나 안정성 그리고 사용성을 위해서라도 '페이징 자원'은 꼭 필요합니다. 자원 중에 그 순서가 명확한 경우에는 /Account?members=[0-9] /Account?members=[10-19] 와 같은 방법으로 자원을 가져오는 것이 가능합니다. 하지만 어떤 경우에는 순서는 명확하지만 순서내의 숫자가 불규칙적으로 산재된 경우가 있습니다. 즉 id가 1,3,10,11,12,13,14,15,16,44 와 같은 방식일 수 있겠죠. 이런 경우에는 /Account?start=0&amp;count=10 이나 /Account?start=10&amp;count=10 처럼 특정 position을 정하고 거기에서 부터 멤버 갯수를 셈하여 접근하는 방식도 매우 유용한 방식이죠. 아무튼 이러한 '페이징 자원'방식은 그 자원들이 집합 내에서 특정 순서를 가지고 있는 경우에만 유용한 방식이라 할 수 있겠습니다.<br/><br/><h2>정렬 자원</h2>'정렬 자원'은 말 그대로 어떤 기준에 입각하여 정렬하여 자원을 접근하고자 할 때 유용하겠죠. 가장 간단한 방법은/Account?sort=ascending 이나 /Account?sort=descending 처럼 기본 값을(이를테면 id값) 기준으로 정렬하여 볼 수 있습니다. 또한 특정 필드값을 기준으로 정렬하고자 할 때에는 /Account?sortBy="필드1"처럼 정의해두면 다양한 활용이 가능하겠죠.<br/><br/><h2>알고리즘 자원</h2>자원 정의의 무한한 가능성을 소개하기 위해 마지막으로 '알고리즘 자원'을 설명드리겠습니다. 이제까지는 자원의 대상은 눈에 보이고 구체적인 대상이었습니다만 때로는 어떤 비즈니스 로직이나 프로세스가 자원의 대상이 될 수도 있습니다. 예를 들어 '이체'라는행위를 자원으로 보면 어떨까요? 자, 이체라는 자원을 /Transfer라고 정의하고 이것을 행위와 관련지어서 자원을 세부정의해 보겠습니다.<div><table class="" id="jn01" border="1" bordercolor="#000000" cellpadding="3" cellspacing="0" width="100%"><tbody><tr><td width="33%">액션<br/></td><td width="33%">집합<br/></td><td width="33%">설명<br/></td></tr><tr><td width="33%">GET<br/></td><td width="33%">이전의 이체의 목록을 반환<br/></td><td width="33%">/Transfer/123 : 특정 이체 번호에 해당하는 이체 기록을 전달<br/></td></tr><tr><td width="33%">POST<br/></td><td width="33%">새로운 이체를 수행!<br/></td><td width="33%"><br/></td></tr><tr><td width="33%">PUT<br/></td><td width="33%">미 지원<br/></td><td width="33%">현재 진행 중인 이체 절차를 변경<br/></td></tr><tr><td width="33%">DELETE<br/></td><td width="33%">미 지원<br/></td><td width="33%">이체 취소<br/></td></tr></tbody></table></div><br/>이번 글에서는 주로 URI 패턴에 따라 보통 REST 서비스를 웹상에 구현하려면 필요한 몇가지 필수 REST URI 정의들을 소개했습니다.<br/>더 하고 싶은 심도깊은 이야기도 몇몇 있기는 하지만 도저히 당분간은 시간이 나질 않을 듯 하네요. 아마도 6월 중순까지는 이렇게 몇페이지 짜리 글은 아마도 힘들지 않을까 싶어요. <br/>아무튼 지금까지의 내용은 사실 REST서비스 구축을 위한 아주 기본적인 내용들입니다. 보안, 성능을 위한 캐시, 버저닝, 단위테스트, 동시성 제어, 개발 및 운영 플랫폼 등등 생각해봐야 할 것들은 너무나 많지요. 모쪼록 하반기에는 이러한 내용으로도 이블로그에 글을 채울 수 있기를 기대합니다.
+       <!--
+       <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+		    xmlns:dc="http://purl.org/dc/elements/1.1/"
+		    xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+       <rdf:Description
+	        rdf:about="http://calmglow.egloos.com/4140550"
+	        dc:identifier="http://calmglow.egloos.com/4140550"
+	        dc:title="웹 2.x시대의 서버측 웹 개발 환경: 2. URI 패턴"
+	        trackback:ping="http://calmglow.egloos.com/tb/4140550"/>
+       </rdf:RDF>
+       -->
+</div> <div class="post_taglist f_clear"><strong>태그 : </strong><a href="tag/URI.html" rel="tag">URI</a>, <a href="tag/REST.html" rel="tag">REST</a></div> 
+                <link href="../csp.cyworld.com/css/sp.css" type="text/css" rel="stylesheet" />
+                <script type="text/javascript">
+                    if(!document.getElementById("empathyButtonJS")) {
+                        strLoginURL = "pop_bridgec570.html?url=http%3A%2F%2Fcalmglow.egloos.com%2F4140550";
+                        window.sp_pop_url = "http://cyxso.cyworld.com/PopUpLogin.sk?loginstr=direct&redirection="+encodeURIComponent(strLoginURL)+"&pop=direct";
+                        var se = document.createElement('script');
+                        se.type = "text/javascript";
+                        se.src = "../csp.cyworld.com/js/sp.js";
+                        se.id = "empathyButtonJS";
+                        document.getElementsByTagName('head')[0].appendChild(se);
+                    }
+                </script>
+            <div class="post_share_area f_clear">
+                <h3>공유하기 버튼</h3>
+                <table class="post_share_button" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td class="button">
+
+                               <div class="post_share_btnitem spready sprecommend" sptype="social_mod_hor" spkey="7b1fcee6587a023c9932dd6b209f7d39" ckey="" spsvccode="250" spfolderno="" spitemseq="" spurl="http://calmglow.egloos.com/4140550" sptitle="웹 2.x시대의 서버측 웹 개발 환경: 2. URI 패턴" spthumbnail="" spsummary="그동안 BMT로 인하여 정신없이 보내어 본 '웹 2.x시대의 서버측 웹 개발 환경' 시리즈의 세번째 글이 늦어졌습니다.매일 꼬박꼬박 블로그에 글을 올리는 분들이 정말로 존경스럽습니다. 회사에선 업무보랴, 서핑하랴 집에선 노느라 블로깅 하기가 정말 쉽지가 않으니까요. 각설하고 두번째 글에서 RESTful 서비스는 크게 자원과 행위와 컨텐츠의 타입으로 이루..." spismobile="0" spwritertid="" spwriterbid="" spwriternm="Yozz (이글루스)"  spcategory="IT" sprecommendee_id="" sprecommendee_nm="" sptag1="REST" sptag2="" sptag3="" sptag4=""></div>
+                               <div class="post_share_btnitem">
+                                    <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://calmglow.egloos.com/4140550" data-count="horizontal" data-via="">Tweet</a><script type="text/javascript" src="../platform.twitter.com/widgets.js"></script>
+                                </div>
+                                <div class="post_share_btnitem">
+                                    <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fcalmglow.egloos.com%2F4140550&amp;layout=button_count&amp;show_faces=false&amp;width=110&amp;action=like&amp;font=trebuchet+ms&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none;overflow:hidden;width:110px;height:21px;" allowTransparency="true"></iframe>
+                                </div>
+                            </td><td class="blank">&nbsp;</td>
+                    </tr>
+                </table>
+            </div>
+		<div class="post_meta_area f_clear">
+		    <h3>포스트 메타 정보</h3>       
+		    <div class="post_meta_menu">       
+			
+		    
+                    <h4 id="tab1_4140550" onclick="PostMeta.show_tab(1,4140550,'b0015706')" class="post_meta_title1_on">퍼블리싱 및 추천</h4>         
+                    <ul id="tab_c1_4140550" class="post_meta_content">      
+                            <li><strong>내보내기</strong>       
+                                <ul><li>밸리 : <a href= "http://valley.egloos.com/theme/technology" target= "_blank" > IT</a >  <em class="date">2009/05/16 01:36</em></li><li>태그 : <a href= "http://valley.egloos.com/tag/URI" target= "_blank" > URI</a >, <a href= "http://valley.egloos.com/tag/REST" target= "_blank" > REST</a >		           
+                                </ul>
+                            </li></ul>
+		    <h4 id="tab2_4140550" onclick="PostMeta.show_tab(2,4140550,'b0015706',5)" class="post_meta_title2">같은 카테고리의 글</h4>
+        <ul id="tab_c2_4140550" class="post_meta_content" style="display:none;"></ul>
+		    </div>             
+		</div>
+		
+                </div>
+                <div class="post_footer_area f_clear">
+                  <div class="post_tail">
+                    <a href="#trb" onclick="feedbackview('post_trackback', 'b0015706', 4140550, 0, 0);return false;" class="post_tail_trbk">트랙백(<span id="trbcnt4140550" class="count">0</span>)</a><span class="post_tail_ping">핑백(<span id="pingcnt4140550" class="count">1</span>)</span><span class="post_tail_cmmt"> 덧글(<span id="cmtcnt4140550" class="count">1</span>)</span>
+                  </div>
+                  <div class="post_admin">
+                    
+                  </div>
+                </div>
+                <hr class="line" />
+                 <div class="post_link">
+            <div class="post_trackback" id="trackback_4140550"></div> <div class="post_pingback" id="pingback_4140550">
+            
+            <h3>핑백</h3>
+            <ul class="pingback_list">
+              <li><h4><a href="4215061.html" target="_blank">Me, You and Us - calmglow (최진호) : 블로그 재시작, BMT와 PoC에 대해</a> <span class="pingback_datetime">2009-08-19 22:57:01</span> <span class="pingback_link"><a href="4140550.html#4140550" title="#">#</a></span></h4> <p class="pingback_desc">... 4월부터 블로그가 휴업상태였습니다. 이미 <u>이전 포스팅</u>에서도 거듭되는 회사 업무로 블로깅을 잠시 쉰다고는 하였으나 이쯤되면 쉬는게 아니라 아예 문 닫은 것 아닌가 하는 의심이 들 것도 같습니다. 아무튼 그동안 좀 ... <a href="4215061.html" target="_blank" class="more">more</a></p>
+              </li>
+            </ul>
+          </div> <div class="post_comment" id="comment_4140550">
+            
+            <h3>덧글</h3> 
+            <ul class="comment_list">
+              <li class="comment_item">
+                <h4 class="comment_writer_info">
+                  <span class="comment_gravatar"><img src="../md.egloos.com/img/eg/profile_anonymous.jpg" alt="" /></span> <span class="comment_writer"></span> <span class="comment_datetime" title="2009/06/10 20:03">2009/06/10 20:03</span> <span class="comment_link"><a name="12698331" href="4140550.html#12698331" title="#">#</a> </span> <span class="comment_admin"> <a href="#" onclick="replyComment('replyform4140550','4140550','12698331',5,'','http://', '', '4140550.html#cmt','','2'); return false;" title="답글">답글</a> </span> <span class="comment_security"><img src="../md.egloos.net/img/eg/post_security3.gif" width="9" height="10" border="0" alt="비공개" /></span>
+                </h4>비공개 덧글입니다. <div id="reply4140550_12698331" class="comment_write reply_write" style="display:none;"></div>
+              </li>
+            </ul>
+<div class="comment_write">
+   <fieldset>
+       <legend>댓글 입력 영역</legend>
+   <form id="cmtform4140550" name="cmtform4140550" target="cmtviewfrm" action="http://calmglow.egloos.com/exec/egloo_comment_exec.php" method="post" style="margin:0px;" onsubmit="return runComment(this,5);">
+       <input type="hidden" name="eid" value="b0015706" />
+       <input type="hidden" name="srl" value="4140550" />
+       <input type="hidden" name="tid" value="" />
+       <input type="hidden" name="subject" value="웹 2.x시대의 서버측 웹 개발 환경: 2. URI 패턴" />       <input type="hidden" name="cmtsrl" value="" />
+       <input type="hidden" name="xhtml" value="" />
+       <input type="hidden" name="adview" value="" />
+       <input type="hidden" name="ismenu" value="0" />
+       <input type="hidden" name="ismain" value="" />
+
+        <div class="comment_info">
+            <span class="comment_name">
+                <label for="cmt_name">닉네임</label>
+                <input type="text" id="name" name="name" class="name" size="10" maxlength="10" value="" />
+            </span>
+            <span class="comment_passwd">
+                <label for="cmt_passwd">비밀번호</label>
+                <input type="password" id="passwd" name="passwd" class="passwd" size="10" maxlength="10" value="" onfocus="document.cmtform4140550.tid.value='ihziXYcFJAnAwd1E6x8_HH-jdx_m2jomZALKtTPxETk.'" />
+            </span>
+            <span class="comment_blog">
+                <label for="cmt_blog">블로그</label>
+                <input type="text" id="homepage" name="homepage" class="blog" value="http://" size="20" />
+            </span>
+            <span class="comment_login"> 
+                <a href="http://sec.egloos.com/login.php?returnurl=http://calmglow.egloos.com/4140550#cmt" title="로그인">로그인</a>
+            </span>
+        </div>
+       <textarea id="comment" name="comment" class="comment_field" title="덧글 입력 영역" rows="5" cols="50"></textarea>
+       <div class="comment_btn f_clear">
+           <input type="checkbox" id="no_open" name="security" /> <label for="no_open">비공개</label>
+           <input type="image" value="댓글등록" src="../md.egloos.net/img/eg/btn_comment.gif" class="comment_submit" />
+       </div>
+   </form>
+   <form id="replyform4140550" name="replyform4140550" target="cmtviewfrm" action="http://calmglow.egloos.com/exec/egloo_comment_exec.php" method="post" style="margin:0px;">
+       <input type="hidden" name="eid" value="b0015706" />
+       <input type="hidden" name="srl" value="4140550" />
+       <input type="hidden" name="tid" value="ihziXYcFJAnAwd1E6x8_HH-jdx_m2jomZALKtTPxETk." />
+       <input type="hidden" name="subject" value="웹 2.x시대의 서버측 웹 개발 환경: 2. URI 패턴" />
+       <input type="hidden" name="cmtsrl" value="" />
+       <input type="hidden" name="name" value="" />
+       <input type="hidden" name="homepage" value="" />
+       <input type="hidden" name="passwd" value="" />
+       <input type="checkbox" name="security" value="" style="display:none;" />
+       <input type="hidden" name="comment" value="" />
+       <input type="hidden" name="ismenu" value="0" />
+       <input type="hidden" name="ismain" value="" />
+       <input type="hidden" name="xhtml" value="" />
+       <input type="hidden" name="adview" value="" />
+       <input type="hidden" name="page" id="replyform_page" value="1" />
+   </form>
+   <form id="editform4140550" name="editform4140550" target="cmtviewfrm" action="http://calmglow.egloos.com/exec/egloo_editcomment_exec.php" method="post" style="margin:0px;">
+       <input type="hidden" name="eid" value="b0015706" />
+       <input type="hidden" name="srl" value="4140550" />
+       <input type="hidden" name="tid" value="ihziXYcFJAnAwd1E6x8_HH-jdx_m2jomZALKtTPxETk." />
+       <input type="hidden" name="subject" value="웹 2.x시대의 서버측 웹 개발 환경: 2. URI 패턴" />
+       <input type="hidden" name="cmtsrl" value="" />
+       <input type="hidden" name="writer" value="" />
+       <input type="hidden" name="name" value="" />
+       <input type="hidden" name="homepage" value="" />
+       <input type="hidden" name="passwd" value="" />
+       <input type="checkbox" name="security" value="" style="display:none;" />
+       <input type="hidden" name="comment" value="" />
+       <input type="hidden" name="ismenu" value="0" />
+       <input type="hidden" name="ismain" value="" />
+       <input type="hidden" name="xhtml" value="" />
+       <input type="hidden" name="adview" value="" />
+       <input type="hidden" name="page" id="editform_page" value="1" />
+   </form>
+   </fieldset>
+</div>  
+          </div>
+          </div> 
+              
+              
+              
+              
+            </div>
+          </div>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <div class="post_navi">
+            
+            <div class="prev"><a href="4178619.html"><span class="txt">다음글 : </span>국민 알기를 노예처럼</a></div><div class="next"><a href="4136709.html"><span class="txt">이전글 : </span>2009년 전세계 미들웨어 시장 전망은 다소 비관적</a></div> 
+          </div>
+          
+        </div>
+        <hr class="line" />
+        
+        <div id="section_widemenu2" class="widemenu"></div>
+        <hr class="line" />
+      </div>
+      
+      <div id="section_sidebar1" class="column">
+        <div class="widget menu_profile">
+          
+          <h3>프로필</h3>
+          <div class="widget_content">
+            <div class="profile_image">
+              <a href="javascript:void(0);" onclick="Control.Modal.openDialog(this, event, '../pds21.egloos.com/logo/201303/15/06/b0015706.png');"><img src="../pds21.egloos.com/logo/201303/15/06/b0015706.png" width="160" height="129" border="0" alt="" /></a>
+            </div>
+            <div class="profile_desc">
+              밥값하는 IT 아키텍트가 되기 위해 노력중입니다.
+연락처: calmglow at gmail.com<span class="profile_usernick fn"><span class="by">by</span> Calmglow</span>
+            </div>
+            <div class="profile_prize">
+               <a href="http://eskimos.egloos.com/3750" title="이글루스 피플"><img src="../md.egloos.net/img/eg/newsletter_user.gif" width="15" height="15" border="0" style="vertical-align: text-bottom;" alt="이글루스 피플" /></a>
+            </div>
+            <div class="bg_profile"></div>
+          </div>
+        </div>
+        <div class="widget menu_category">
+          
+          <h3>카테고리</h3>
+          <ul class="widget_content">
+            <li class=""><a href="category/IT.html">IT</a><span class="count">(109)</span>
+            </li><li class=""><a href="category/Programming.html">Programming</a><span class="count">(16)</span>
+            </li><li class=""><a href="category/%20Open%20and%20Social.html"> Open and Social</a><span class="count">(22)</span>
+            </li><li class=""><a href="category/Enterprise.html">Enterprise</a><span class="count">(136)</span>
+            </li><li class=""><a href="category/Mobile.html">Mobile</a><span class="count">(3)</span>
+            </li><li class=""><a href="category/Art%20and%20Life.html">Art and Life</a><span class="count">(139)</span>
+            </li>
+          </ul>
+        </div>
+        <div class="widget menu_archive" id="widget_menu_archive">
+          
+          <h3>이전글 목록</h3>
+          <div class="widget_content">
+            <ul>
+              <li><a href="archives/2013/05.html">2013년 05월</a><span class="count">(1)</span>
+              </li><li><a href="archives/2013/04.html">2013년 04월</a><span class="count">(1)</span>
+              </li><li><a href="archives/2013/03.html">2013년 03월</a><span class="count">(3)</span>
+              </li><li><a href="archives/2013/02.html">2013년 02월</a><span class="count">(2)</span>
+              </li><li><a href="archives/2012/12.html">2012년 12월</a><span class="count">(2)</span>
+              </li>
+            </ul>
+            <div class="allview">
+              <a href="archives.html">more...</a>
+            </div>
+          </div>
+        </div>
+        <div class="widget menu_comment" id="widget_menu_comment">
+          
+          <h3>최근 덧글</h3>
+          <div class="widget_content">
+            <ul>
+              <li>
+                <span class="desc"><a href="4799567.html#14584932">이 포럼은 굉장합니다. 좋은 해설 모두</a></span><em class="fn">by 苗</em> <em class="date">8/21</em>
+              </li><li>
+                <span class="desc"><a href="4792335.html#14547086">어.....
+
+&lt;다수의 사용자는 10개 이하의 앱만을 사용하고 대부분의..</a></span><em class="fn">by 기보</em> <em class="date">5/7</em>
+              </li><li>
+                <span class="desc"><a href="4786276.html#14433830">저도 구글이 리더 서비스를 포기한다고 했을 때 여러가지 생각을 했..</a></span><em class="fn">by kkamagui</em> <em class="date">8/15</em>
+              </li><li>
+                <span class="desc"><a href="4242652.html#14432226">상당히 늦었지만, 지금은 상당히 리눅스로 대세가 기울었다 볼 수 ..</a></span><em class="fn">by  JR </em> <em class="date">8/12</em>
+              </li><li>
+                <span class="desc"><a href="4792335.html#14404815">통찰력 있는 좋은 글입니다. 잘 봤습니다.</a></span><em class="fn">by 슈니</em> <em class="date">6/25</em>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="widget menu_trackback">
+          
+          <h3>최근 트랙백</h3>
+          <div class="widget_content">
+            <ul>
+              <li>
+                <span class="desc"><a href="4782030.html#3780893">replica Emporio Armani</a></span><em class="fn">http://www.asmallheaven.ne..</em> <em class="date">10/12</em>
+              </li><li>
+                <span class="desc"><a href="4782030.html#3780888">http://www.asmallheaven.net/replica-hublot-disocunt-..</a></span><em class="fn">replica hublot watches Rol..</em> <em class="date">10/12</em>
+              </li><li>
+                <span class="desc"><a href="4782030.html#3780885">replica Corum</a></span><em class="fn">replica breitling Chronomat ..</em> <em class="date">10/12</em>
+              </li><li>
+                <span class="desc"><a href="4078991.html#3331143">fake replica breitling</a></span><em class="fn">CeCe McDonald killing trial ...</em> <em class="date">09/27</em>
+              </li><li>
+                <span class="desc"><a href="4078991.html#3331119">replica tag heuer watches</a></span><em class="fn">Charles Trifilette</em> <em class="date">09/27</em>
+              </li>
+            </ul>
+            <div class="allview"></div>
+          </div>
+        </div>
+        <div class="widget menu_rss">
+          
+          <h3>RSS</h3>
+          <div class="widget_content">
+            <a href="http://rss.egloos.com/blog/calmglow" target="_blank"><img src="../md.egloos.com/skn/tpl/menu_rss/1/rss_practika_64.png" alt="RSS" /></a>
+          </div>
+        </div>
+        <div class="widget menu_tagcloud">
+          
+          <h3>태그</h3>
+          <div class="widget_content">
+            <a href="tag/groovy.html" rel="tag" class="tag_level_1">groovy</a>
+<a href="tag/SNS.html" rel="tag" class="tag_level_1">SNS</a>
+<a href="tag/ebook.html" rel="tag" class="tag_level_1">ebook</a>
+<a href="tag/Ubuntu.html" rel="tag" class="tag_level_1">Ubuntu</a>
+<a href="tag/WAS%ed%8a%9c%eb%8b%9d.html" rel="tag" class="tag_level_1">WAS튜닝</a>
+<a href="tag/%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8.html" rel="tag" class="tag_level_1">프로젝트</a>
+<a href="tag/%ec%98%a4%ec%9c%a4.html" rel="tag" class="tag_level_1">오윤</a>
+<a href="tag/mwc2013.html" rel="tag" class="tag_level_1">mwc2013</a>
+<a href="tag/html5.html" rel="tag" class="tag_level_1">html5</a>
+<a href="tag/%ec%b4%88%eb%93%b1%ea%b5%90%ec%9c%a1.html" rel="tag" class="tag_level_1">초등교육</a>
+<a href="tag/%eb%84%a5%ec%84%bc.html" rel="tag" class="tag_level_1">넥센</a>
+<a href="tag/%ec%9a%b0%eb%b6%84%ed%88%ac.html" rel="tag" class="tag_level_3">우분투</a>
+<a href="tag/%ec%98%a4%ed%94%88%ec%86%8c%ec%8a%a4.html" rel="tag" class="tag_level_1">오픈소스</a>
+<a href="tag/%ec%9d%b4%eb%b6%81.html" rel="tag" class="tag_level_1">이북</a>
+<a href="tag/REST.html" rel="tag" class="tag_level_2">REST</a>
+<a href="tag/scratch.html" rel="tag" class="tag_level_1">scratch</a>
+<a href="tag/%eb%af%b8%eb%9e%98.html" rel="tag" class="tag_level_1">미래</a>
+<a href="tag/mwc.html" rel="tag" class="tag_level_1">mwc</a>
+<a href="tag/performance.html" rel="tag" class="tag_level_1">performance</a>
+<a href="tag/%ec%9b%b9%ec%95%b1.html" rel="tag" class="tag_level_1">웹앱</a>
+<a href="tag/googleappengine.html" rel="tag" class="tag_level_1">googleappengine</a>
+<a href="tag/clien.html" rel="tag" class="tag_level_1">clien</a>
+<a href="tag/%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c.html" rel="tag" class="tag_level_2">클라우드</a>
+<a href="tag/webapp.html" rel="tag" class="tag_level_1">webapp</a>
+<a href="tag/%ed%81%b4%eb%a6%ac%ec%95%99.html" rel="tag" class="tag_level_1">클리앙</a>
+<a href="tag/HUD.html" rel="tag" class="tag_level_1">HUD</a>
+<a href="tag/%eb%aa%a8%eb%b0%94%ec%9d%bc%ec%95%b1%ed%92%88%ec%a7%88%ea%b2%80%ec%a6%9d.html" rel="tag" class="tag_level_1">모바일앱품질검증</a>
+<a href="tag/gae.html" rel="tag" class="tag_level_1">gae</a>
+<a href="tag/%ec%98%81%ec%83%9d.html" rel="tag" class="tag_level_1">영생</a>
+<a href="tag/%ec%b0%bd%ec%9d%98%eb%a0%a5.html" rel="tag" class="tag_level_1">창의력</a>
+
+            <div class="allview">
+              <a href="tag.html">태그 전체보기</a>
+            </div>
+          </div>
+        </div>
+        
+        <div>
+          <div class="widget widget_M00000002" style="margin-top:0;margin-bottom:0;padding-top:0;padding-bottom:0;">
+   <h3 style="display:none;">Google Analytics</h3>
+   <div class="widget_content">
+    <!-- 구글 분석 첫번째 기초 버전 -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17725464-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+    </div>
+</div>
+        </div>
+        <div id="sidebar1_blank" class="blank"></div>
+      </div>
+      <hr class="line" />
+    </div>
+    <hr class="line" />
+    
+    <div class="footer f_clear">
+      <div class="license">
+        <span class="copyright"><a href="index.html" title="powered by egloos.com">calmglow.egloos.com</a> is powered by <a href="http://www.egloos.com/" target="_blank">Egloos</a>.</span> <span class="rss">Subscribe to <a href="http://rss.egloos.com/blog/calmglow" target="_blank" title="RSS">RSS</a>.</span>
+        <span class="skinby">Skin designed by <a href="index.html" target="_blank">calmglow</a>.</span>
+      </div>
+    </div>
+  </div>
+</div><iframe src="http://statweb.egloos.com/estat/send?bid=b0015706&amp;ref=http%253A%252F%252Fcalmglow.egloos.com%252Ftag%252FREST&amp;uid=&amp;mbid=&amp;openflag=1" style="width: 0px; height: 0px; border: 0px solid #fff;"></iframe>
+<img width="0" height="0" border="0" src="egloo_pds65b9.html?eid=b0015706" alt="" />
+<form id="trackfrom" name="trackfrom" method="post" action="#">
+<input type="hidden" name="url" value="" />
+<input type="hidden" name="title" value="" />
+<input type="hidden" name="trburl" value="" />
+</form>
+<div style="z-index:9901;top:764px;left:169px;display:none;" id="egloo_bookmark" class="popupWrap">
+    <div class="popupTitle">이글루링크 추가하기</div>
+    <dl class="popupBody">
+        <dt class="no-arrow" style="background:none;font-size:12px;text-align:center;">
+            <span id="egloo-bookmark-url" style="color:#0F71A1;"></span>
+            (<span id="egloo-bookmark-name"></span>)을(를)</dt>
+        <dd class="notice" style="margin:0;padding:0 0 0 8px;line-height:1.8em;color:#000;font-size:12px;text-align:center;">이글루링크로 추가하시겠습니까? 추가하시려면 그룹선택을 하세요.</dd>
+        <dd class="notice weak" style="margin:0;padding:0 0 0 8px;line-height:1.8em;font-size:11px;color:#666666;text-align:center;">(그룹선택 하지 않는 경우, 최상단 목록에 추가됩니다.)</dd>
+        <dd class="egloo-bookmark-group" style="margin:0;padding:10px 0 8px;line-height:1.8em;text-align:center;color:#333;font-size:12px;text-align:center;">그룹선택 :
+            <select name="groupID" id="egloo-bookmark-groupID" style="font-family:'돋움','dotum','Trebuchet MS',Sans-serif;margin-left:10px;"><option value="000">그룹선택없음</option></select></dd>
+        <dd class="buttons">
+            <input type="button" value="지금 확인" onfocus="blur();" onclick="Modal.insertBookmark(true);" class="button btn24 btn_bold"/>
+            <input type="button" value="나중에 확인" onfocus="blur();" onclick="Modal.insertBookmark(false);" class="button btn24 btn_weak"/>
+        </dd>
+        <dd class="close" onclick="Modal.close();"><img src="../md.egloos.com/img/www/btn/button_popup_close.gif" alt="이글루링크 취소" title="이글루링크 취소" /></dd>
+    </dl>
+</div>
+</body>
+</html>

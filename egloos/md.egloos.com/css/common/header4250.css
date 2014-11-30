@@ -1,0 +1,53 @@
+﻿div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,p,blockquote { margin:0; padding:0; }
+button { border:none; vertical-align:middle; cursor:pointer; }
+button span { display:block; text-indent:-1000em; }
+body{background:url(../../img/www/bg_gnb_top.gif) repeat-x}
+
+    #header .gnb_sub { padding:12px 0 11px; height:12px;  text-align:right; color:#d9d9d9; font-size:11px;letter-spacing:-1px;}
+    #header .gnb_sub a { color:#ababab; font-family:Dotum, "돋움" }
+    #header .gnb_sub a:hover { color:#4facdd; }
+    #header .gnb_wrap .navigator { float:left; width:740px;padding-top:28px;}
+    #header .gnb_wrap .navigator h1 { display:block; float:left; }
+    #header .gnb_wrap .navigator ul { float:left; margin:9px 0 0 50px; }
+    #header .gnb_wrap .navigator li {float:left; }
+    #header .gnb_wrap .navigator li a {display:block;height:23px;background:url('../../img/www/set_main_menu.png') no-repeat 0 0;overflow:hidden;text-indent:-1000em;}
+    #header .gnb_wrap .navigator li a:hover {height:29px;}
+    
+
+    #header .gnb_wrap .navigator li a.valley {width:63px;background-position:0 0;}
+    #header .gnb_wrap .navigator li a.valley:hover, #header .gnb_wrap .navigator li.on a.valley{background-position:0 -57px; }
+
+    #header .gnb_wrap .navigator li a.theme {width:100px;background-position:-63px 0;margin-right:20px;}
+    #header .gnb_wrap .navigator li a.theme:hover, #header .gnb_wrap .navigator li.on a.theme{background-position:-63px -57px;}
+    #header .gnb_wrap .navigator li.on a.theme {width:100px;height:32px;background-position:-63px -93px;margin-top:-3px;}
+
+    #header .gnb_wrap .navigator li a.skin { width:70px; background-position:-183px 0;margin-right:39px}
+    #header .gnb_wrap .navigator li a.skin:hover, #header .gnb_wrap .navigator li.on a.skin{background-position:-183px -57px; }
+    #header .gnb_wrap .navigator li a.apps { width:30px; background-position:-292px 0; }
+    #header .gnb_wrap .navigator li a.apps:hover, #header .gnb_wrap .navigator li.on a.apps{background-position:-292px -57px; }
+
+
+    
+    #header .gnb_wrap .search_wrap { float:right; width:240px; }
+    #header .gnb_wrap .search_wrap .search {  overflow:hidden; height:19px; margin-top:5px; border:solid 1px #ccc; }
+    #header .gnb_wrap .search_wrap .search input { float:left; height:14px; width:190px; padding:5px 0 0 12px;  font-size:11px; border:0; color:#b4b4b4; font-family:Dotum, �뗭�; letter-spacing:-1px; }
+    #header .gnb_wrap .search_wrap .search button { float:right; width:34px; height:19px; background:url('../../img/www/index/set_main_btn.gif') 10px 0 no-repeat; }
+    #header .gnb_wrap .search_wrap dl { clear:both; margin-top:5px; color:#686868; font-size:11px;  text-align:left; border:none; font-family:Dotum, �뗭�; letter-spacing:-1px; }
+    #header .gnb_wrap .search_wrap dl dt { float:left; font-weight:bold; }
+    #header .gnb_wrap .search_wrap dl dd a { color:#686868; }
+    #header .gnb_wrap .search_wrap dl dd a:hover { color:#4facdd; }
+
+    #header .gnb_wrap .layer_theme { clear:both; position:absolute; top:101px;left:236px; width:415px;height:340px; background:transparent url('../../img/www/index/bg_layer_theme.png') repeat; _background:none; z-index:998; }
+    #header .gnb_wrap .layer_theme .layer_line{position:relative; width:415px; height:317px; background-color:#fff; border:solid 1px #2eb0ee;border-top:3px solid #2eb0ee;padding:23px 0 0 0px;}
+    #header .gnb_wrap .layer_theme .layer_line ul {float:left;width:97px;border-right:solid 1px #e8e8e8;padding-left:5px}
+    #header .gnb_wrap .layer_theme .layer_line ul.last{border-right:0 none;}
+    #header .gnb_wrap .layer_theme .layer_line ul li{letter-spacing:-1px; text-align:left;line-height:14px;padding-left:20px;padding-top:13px;}
+    #header .gnb_wrap .layer_theme .layer_line ul li:first-child{padding-top:0;}
+    #header .gnb_wrap .layer_theme .layer_line ul li a{color:#7c8188; }
+    #header .gnb_wrap .layer_theme .layer_line ul li a:hover{color:#262627;font-weight:bold;letter-spacing:-2px}
+    #header .gnb_wrap .layer_theme .layer_line .txt_help{position:absolute;left:0;bottom:0; width:400px;height:36px;line-height:36px;border:1px solid #e2e6ef;border-bottom:0;background:#f4f5f7;color:#97a1ab;font-family:"돋움";font-size:11px;letter-spacing:-1px;padding-left:13px}
+    #header .gnb_wrap .layer_theme .layer_line .txt_help a{color:#fe6716;text-decoration:underline;background:url(../images/spr_main.html) no-repeat right -199px;padding:0 5px 0 8px;}
+
+/* floating_banner */
+.floating_banner { position:absolute; top:110px; left:50%; margin-left:490px; }
+.floating_banner_ipad { position:absolute; top:110px; left:50%; margin-left:510px; }

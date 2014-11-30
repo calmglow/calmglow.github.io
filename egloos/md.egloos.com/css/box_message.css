@@ -1,0 +1,82 @@
+body {
+	font-family: 돋움, Trebuchet MS, Sans-serif;
+	text-align: center;
+	margin: 0 auto;
+	width: 100%;
+	font-size: 12px;
+	color: #333;
+	background-color: #fff;
+	position: absolute;
+	top: 30%;
+	}
+
+a:link		{ color: #00729b; text-decoration: underline }
+a:visited	{ color: #00729b; text-decoration: underline }
+a:active	{ color: #00729b;  } 
+a:hover		{ color: #ff9a00; text-decoration: underline }
+
+.box_message {
+	padding-top: 80px;
+	margin: 0 auto;
+	width: 360px;
+	background: url("../img/pp/message_error.gif") 0 0 no-repeat;
+	}
+	
+.box_message p.desc {
+	text-align: center;
+	padding: 10px 30px;
+	margin: 0;
+	}
+	
+.box_message .bottom {
+	background: url("../img/pp/message_bottom.gif") 0 0 no-repeat;
+	height: 17px;
+	font-size: 10px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #bbb;
+	padding-top: 12px;
+	}
+	
+/*** button#0001-20060905 ***/
+input {
+	border: 1px;
+	border-color: #ddd #c4c4c4 #c4c4c4 #ddd;
+	border-style: solid;
+	color: #333;
+	margin: 0;
+	font-family: "돋움";
+	padding: 2px 5px 0 5px;
+	}
+/* IE Hack */
+*html input {padding: 2px 0 0 0; }
+
+/* height=28 */
+input#bt28 {
+	background: url("../img/lib/bt28.gif");
+	height: 28px;
+	font-size: 12px;	
+	}
+
+input#bt28:hover {
+	border-style: double;
+	color: #00729b;
+	}
+input#bt28:active {
+	border-style: double;
+	border-color: #aaa #e5e5e5 #e5e5e5 #aaa;
+	color: #555;
+	}
+
+ul {
+	margin : 0 auto;
+	padding : 0;
+	text-align : center;
+	}
+
+li {
+	list-style : none;
+	margin : 0 auto;
+	padding : 0;
+	text-align : left;
+	line-height : 150%;
+	}

@@ -1,0 +1,594 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv='pragma' content='no-cache' />
+<meta http-equiv='cache-control' content='no-cache' />
+<meta http-equiv='Content-type' content='text/html; charset=utf-8' />
+<meta name="author" content="Calmglow" />
+<meta name="keywords" content="calmglow (최진호)" />
+  <link rel="shortcut icon" href="http://profile.egloos.net/b0015706.ico" />
+
+<link rel="pingback" href="http://rpc.egloos.com/rpc1" />
+<link rel="alternate" type="application/rss+xml" title="calmglow (최진호)" href="http://rss.egloos.com/blog/calmglow" />
+<title>calmglow (최진호) : 우분투 11.10의 문제</title>
+	<script type="text/javascript" src="../md.egloos.com/js/ap757c.js?ver=1.043"></script>
+	<script type="text/javascript" src="../md.egloos.com/js/gdba6c.js?ver=1.002"></script>
+	<script type="text/javascript" src="../md.egloos.com/js/eg961f.js?ver=1.020"></script>
+	<script type="text/javascript" src="../md.egloos.com/js/eg_new961f.js?ver=1.020"></script>
+	<script type="text/javascript" src="../md.egloos.com/js/crba6c.js?ver=1.002"></script>
+    <script type="text/javascript" src="../md.egloos.com/js/page/insad05.js?ver=1.4"></script>
+
+	<script type="text/javascript" src="../md.egloos.com/js/lib/prototype_v1511.js"></script>
+	<script type="text/javascript" src="../md.egloos.com/js/control/Control.js"></script>
+	<script type="text/javascript" src="../md.egloos.com/js/control/Control.ImgModal4eee.js?ver=1.004"></script>
+	<script type="text/javascript" src="../md.egloos.com/js/page/blog/compatible.js"></script>
+	
+<link type="text/css" rel="stylesheet" href="../logo21.egloos.com/skin/css/b/001/57/b0015706_t.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../md.egloos.com/css/style_comment4963.css?ver=1.1" media="screen" />
+<link type="text/css" rel="stylesheet" href="../md.egloos.com/css/skin2_common.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../logo21.egloos.com/skin/css/b/001/57/b0015706_1_s.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../md.egloos.com/css/egloo_navibar62ea.css?ver=1.2" media="screen" />
+<link type="text/css" rel="stylesheet" href="../md.egloos.com/css/common/popup34c0.css?ver=2.00" />
+<link type="text/css" rel="stylesheet" href="../md.egloos.com/css/common/button.css" />
+<script type="text/javascript" src="../md.egloos.com/js/modal/Modal.js"></script>
+<script type="text/javascript" src="../md.egloos.com/js/modal/Modal.Center.js"></script>
+<script type="text/javascript" src="../md.egloos.com/js/page/blog/Modal.BookmarkDlgba6c.js?ver=1.002"></script>
+
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function() {
+    new Modal.BookmarkDlg('egloo_bookmark', {overlay: true,
+                'groupURL'     : "/exec/egloo_bookmark_group.php",
+                'remoteURL'    : "/exec/egloo_insbookmark_exec.php"});
+    if(''==''){
+	    	copy_contents('calmglow.egloos.com','Calmglow','0');
+    }
+    var hash = window.location.hash; 
+    if(!hash.empty() ) {
+        var name  = hash.substr(1, hash.length -1 );
+        var search = $$('[name="'+name+'"]');
+        if(search.length == 0 ) {
+             feedbackview('post_trackback_hash', 'b0015706', 4637329, 0, 0);
+        }
+    }
+
+
+});
+
+      
+//]]>
+</script><script type="text/javascript">
+//<![CDATA[
+// function ndrclick2(pndrpageid, pndrregionid) { 
+// i = new Image(); 
+// i.src = "http://statclick.egloos.com/stat/statclick.tiff?cp_url=[click_ndr.nate.com/??ndrpageid="+pndrpageid+"&ndrregionid="+pndrregionid+"]";
+// }
+//]]>
+</script> 
+</head>
+<body>
+<iframe name="cmtviewfrm" id="cmtviewfrm" src="about:blank" width="0" height="0" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" style="display:block;border:0px;"></iframe>
+<div id="navibar_login"><a href="http://www.egloos.com/">이글루스</a> | <a href="http://sec.egloos.com/login.php?returnurl=http%3A%2F%2Fcalmglow.egloos.com%2F4637329">로그인</a></div>
+<div class="body">
+  <div class="wrap">
+    
+    <div class="header">
+      <h1>
+        <a href="index.html" title="calmglow (최진호)">calmglow (최진호)</a>
+      </h1>
+      <div class="url">
+        <a href="index.html" title="http://calmglow.egloos.com">calmglow.egloos.com</a>
+      </div>
+      <div class="topmenu">
+        <a href="photo/index.html" title="포토로그">포토로그</a> 
+      </div>
+    </div>
+    <hr class="line" />
+    
+    <div class="container f_clear">
+      
+      <div class="content_wrap f_clear">
+        
+        <div id="section_widemenu1" class="widemenu">
+          <div>
+            <div class="widget widget_M00000004">
+   <h3 style="display:none;">adsense(728_90)</h3>
+   <div class="widget_content">
+    <script type="text/javascript">
+google_ad_client = "ca-pub-0991130978851223";
+
+google_ad_slot = "6315573320";
+google_ad_width = 728;
+google_ad_height = 90;
+
+</script>
+<script type="text/javascript"
+src="../pagead2.googlesyndication.com/pagead/f.txt">
+</script>
+    </div>
+</div>
+          </div>
+        </div>
+        <hr class="line" />
+        
+        <div id="section_content" class="content">
+          
+          <div>
+            <div class="post_view">
+              
+                
+                <div class="post_title_area">
+                  <div class="post_title">
+                    <h2 class="entry-title" title="#">
+                      <a href="4637329.html" name="4637329" title="우분투 11.10의 문제">우분투 11.10의 문제</a> <span class="post_title_category"><a href="category/%20Open%20and%20Social.html"> Open and Social</a></span>
+                    </h2>
+                  </div>
+                  <ul class="post_info">
+                    <li class="post_info_author">
+                      <span class="by">by</span> Calmglow
+                    </li>
+                    <li class="post_info_date"><abbr class="published" title="2011/10/23 00:52">2011/10/23 00:52</abbr>
+                    </li>
+                    <li class="post_info_link"><a href="4637329.html">calmglow.egloos.com/4637329</a>
+                    </li>
+                    <li class="post_info_cmtcount">
+                      <span class="txt">덧글수 :</span> 18
+                    </li>
+                  </ul>
+                </div>
+                <div class="post_content entry-content">
+                  <div class='hentry'><span class='copyright_entry' style='display:block;' title='우분투 11.10의 문제@@**@@http://calmglow.egloos.com/4637329'></span>우분투를 메인 OS로 사용한지 벌써 2년이 넘어간다. 2년동안 개인 용도로 뿐만 아니라 회사용으로도 그 수없이 많은 프리젠테이션과 제안작업등을 꿋꿋하게 우분투로 대처해왔던 나도 놀라울 그 끈기는 과연 어디에서 왔을까?<br/>지금에 와서 생각해보면 참으로 끈질긴 우분투 사랑이 아닐 수 없다. 개발업무시에는 참으로 편한게 우분투이지만 그외의 작업들에서 우분투는 결코 쉬운 OS가 아니다. 그래도 나는 엔지니어랍시고 우분투를 사용해왔는데,<br/>최근에 11.10으로 업그레이드하고 나서 큰 회의가 들었다.<br/><br/>첫째로, 한글 입력에 버그가 있다. iBus에서 뭔가 새로 업데이트되면서 충돌이 발생하는 것 같은데, 제대로된 한글입력이 안되고 띄어쓰기가 엉뚱하게 되는 치명적인 버그다. uim등의 다른 한글 입력기로 바꾸면 된다지만 이 얼마나 초보자에게 친절한 OS인가?<br/><br/>둘째로, Unity가 아직 완전하지 못하다. 우분투가 기본 UI관리자로 Unity를 사용하기로 하고 그것에 맞춰 개발한지 1년은 된 듯 한데 여전히 너무나 불안하고 완전치 못하다. Unity기반에서는 그 흔한 스크린 세이버도 없고 폰트 설정 프로그램도 별도로 없다. 그 외에도 gnome관련 기존 프로그램들과의 호환성도 불안불안하다.<br/><br/>아무리 우분투가 사용자가 참여해서 더 좋게 만들어가는, 의무와 권리가 별도로 있는 OS가 아닌 것은 알고 있지만 그럼에도 불구하고 Major 판이 올라갈 때마다 아주 기본적인 부분에서 조차 불안함을 느끼며 그것을 사용해야하는 것인지, 이러한 불안함으로 인해 떨어질 수 밖에 없는 업무 생산성은 어떻게 할 것인지 심각하게 고민하지 않을 수가 없다.<br/><br/>우분투는 다른 리눅스에 비해 비교적 최종사용자의 편의성에 더 초점을 맞춘 OS이다. 우분투의 역사나 영향력이 여타 다른 리눅스 배포판에 비해 적지 않은 수준에까지 올라왔는데도 불구하고 여전히 기존의 리눅스 배포판이 지니고 있는 문제점, 버그에 대해 부끄러워하거나 2%의 부족함에 대해 채우려는 모습등이 보이지 않는, 날것의 모습 그대로의 OS 우분투는 아마도 앞으로도 영원히 이렇게 나사 몇개는 빠진듯한 모습을 최종 사용자에게 보여줄 것 같다.<br/><br/>솔직히 화가 난다. 이런 말도 안되는 버그를 안고 그대로 release해버리는 무책임함. 조만간 우분투의 세계를 잠시나마 떠나게 될지도 모르겠다.<br/><br/>P.S. 12월 20일자로 ibus 한글문제 해결된 버전이 패치되었다. 아마도 한글문제는 현재 어느정도 해결이 된 상태로 보임.<br/>
+       <!--
+       <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+		    xmlns:dc="http://purl.org/dc/elements/1.1/"
+		    xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+       <rdf:Description
+	        rdf:about="http://calmglow.egloos.com/4637329"
+	        dc:identifier="http://calmglow.egloos.com/4637329"
+	        dc:title="우분투 11.10의 문제"
+	        trackback:ping="http://calmglow.egloos.com/tb/4637329"/>
+       </rdf:RDF>
+       -->
+</div> <div class="post_taglist f_clear"><strong>태그 : </strong><a href="tag/%ec%9a%b0%eb%b6%84%ed%88%ac.html" rel="tag">우분투</a></div> 
+                <link href="../csp.cyworld.com/css/sp.css" type="text/css" rel="stylesheet" />
+                <script type="text/javascript">
+                    if(!document.getElementById("empathyButtonJS")) {
+                        strLoginURL = "pop_bridgea4b6.html?url=http%3A%2F%2Fcalmglow.egloos.com%2F4637329";
+                        window.sp_pop_url = "http://cyxso.cyworld.com/PopUpLogin.sk?loginstr=direct&redirection="+encodeURIComponent(strLoginURL)+"&pop=direct";
+                        var se = document.createElement('script');
+                        se.type = "text/javascript";
+                        se.src = "../csp.cyworld.com/js/sp.js";
+                        se.id = "empathyButtonJS";
+                        document.getElementsByTagName('head')[0].appendChild(se);
+                    }
+                </script>
+            <div class="post_share_area f_clear">
+                <h3>공유하기 버튼</h3>
+                <table class="post_share_button" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td class="button">
+
+                               <div class="post_share_btnitem spready sprecommend" sptype="social_mod_hor" spkey="3ce2107c154063a58bdc68d100d73e2d" ckey="" spsvccode="250" spfolderno="" spitemseq="" spurl="http://calmglow.egloos.com/4637329" sptitle="우분투 11.10의 문제" spthumbnail="" spsummary="우분투를 메인 OS로 사용한지 벌써 2년이 넘어간다. 2년동안 개인 용도로 뿐만 아니라 회사용으로도 그 수없이 많은 프리젠테이션과 제안작업등을 꿋꿋하게 우분투로 대처해왔던 나도 놀라울 그 끈기는 과연 어디에서 왔을까?지금에 와서 생각해보면 참으로 끈질긴 우분투 사랑이 아닐 수 없다. 개발업무시에는 참으로 편한게 우분투이지만 그외의 작업들에서 우분투는 결..." spismobile="0" spwritertid="" spwriterbid="" spwriternm="Calmglow (이글루스)"  spcategory=" Open and Social" sprecommendee_id="" sprecommendee_nm="" sptag1="" sptag2="" sptag3="" sptag4=""></div>
+                               <div class="post_share_btnitem">
+                                    <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://calmglow.egloos.com/4637329" data-count="horizontal" data-via="">Tweet</a><script type="text/javascript" src="../platform.twitter.com/widgets.js"></script>
+                                </div>
+                                <div class="post_share_btnitem">
+                                    <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fcalmglow.egloos.com%2F4637329&amp;layout=button_count&amp;show_faces=false&amp;width=110&amp;action=like&amp;font=trebuchet+ms&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none;overflow:hidden;width:110px;height:21px;" allowTransparency="true"></iframe>
+                                </div>
+                            </td><td class="blank">&nbsp;</td>
+                    </tr>
+                </table>
+            </div><div class="daumview_widget" style="margin-top:15px; text-align:center"><embed src="http://v.daum.net/static/recombox2.swf?nurl=http://calmglow.egloos.com/4637329" quality="high" bgcolor="#ffffff" width="400" height="58" type="application/x-shockwave-flash"></embed></div>
+		<div class="post_meta_area f_clear">
+		    <h3>포스트 메타 정보</h3>       
+		    <div class="post_meta_menu">       
+			
+		    
+                    <h4 id="tab1_4637329" onclick="PostMeta.show_tab(1,4637329,'b0015706')" class="post_meta_title1_on">퍼블리싱 및 추천</h4>         
+                    <ul id="tab_c1_4637329" class="post_meta_content">      
+                            <li><strong>내보내기</strong>       
+                                <ul><li>밸리 : <a href= "http://valley.egloos.com/theme/technology" target= "_blank" > IT</a >  <em class="date">2011/10/23 00:52</em></li><li>태그 : <a href= "http://valley.egloos.com/tag/우분투" target= "_blank" > 우분투</a ><li>Daum View : <a href="http://v.daum.net/ch/it">IT과학 > IT</a> <em class="date">2011/12/25 20:51</em></li>		           
+                                </ul>
+                            </li></ul>
+		    <h4 id="tab2_4637329" onclick="PostMeta.show_tab(2,4637329,'b0015706',15)" class="post_meta_title2">같은 카테고리의 글</h4>
+        <ul id="tab_c2_4637329" class="post_meta_content" style="display:none;"></ul>
+		    </div>             
+		</div>
+		
+                </div>
+                <div class="post_footer_area f_clear">
+                  <div class="post_tail">
+                    <a href="#trb" onclick="feedbackview('post_trackback', 'b0015706', 4637329, 0, 0);return false;" class="post_tail_trbk">트랙백(<span id="trbcnt4637329" class="count">0</span>)</a><span class="post_tail_ping">핑백(<span id="pingcnt4637329" class="count">1</span>)</span><span class="post_tail_cmmt"> 덧글(<span id="cmtcnt4637329" class="count">18</span>)</span>
+                  </div>
+                  <div class="post_admin">
+                    
+                  </div>
+                </div>
+                <hr class="line" />
+                 <div class="post_link">
+            <div class="post_trackback" id="trackback_4637329"></div> <div class="post_pingback" id="pingback_4637329">
+            
+            <h3>핑백</h3>
+            <ul class="pingback_list">
+              <li><h4><a href="4663061.html" target="_blank">calmglow (최진호) : 우분투 테스트 커뮤니티 활동하기</a> <span class="pingback_datetime">2012-01-05 22:41:58</span> <span class="pingback_link"><a href="4637329.html#4637329" title="#">#</a></span></h4> <p class="pingback_desc">... 니다. 언제나 마찬가지로 작년 10월에도 저는 기쁜 마음으로 우분투 11.10을 설치하였습니다. 그런데 화가 나서 어쩔 줄 모르게 되었습니다. <u>한글 문제 때문에 제대로 글을 쓸 수조차 없었던 거죠</u>. 정확히 말하면 ibus라는 한글 입력 시스템이 유독 Unity라는 우분투 전용 윈도우에서만 발생하는 버그입니다. 그래서 그동안 win ... <a href="4663061.html" target="_blank" class="more">more</a></p>
+              </li>
+            </ul>
+          </div> <div class="post_comment" id="comment_4637329">
+            
+            <h3>덧글</h3> 
+            <ul class="comment_list">
+              <li class="comment_item">
+                <h4 class="comment_writer_info">
+                  <span class="comment_gravatar"><img src="../md.egloos.com/img/eg/profile_anonymous.jpg" alt="" /></span> <span class="comment_writer">DD</span> <span class="comment_datetime" title="2011/10/23 02:25">2011/10/23 02:25</span> <span class="comment_link"><a name="13945514" href="4637329.html#13945514" title="#">#</a> </span> <span class="comment_admin"> <a href="#" onclick="delComment_view('b0015706','4637329','13945514','','','0'); return false;">삭제</a>  <a href="#" onclick="replyComment('replyform4637329','4637329','13945514',5,'','http://', '', '4637329.html#cmt','','0'); return false;" title="답글">답글</a> </span> <span class="comment_security"></span>
+                </h4><div id="comment_13945514">유가 고쳐볼 요량은 없는거야?징징징 ㅋ<br />불만보니 한글문제고만.ㅋ 양넘들이 알아서 만드는건데 왜 한글까지 신경써야하지?</div> <div id="reply4637329_13945514" class="comment_write reply_write" style="display:none;"></div>
+              </li><li class="comment_reply">
+                <h4 class="comment_writer_info">
+                  <span class="comment_gravatar"><a href="http://mongmongee.egloos.com/" title="http://mongmongee.egloos.com"><img src="../profile.egloos.net/b0056031_50.jpg" alt="" /></a></span> <span class="comment_writer"><a href="http://mongmongee.egloos.com/" title="http://mongmongee.egloos.com" target="_blank">몽몽이</a></span> <span class="comment_datetime" title="2011/10/23 10:31">2011/10/23 10:31</span> <span class="comment_link"><a name="13945514.01" href="4637329.html#13945514.01" title="#">#</a> </span> <span class="comment_admin"></span> <span class="comment_security"></span>
+                </h4><div id="comment_13945514.01">아 그럼 만들지를 말든가<br />한국넘이 만들면 영어는 신경 안 써도 되는건가?<br />그런 식이면 웹 브라우저는 한국넘이 만들어서 니가 이렇게 한글로 똥을 달고 있냐</div> 
+              </li><li class="comment_item">
+                <h4 class="comment_writer_info">
+                  <span class="comment_gravatar"><img src="../md.egloos.com/img/eg/profile_anonymous.jpg" alt="" /></span> <span class="comment_writer">김</span> <span class="comment_datetime" title="2011/10/23 02:53">2011/10/23 02:53</span> <span class="comment_link"><a name="13945522" href="4637329.html#13945522" title="#">#</a> </span> <span class="comment_admin"> <a href="#" onclick="delComment_view('b0015706','4637329','13945522','','','0'); return false;">삭제</a>  <a href="#" onclick="replyComment('replyform4637329','4637329','13945522',5,'','http://', '', '4637329.html#cmt','','0'); return false;" title="답글">답글</a> </span> <span class="comment_security"></span>
+                </h4><div id="comment_13945522">전 그래서 unity를 날렸습니다.</div> <div id="reply4637329_13945522" class="comment_write reply_write" style="display:none;"></div>
+              </li><li class="comment_reply">
+                <h4 class="comment_writer_info">
+                  <span class="comment_gravatar"><img src="../md.egloos.com/img/eg/profile_anonymous.jpg" alt="" /></span> <span class="comment_writer">김</span> <span class="comment_datetime" title="2011/10/23 02:54">2011/10/23 02:54</span> <span class="comment_link"><a name="13945522.01" href="4637329.html#13945522.01" title="#">#</a> </span> <span class="comment_admin"> <a href="#" onclick="delComment_view('b0015706','4637329','13945522.01','','','0'); return false;">삭제</a> </span> <span class="comment_security"></span>
+                </h4><div id="comment_13945522.01">ibus 와 unity가 충돌이 원인이라는 인터넷 게시물을 읽고 unity를 삭제했네요..</div> 
+              </li><li class="comment_item">
+                <h4 class="comment_writer_info">
+                  <span class="comment_gravatar"><img src="../md.egloos.com/img/eg/profile_anonymous.jpg" alt="" /></span> <span class="comment_writer">...</span> <span class="comment_datetime" title="2011/10/23 03:05">2011/10/23 03:05</span> <span class="comment_link"><a name="13945527" href="4637329.html#13945527" title="#">#</a> </span> <span class="comment_admin"> <a href="#" onclick="delComment_view('b0015706','4637329','13945527','','','0'); return false;">삭제</a>  <a href="#" onclick="replyComment('replyform4637329','4637329','13945527',5,'','http://', '', '4637329.html#cmt','','0'); return false;" title="답글">답글</a> </span> <span class="comment_security"></span>
+                </h4><div id="comment_13945527">괜히 11.10 왔더니 돌아가지도 못합니다. ㅋㅋ차라리 그놈3에 적응해 보는게 좋을지도요</div> <div id="reply4637329_13945527" class="comment_write reply_write" style="display:none;"></div>
+              </li><li class="comment_item">
+                <h4 class="comment_writer_info">
+                  <span class="comment_gravatar"><img src="../md.egloos.com/img/eg/profile_anonymous.jpg" alt="" /></span> <span class="comment_writer">ㅋㅋ</span> <span class="comment_datetime" title="2011/10/23 03:55">2011/10/23 03:55</span> <span class="comment_link"><a name="13945539" href="4637329.html#13945539" title="#">#</a> </span> <span class="comment_admin"> <a href="#" onclick="delComment_view('b0015706','4637329','13945539','','','0'); return false;">삭제</a>  <a href="#" onclick="replyComment('replyform4637329','4637329','13945539',5,'','http://', '', '4637329.html#cmt','','0'); return false;" title="답글">답글</a> </span> <span class="comment_security"></span>
+                </h4><div id="comment_13945539">xfce로 쓰시면 됩니다. gnome 3이 되면서 이상해졌어요.</div> <div id="reply4637329_13945539" class="comment_write reply_write" style="display:none;"></div>
+              </li><li class="comment_reply">
+                <h4 class="comment_writer_info">
+                  <span class="comment_gravatar"><a href="index.html" title="http://calmglow.egloos.com"><img src="../profile.egloos.net/b0015706_50.jpg" alt="" /></a></span> <span class="comment_writer"><a href="index.html" title="http://calmglow.egloos.com" target="_blank">Calmglow</a></span> <span class="comment_datetime" title="2011/10/23 12:03">2011/10/23 12:03</span> <span class="comment_link"><a name="13945539.01" href="4637329.html#13945539.01" title="#">#</a> </span> <span class="comment_admin"></span> <span class="comment_security"></span>
+                </h4><div id="comment_13945539.01">ㅜㅜ 예 알고 있습니다. 대안은 많죠. 그걸 몰라서가 아니라, 언제까지 이런 불안함에 대처해야만 하는 만년 불안OS의 딱지를 떼지 못하는 우분투에 대한 하소연이죠.</div> 
+              </li><li class="comment_item">
+                <h4 class="comment_writer_info">
+                  <span class="comment_gravatar"><img src="../md.egloos.com/img/eg/profile_anonymous.jpg" alt="" /></span> <span class="comment_writer"><a href="http://jazz.pe.kr/" title="http://jazz.pe.kr" target="_blank">아름프로</a></span> <span class="comment_datetime" title="2011/10/23 09:45">2011/10/23 09:45</span> <span class="comment_link"><a name="13945633" href="4637329.html#13945633" title="#">#</a> </span> <span class="comment_admin"> <a href="#" onclick="delComment_view('b0015706','4637329','13945633','','','0'); return false;">삭제</a>  <a href="#" onclick="replyComment('replyform4637329','4637329','13945633',5,'','http://', '', '4637329.html#cmt','','0'); return false;" title="답글">답글</a> </span> <span class="comment_security"></span>
+                </h4><div id="comment_13945633">노트북 새로 장만하며 리눅스 계열로 넘어가 사용하려 야심차게 준비했는데 ..<br />요즘 게임밍 노트북이라 불이우는 NVidia 계열 그래픽카드를 가진 넘에는 제대로 설치도 안되네. <br />시간과 정성을 더 들인다면 어찌어찌 해볼 여력은 있을지도 모르겠지만, 이 정도의 시간을 투자해야만 하는가?<br />라는 생각에 나도 화가 좀 많이나서 이번 11.10에서 나도 과감히 ubuntu 버렸다네.. 마음에 안들어 ~~ 힝 ~~</div> <div id="reply4637329_13945633" class="comment_write reply_write" style="display:none;"></div>
+              </li><li class="comment_reply">
+                <h4 class="comment_writer_info">
+                  <span class="comment_gravatar"><a href="index.html" title="http://calmglow.egloos.com"><img src="../profile.egloos.net/b0015706_50.jpg" alt="" /></a></span> <span class="comment_writer"><a href="index.html" title="http://calmglow.egloos.com" target="_blank">Calmglow</a></span> <span class="comment_datetime" title="2011/10/23 12:04">2011/10/23 12:04</span> <span class="comment_link"><a name="13945633.01" href="4637329.html#13945633.01" title="#">#</a> </span> <span class="comment_admin"></span> <span class="comment_security"></span>
+                </h4><div id="comment_13945633.01">역시나 우분투도 잉여력이 넘치는 사람들의 OS가 아닌가 싶습니다.</div> 
+              </li><li class="comment_item">
+                <h4 class="comment_writer_info">
+                  <span class="comment_gravatar"><img src="../md.egloos.com/img/eg/profile_anonymous.jpg" alt="" /></span> <span class="comment_writer">dd</span> <span class="comment_datetime" title="2011/10/23 17:19">2011/10/23 17:19</span> <span class="comment_link"><a name="13945900" href="4637329.html#13945900" title="#">#</a> </span> <span class="comment_admin"> <a href="#" onclick="delComment_view('b0015706','4637329','13945900','','','0'); return false;">삭제</a>  <a href="#" onclick="replyComment('replyform4637329','4637329','13945900',5,'','http://', '', '4637329.html#cmt','','0'); return false;" title="답글">답글</a> </span> <span class="comment_security"></span>
+                </h4><div id="comment_13945900">한글 문제는 uim으로 해결했습니다. 우분투가 참 좋긴 한데 이런 사소한 부분을 해결하는게 쉽지가 않더군요. 윈도우에 비해 사용하는 한국 유저들도 적다 보니 이런 문제들에 대해 해결할 수 있는 방법을 찾기도 쉽지 않아 난해한 영어를 해석해야 하고.. 그런 부분만 고쳐진다면 참 좋을텐데 말이죠.</div> <div id="reply4637329_13945900" class="comment_write reply_write" style="display:none;"></div>
+              </li><li class="comment_reply">
+                <h4 class="comment_writer_info">
+                  <span class="comment_gravatar"><a href="index.html" title="http://calmglow.egloos.com"><img src="../profile.egloos.net/b0015706_50.jpg" alt="" /></a></span> <span class="comment_writer"><a href="index.html" title="http://calmglow.egloos.com" target="_blank">Calmglow</a></span> <span class="comment_datetime" title="2011/10/23 20:53">2011/10/23 20:53</span> <span class="comment_link"><a name="13945900.01" href="4637329.html#13945900.01" title="#">#</a> </span> <span class="comment_admin"></span> <span class="comment_security"></span>
+                </h4><div id="comment_13945900.01">그런 부분이란게 너무나 기본적인 부분들이라서요.. 어떤 문화라고 봅니다. 리눅스가 가진 문화. 잉여롭게 무언가를 하기에는 참 즐겁지만 그것으로 진지하게 무언가를 하려면 생산성이 너무 떨어지는.. uim쓰면 문제는 없지만 그래도 몇몇 앱과 uim으로 인한 충돌이 있네요. uim설치후 unity launcher에서 키보드 입력시 무언가 이상한 현상이 발생하네요.</div> 
+              </li><li class="comment_item">
+                <h4 class="comment_writer_info">
+                  <span class="comment_gravatar"><img src="../md.egloos.com/img/eg/profile_anonymous.jpg" alt="" /></span> <span class="comment_writer">승네군</span> <span class="comment_datetime" title="2011/10/24 01:08">2011/10/24 01:08</span> <span class="comment_link"><a name="13946277" href="4637329.html#13946277" title="#">#</a> </span> <span class="comment_admin"> <a href="#" onclick="delComment_view('b0015706','4637329','13946277','','','0'); return false;">삭제</a>  <a href="#" onclick="replyComment('replyform4637329','4637329','13946277',5,'','http://', '', '4637329.html#cmt','','0'); return false;" title="답글">답글</a> </span> <span class="comment_security"></span>
+                </h4><div id="comment_13946277">리눅스나 오픈소스가 그거아닌가요.. (요즘에야 마일스톤을 잘 정해서 왠만하면 맞추려고 하고 있다지만..)<br /><br />초기 개발 -&gt; 버그가 몇개 있지만, 릴리즈 -&gt; 잔존 버그를 fix후, (버그가 있는)새로운 기능을 추가하여 릴리즈 -&gt; 마지막거 반복.</div> <div id="reply4637329_13946277" class="comment_write reply_write" style="display:none;"></div>
+              </li><li class="comment_item">
+                <h4 class="comment_writer_info">
+                  <span class="comment_gravatar"><img src="../md.egloos.com/img/eg/profile_anonymous.jpg" alt="" /></span> <span class="comment_writer">richpapa</span> <span class="comment_datetime" title="2011/10/27 11:31">2011/10/27 11:31</span> <span class="comment_link"><a name="13949469" href="4637329.html#13949469" title="#">#</a> </span> <span class="comment_admin"> <a href="#" onclick="delComment_view('b0015706','4637329','13949469','','','0'); return false;">삭제</a>  <a href="#" onclick="replyComment('replyform4637329','4637329','13949469',5,'','http://', '', '4637329.html#cmt','','0'); return false;" title="답글">답글</a> </span> <span class="comment_security"></span>
+                </h4><div id="comment_13949469">unity는 어떻게 삭제해야 하나요? 일일이 찾아서 해야하는 것은 아닌거죠? 그리고 기존으로 돌아가려면 어떻게 해야 하나요? 초보에게 빛을 주세요.</div> <div id="reply4637329_13949469" class="comment_write reply_write" style="display:none;"></div>
+              </li><li class="comment_reply">
+                <h4 class="comment_writer_info">
+                  <span class="comment_gravatar"><a href="index.html" title="http://calmglow.egloos.com"><img src="../profile.egloos.net/b0015706_50.jpg" alt="" /></a></span> <span class="comment_writer"><a href="index.html" title="http://calmglow.egloos.com" target="_blank">Calmglow</a></span> <span class="comment_datetime" title="2011/10/27 14:25">2011/10/27 14:25</span> <span class="comment_link"><a name="13949469.01" href="4637329.html#13949469.01" title="#">#</a> </span> <span class="comment_admin"></span> <span class="comment_security"></span>
+                </h4><div id="comment_13949469.01">굳이 삭제하지 마시구요. 그냥 처음 로그인시에 옵션을 통해 Unity2D쓰시면 별 문제는 없을겁니다. 아님, 기존으로라면 그냥 10.10이나 11.04쓰시면 어떨까요? 아님 Gnome 3.0을 쓰는 방법이 있죠. sudo apt-get install gnome-shell 이걸 터미널창에서 실행하시면 되실듯.</div> 
+              </li><li class="comment_item">
+                <h4 class="comment_writer_info">
+                  <span class="comment_gravatar"><img src="../md.egloos.com/img/eg/profile_anonymous.jpg" alt="" /></span> <span class="comment_writer">커널해커</span> <span class="comment_datetime" title="2011/10/31 18:28">2011/10/31 18:28</span> <span class="comment_link"><a name="13953373" href="4637329.html#13953373" title="#">#</a> </span> <span class="comment_admin"> <a href="#" onclick="delComment_view('b0015706','4637329','13953373','','','0'); return false;">삭제</a>  <a href="#" onclick="replyComment('replyform4637329','4637329','13953373',5,'','http://', '', '4637329.html#cmt','','0'); return false;" title="답글">답글</a> </span> <span class="comment_security"></span>
+                </h4><div id="comment_13953373">저역시도 11.10으로 업데이트 하면서 고민이 많았다는..<br /><br />역시 우분투가 그다지 만만치 않다는 느낌입니다. ㅡㅡa; 우분투 11.10의 얼터네이션 버전을 받아서 소스를 보고 있지만,, 우분투를 버리고, 센토스로 다시 가야할듯 합니다.<br /><br />컥..</div> <div id="reply4637329_13953373" class="comment_write reply_write" style="display:none;"></div>
+              </li><li class="comment_reply">
+                <h4 class="comment_writer_info">
+                  <span class="comment_gravatar"><a href="index.html" title="http://calmglow.egloos.com"><img src="../profile.egloos.net/b0015706_50.jpg" alt="" /></a></span> <span class="comment_writer"><a href="index.html" title="http://calmglow.egloos.com" target="_blank">Calmglow</a></span> <span class="comment_datetime" title="2011/10/31 22:09">2011/10/31 22:09</span> <span class="comment_link"><a name="13953373.01" href="4637329.html#13953373.01" title="#">#</a> </span> <span class="comment_admin"></span> <span class="comment_security"></span>
+                </h4><div id="comment_13953373.01">에효 저도 우분투에 애정이 넘치는 사람이지만 일단 살고 봐야죠. 일반적인 용도나 업무용으로 도저히 불편해서요.. LTE버전 나오면 기대해봐야겠네요.</div> 
+              </li><li class="comment_item">
+                <h4 class="comment_writer_info">
+                  <span class="comment_gravatar"><img src="../md.egloos.com/img/eg/profile_anonymous.jpg" alt="" /></span> <span class="comment_writer">ujhone</span> <span class="comment_datetime" title="2011/11/12 10:50">2011/11/12 10:50</span> <span class="comment_link"><a name="13964488" href="4637329.html#13964488" title="#">#</a> </span> <span class="comment_admin"> <a href="#" onclick="delComment_view('b0015706','4637329','13964488','','','0'); return false;">삭제</a>  <a href="#" onclick="replyComment('replyform4637329','4637329','13964488',5,'','http://', '', '4637329.html#cmt','','0'); return false;" title="답글">답글</a> </span> <span class="comment_security"></span>
+                </h4><div id="comment_13964488">저도 유니티의 버그를 보면서 뒤집어 졌습니다.<br />업무용으로 LTS를 사용해야 하는 이유를 알겠더군요 내년 버젼이 LTS입니다.<br />12.04를 LTS로 낸다고 하더군요<br /><br />사실 10.04가 LTS인데 LTS이전에는 버그 덩어리가 맞죠  <br />고르고 고른 LTS도 벌써 릴리즈 3까지 나왔습죠... <br />제가 보기에는 우분투의 배포 목적같은 기본 시각에서  다시 접근하셔야 네요....</div> <div id="reply4637329_13964488" class="comment_write reply_write" style="display:none;"></div>
+              </li><li class="comment_reply">
+                <h4 class="comment_writer_info">
+                  <span class="comment_gravatar"><a href="index.html" title="http://calmglow.egloos.com"><img src="../profile.egloos.net/b0015706_50.jpg" alt="" /></a></span> <span class="comment_writer"><a href="index.html" title="http://calmglow.egloos.com" target="_blank">Calmglow</a></span> <span class="comment_datetime" title="2011/11/14 00:41">2011/11/14 00:41</span> <span class="comment_link"><a name="13964488.01" href="4637329.html#13964488.01" title="#">#</a> </span> <span class="comment_admin"></span> <span class="comment_security"></span>
+                </h4><div id="comment_13964488.01">예 저도 그렇게 생각하기로 했습니다. 잠깐 윈도우 쓰고 내년부터 다시 12.04로 시작하려구요. 이제 다시 10.04 쓰려니 뭔가 안내키네요.</div> 
+              </li>
+            </ul>
+<div class="comment_write">
+   <fieldset>
+       <legend>댓글 입력 영역</legend>
+   <form id="cmtform4637329" name="cmtform4637329" target="cmtviewfrm" action="http://calmglow.egloos.com/exec/egloo_comment_exec.php" method="post" style="margin:0px;" onsubmit="return runComment(this,5);">
+       <input type="hidden" name="eid" value="b0015706" />
+       <input type="hidden" name="srl" value="4637329" />
+       <input type="hidden" name="tid" value="" />
+       <input type="hidden" name="subject" value="우분투 11.10의 문제" />       <input type="hidden" name="cmtsrl" value="" />
+       <input type="hidden" name="xhtml" value="" />
+       <input type="hidden" name="adview" value="" />
+       <input type="hidden" name="ismenu" value="0" />
+       <input type="hidden" name="ismain" value="" />
+
+        <div class="comment_info">
+            <span class="comment_name">
+                <label for="cmt_name">닉네임</label>
+                <input type="text" id="name" name="name" class="name" size="10" maxlength="10" value="" />
+            </span>
+            <span class="comment_passwd">
+                <label for="cmt_passwd">비밀번호</label>
+                <input type="password" id="passwd" name="passwd" class="passwd" size="10" maxlength="10" value="" onfocus="document.cmtform4637329.tid.value='NdMpm7VJfLZWgBm1EBvi7of2fyH68YeidgJ8Q81YES0.'" />
+            </span>
+            <span class="comment_blog">
+                <label for="cmt_blog">블로그</label>
+                <input type="text" id="homepage" name="homepage" class="blog" value="http://" size="20" />
+            </span>
+            <span class="comment_login"> 
+                <a href="http://sec.egloos.com/login.php?returnurl=http://calmglow.egloos.com/4637329#cmt" title="로그인">로그인</a>
+            </span>
+        </div>
+       <textarea id="comment" name="comment" class="comment_field" title="덧글 입력 영역" rows="5" cols="50"></textarea>
+       <div class="comment_btn f_clear">
+           <input type="checkbox" id="no_open" name="security" /> <label for="no_open">비공개</label>
+           <input type="image" value="댓글등록" src="../md.egloos.net/img/eg/btn_comment.gif" class="comment_submit" />
+       </div>
+   </form>
+   <form id="replyform4637329" name="replyform4637329" target="cmtviewfrm" action="http://calmglow.egloos.com/exec/egloo_comment_exec.php" method="post" style="margin:0px;">
+       <input type="hidden" name="eid" value="b0015706" />
+       <input type="hidden" name="srl" value="4637329" />
+       <input type="hidden" name="tid" value="NdMpm7VJfLZWgBm1EBvi7of2fyH68YeidgJ8Q81YES0." />
+       <input type="hidden" name="subject" value="우분투 11.10의 문제" />
+       <input type="hidden" name="cmtsrl" value="" />
+       <input type="hidden" name="name" value="" />
+       <input type="hidden" name="homepage" value="" />
+       <input type="hidden" name="passwd" value="" />
+       <input type="checkbox" name="security" value="" style="display:none;" />
+       <input type="hidden" name="comment" value="" />
+       <input type="hidden" name="ismenu" value="0" />
+       <input type="hidden" name="ismain" value="" />
+       <input type="hidden" name="xhtml" value="" />
+       <input type="hidden" name="adview" value="" />
+       <input type="hidden" name="page" id="replyform_page" value="1" />
+   </form>
+   <form id="editform4637329" name="editform4637329" target="cmtviewfrm" action="http://calmglow.egloos.com/exec/egloo_editcomment_exec.php" method="post" style="margin:0px;">
+       <input type="hidden" name="eid" value="b0015706" />
+       <input type="hidden" name="srl" value="4637329" />
+       <input type="hidden" name="tid" value="NdMpm7VJfLZWgBm1EBvi7of2fyH68YeidgJ8Q81YES0." />
+       <input type="hidden" name="subject" value="우분투 11.10의 문제" />
+       <input type="hidden" name="cmtsrl" value="" />
+       <input type="hidden" name="writer" value="" />
+       <input type="hidden" name="name" value="" />
+       <input type="hidden" name="homepage" value="" />
+       <input type="hidden" name="passwd" value="" />
+       <input type="checkbox" name="security" value="" style="display:none;" />
+       <input type="hidden" name="comment" value="" />
+       <input type="hidden" name="ismenu" value="0" />
+       <input type="hidden" name="ismain" value="" />
+       <input type="hidden" name="xhtml" value="" />
+       <input type="hidden" name="adview" value="" />
+       <input type="hidden" name="page" id="editform_page" value="1" />
+   </form>
+   </fieldset>
+</div>  
+          </div>
+          </div> 
+              
+              
+              
+              
+            </div>
+          </div>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <div class="post_navi">
+            
+            <div class="prev"><a href="4653131.html"><span class="txt">다음글 : </span>IBM의 진짜 장점</a></div><div class="next"><a href="4632285.html"><span class="txt">이전글 : </span>구글의 임원들은 구글 플러스를 사용하지 않는다</a></div> 
+          </div>
+          
+        </div>
+        <hr class="line" />
+        
+        <div id="section_widemenu2" class="widemenu"></div>
+        <hr class="line" />
+      </div>
+      
+      <div id="section_sidebar1" class="column">
+        <div class="widget menu_profile">
+          
+          <h3>프로필</h3>
+          <div class="widget_content">
+            <div class="profile_image">
+              <a href="javascript:void(0);" onclick="Control.Modal.openDialog(this, event, '../pds21.egloos.com/logo/201303/15/06/b0015706.png');"><img src="../pds21.egloos.com/logo/201303/15/06/b0015706.png" width="160" height="129" border="0" alt="" /></a>
+            </div>
+            <div class="profile_desc">
+              밥값하는 IT 아키텍트가 되기 위해 노력중입니다.
+연락처: calmglow at gmail.com<span class="profile_usernick fn"><span class="by">by</span> Calmglow</span>
+            </div>
+            <div class="profile_prize">
+               <a href="http://eskimos.egloos.com/3750" title="이글루스 피플"><img src="../md.egloos.net/img/eg/newsletter_user.gif" width="15" height="15" border="0" style="vertical-align: text-bottom;" alt="이글루스 피플" /></a>
+            </div>
+            <div class="bg_profile"></div>
+          </div>
+        </div>
+        <div class="widget menu_category">
+          
+          <h3>카테고리</h3>
+          <ul class="widget_content">
+            <li class=""><a href="category/IT.html">IT</a><span class="count">(109)</span>
+            </li><li class=""><a href="category/Programming.html">Programming</a><span class="count">(16)</span>
+            </li><li class=""><a href="category/%20Open%20and%20Social.html"> Open and Social</a><span class="count">(22)</span>
+            </li><li class=""><a href="category/Enterprise.html">Enterprise</a><span class="count">(136)</span>
+            </li><li class=""><a href="category/Mobile.html">Mobile</a><span class="count">(3)</span>
+            </li><li class=""><a href="category/Art%20and%20Life.html">Art and Life</a><span class="count">(139)</span>
+            </li>
+          </ul>
+        </div>
+        <div class="widget menu_archive" id="widget_menu_archive">
+          
+          <h3>이전글 목록</h3>
+          <div class="widget_content">
+            <ul>
+              <li><a href="archives/2013/05.html">2013년 05월</a><span class="count">(1)</span>
+              </li><li><a href="archives/2013/04.html">2013년 04월</a><span class="count">(1)</span>
+              </li><li><a href="archives/2013/03.html">2013년 03월</a><span class="count">(3)</span>
+              </li><li><a href="archives/2013/02.html">2013년 02월</a><span class="count">(2)</span>
+              </li><li><a href="archives/2012/12.html">2012년 12월</a><span class="count">(2)</span>
+              </li>
+            </ul>
+            <div class="allview">
+              <a href="archives.html">more...</a>
+            </div>
+          </div>
+        </div>
+        <div class="widget menu_comment" id="widget_menu_comment">
+          
+          <h3>최근 덧글</h3>
+          <div class="widget_content">
+            <ul>
+              <li>
+                <span class="desc"><a href="4799567.html#14584932">이 포럼은 굉장합니다. 좋은 해설 모두</a></span><em class="fn">by 苗</em> <em class="date">8/21</em>
+              </li><li>
+                <span class="desc"><a href="4792335.html#14547086">어.....
+
+&lt;다수의 사용자는 10개 이하의 앱만을 사용하고 대부분의..</a></span><em class="fn">by 기보</em> <em class="date">5/7</em>
+              </li><li>
+                <span class="desc"><a href="4786276.html#14433830">저도 구글이 리더 서비스를 포기한다고 했을 때 여러가지 생각을 했..</a></span><em class="fn">by kkamagui</em> <em class="date">8/15</em>
+              </li><li>
+                <span class="desc"><a href="4242652.html#14432226">상당히 늦었지만, 지금은 상당히 리눅스로 대세가 기울었다 볼 수 ..</a></span><em class="fn">by  JR </em> <em class="date">8/12</em>
+              </li><li>
+                <span class="desc"><a href="4792335.html#14404815">통찰력 있는 좋은 글입니다. 잘 봤습니다.</a></span><em class="fn">by 슈니</em> <em class="date">6/25</em>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="widget menu_trackback">
+          
+          <h3>최근 트랙백</h3>
+          <div class="widget_content">
+            <ul>
+              <li>
+                <span class="desc"><a href="4782030.html#3780893">replica Emporio Armani</a></span><em class="fn">http://www.asmallheaven.ne..</em> <em class="date">10/12</em>
+              </li><li>
+                <span class="desc"><a href="4782030.html#3780888">http://www.asmallheaven.net/replica-hublot-disocunt-..</a></span><em class="fn">replica hublot watches Rol..</em> <em class="date">10/12</em>
+              </li><li>
+                <span class="desc"><a href="4782030.html#3780885">replica Corum</a></span><em class="fn">replica breitling Chronomat ..</em> <em class="date">10/12</em>
+              </li><li>
+                <span class="desc"><a href="4078991.html#3331143">fake replica breitling</a></span><em class="fn">CeCe McDonald killing trial ...</em> <em class="date">09/27</em>
+              </li><li>
+                <span class="desc"><a href="4078991.html#3331119">replica tag heuer watches</a></span><em class="fn">Charles Trifilette</em> <em class="date">09/27</em>
+              </li>
+            </ul>
+            <div class="allview"></div>
+          </div>
+        </div>
+        <div class="widget menu_rss">
+          
+          <h3>RSS</h3>
+          <div class="widget_content">
+            <a href="http://rss.egloos.com/blog/calmglow" target="_blank"><img src="../md.egloos.com/skn/tpl/menu_rss/1/rss_practika_64.png" alt="RSS" /></a>
+          </div>
+        </div>
+        <div class="widget menu_tagcloud">
+          
+          <h3>태그</h3>
+          <div class="widget_content">
+            <a href="tag/html5.html" rel="tag" class="tag_level_1">html5</a>
+<a href="tag/%eb%af%b8%eb%9e%98.html" rel="tag" class="tag_level_1">미래</a>
+<a href="tag/%ec%98%81%ec%83%9d.html" rel="tag" class="tag_level_1">영생</a>
+<a href="tag/%ec%b4%88%eb%93%b1%ea%b5%90%ec%9c%a1.html" rel="tag" class="tag_level_1">초등교육</a>
+<a href="tag/Ubuntu.html" rel="tag" class="tag_level_1">Ubuntu</a>
+<a href="tag/ebook.html" rel="tag" class="tag_level_1">ebook</a>
+<a href="tag/googleappengine.html" rel="tag" class="tag_level_1">googleappengine</a>
+<a href="tag/%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c.html" rel="tag" class="tag_level_2">클라우드</a>
+<a href="tag/webapp.html" rel="tag" class="tag_level_1">webapp</a>
+<a href="tag/REST.html" rel="tag" class="tag_level_2">REST</a>
+<a href="tag/HUD.html" rel="tag" class="tag_level_1">HUD</a>
+<a href="tag/%eb%84%a5%ec%84%bc.html" rel="tag" class="tag_level_1">넥센</a>
+<a href="tag/%ec%98%a4%ec%9c%a4.html" rel="tag" class="tag_level_1">오윤</a>
+<a href="tag/%ec%98%a4%ed%94%88%ec%86%8c%ec%8a%a4.html" rel="tag" class="tag_level_1">오픈소스</a>
+<a href="tag/%ec%b0%bd%ec%9d%98%eb%a0%a5.html" rel="tag" class="tag_level_1">창의력</a>
+<a href="tag/clien.html" rel="tag" class="tag_level_1">clien</a>
+<a href="tag/scratch.html" rel="tag" class="tag_level_1">scratch</a>
+<a href="tag/%ec%9b%b9%ec%95%b1.html" rel="tag" class="tag_level_1">웹앱</a>
+<a href="tag/%ec%9a%b0%eb%b6%84%ed%88%ac.html" rel="tag" class="tag_level_3">우분투</a>
+<a href="tag/performance.html" rel="tag" class="tag_level_1">performance</a>
+<a href="tag/%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8.html" rel="tag" class="tag_level_1">프로젝트</a>
+<a href="tag/%ed%81%b4%eb%a6%ac%ec%95%99.html" rel="tag" class="tag_level_1">클리앙</a>
+<a href="tag/groovy.html" rel="tag" class="tag_level_1">groovy</a>
+<a href="tag/WAS%ed%8a%9c%eb%8b%9d.html" rel="tag" class="tag_level_1">WAS튜닝</a>
+<a href="tag/mwc.html" rel="tag" class="tag_level_1">mwc</a>
+<a href="tag/%eb%aa%a8%eb%b0%94%ec%9d%bc%ec%95%b1%ed%92%88%ec%a7%88%ea%b2%80%ec%a6%9d.html" rel="tag" class="tag_level_1">모바일앱품질검증</a>
+<a href="tag/%ec%9d%b4%eb%b6%81.html" rel="tag" class="tag_level_1">이북</a>
+<a href="tag/mwc2013.html" rel="tag" class="tag_level_1">mwc2013</a>
+<a href="tag/SNS.html" rel="tag" class="tag_level_1">SNS</a>
+<a href="tag/gae.html" rel="tag" class="tag_level_1">gae</a>
+
+            <div class="allview">
+              <a href="tag.html">태그 전체보기</a>
+            </div>
+          </div>
+        </div>
+        
+        <div>
+          <div class="widget widget_M00000002" style="margin-top:0;margin-bottom:0;padding-top:0;padding-bottom:0;">
+   <h3 style="display:none;">Google Analytics</h3>
+   <div class="widget_content">
+    <!-- 구글 분석 첫번째 기초 버전 -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17725464-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+    </div>
+</div>
+        </div>
+        <div id="sidebar1_blank" class="blank"></div>
+      </div>
+      <hr class="line" />
+    </div>
+    <hr class="line" />
+    
+    <div class="footer f_clear">
+      <div class="license">
+        <span class="copyright"><a href="index.html" title="powered by egloos.com">calmglow.egloos.com</a> is powered by <a href="http://www.egloos.com/" target="_blank">Egloos</a>.</span> <span class="rss">Subscribe to <a href="http://rss.egloos.com/blog/calmglow" target="_blank" title="RSS">RSS</a>.</span>
+        <span class="skinby">Skin designed by <a href="index.html" target="_blank">calmglow</a>.</span>
+      </div>
+    </div>
+  </div>
+</div><iframe src="http://statweb.egloos.com/estat/send?bid=b0015706&amp;ref=http%253A%252F%252Fcalmglow.egloos.com%252Fpage%252F4&amp;uid=&amp;mbid=&amp;openflag=1" style="width: 0px; height: 0px; border: 0px solid #fff;"></iframe>
+<img width="0" height="0" border="0" src="egloo_pds65b9.html?eid=b0015706" alt="" />
+<form id="trackfrom" name="trackfrom" method="post" action="#">
+<input type="hidden" name="url" value="" />
+<input type="hidden" name="title" value="" />
+<input type="hidden" name="trburl" value="" />
+</form>
+<div style="z-index:9901;top:764px;left:169px;display:none;" id="egloo_bookmark" class="popupWrap">
+    <div class="popupTitle">이글루링크 추가하기</div>
+    <dl class="popupBody">
+        <dt class="no-arrow" style="background:none;font-size:12px;text-align:center;">
+            <span id="egloo-bookmark-url" style="color:#0F71A1;"></span>
+            (<span id="egloo-bookmark-name"></span>)을(를)</dt>
+        <dd class="notice" style="margin:0;padding:0 0 0 8px;line-height:1.8em;color:#000;font-size:12px;text-align:center;">이글루링크로 추가하시겠습니까? 추가하시려면 그룹선택을 하세요.</dd>
+        <dd class="notice weak" style="margin:0;padding:0 0 0 8px;line-height:1.8em;font-size:11px;color:#666666;text-align:center;">(그룹선택 하지 않는 경우, 최상단 목록에 추가됩니다.)</dd>
+        <dd class="egloo-bookmark-group" style="margin:0;padding:10px 0 8px;line-height:1.8em;text-align:center;color:#333;font-size:12px;text-align:center;">그룹선택 :
+            <select name="groupID" id="egloo-bookmark-groupID" style="font-family:'돋움','dotum','Trebuchet MS',Sans-serif;margin-left:10px;"><option value="000">그룹선택없음</option></select></dd>
+        <dd class="buttons">
+            <input type="button" value="지금 확인" onfocus="blur();" onclick="Modal.insertBookmark(true);" class="button btn24 btn_bold"/>
+            <input type="button" value="나중에 확인" onfocus="blur();" onclick="Modal.insertBookmark(false);" class="button btn24 btn_weak"/>
+        </dd>
+        <dd class="close" onclick="Modal.close();"><img src="../md.egloos.com/img/www/btn/button_popup_close.gif" alt="이글루링크 취소" title="이글루링크 취소" /></dd>
+    </dl>
+</div>
+</body>
+</html>

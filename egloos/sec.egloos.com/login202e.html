@@ -1,0 +1,430 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+
+<meta name="author" content="이글루스" />
+<meta name="keywords" content="이글루스, 이글루, egloo, egloos, 블로그, blog" />
+<meta name="description" content="블로그 전문 이글루스-자유로운 스킨편집, 생활의 기록 라이프로그, 쉽게 올리고 멋지게 보는 포토로그, 꿈을 가꾸는 가든, 강력한 통계, PDF 백업을 지원, 성인 전용, 스팸차단 기능 내장, 검색노출 여부 선택으로 쾌적하고 편안한 블로그 환경 제공" />
+
+<title>블로그 전문 이글루스!! - egloos.com</title>
+
+<link href="http://md.egloos.com/img/favicon.ico" rel="shortcut icon"/>
+<link rel="apple-touch-icon-precomposed" href="../md.egloos.com/img/egloos_144.png" />
+
+<!--<link rel="stylesheet" href="http://md.egloos.com/css/join/egloos_main_20090106.css" type="text/css" />-->
+<link rel="stylesheet" href="../md.egloos.com/css/common/commonb139.css?ver=2.04" type="text/css" />
+<link rel="stylesheet" href="../md.egloos.com/css/join/signin_20131112d09a.css?ver=0.01" type="text/css" media="all" />
+
+<script type="text/javascript" src="../md.egloos.com/js/lib/prototype_v1511.js"></script>
+<script type="text/javascript" src="../md.egloos.com/js/io/Cookie.js"></script>
+<script type="text/javascript" src="../md.egloos.com/js/egloos/Copyright84e2.js?ver=1.00"></script>
+
+<script type="text/javascript" src="../md.egloos.com/js/ui/Popup.js"></script>
+<script type="text/javascript" src="../md.egloos.com/js/ui/UI.PostBox.js"></script>
+<script type="text/javascript" src="../md.egloos.com/js/common/StringUtil9c89.js?ver=1.001"></script>
+<script type="text/javascript" src="../md.egloos.com/js/common/LoginUtild5f7.js?ver=2.0"></script>
+<script language="javascript" type="text/javascript">
+<!--
+function setLoginFocus() {
+$('userid').focus();
+}
+
+function findPassword(num){
+
+    Popup.openWindow('https://sec.egloos.com/info/findpwd_view.php?num=' + num, 'chkpwd', 400, 400, false, false, false, false);
+}
+
+function goJoin() {
+    document.location = "https://sec.egloos.com/gate/join.php";
+}
+//-->
+</script>
+
+</head>
+<body onload=" 
+setLoginFocus();">
+<div id="wrap">
+<!-- HEADER START -->
+	<script type="text/javascript">
+	<!--
+		function zumSearch(form) {
+			var kwd = form.query;
+			var method = form.method;
+			if(kwd) {
+				var findstr = kwd.value;
+				findstr = findstr.replace(/(^\s*)|(\s*$)/gi,"");
+				if(findstr == "") {
+					alert("검색어를 넣어주세요");
+					kwd.focus();
+					return false;
+				}
+				
+				var searchUrl = "http://search.zum.com/search.zum?method=" + method.value + "&query=" + encodeURIComponent(kwd.value) + "&qm=f_typing.egloos";
+				window.open(searchUrl, "_blank");
+			}
+		}
+
+		function setSearchOption(method) {
+	    	var option = document.getElementById("selected_search_option");
+	    	var search_method = document.getElementById("search_method");
+	    	if(method == "egloo")
+	    	{
+	        	option.innerHTML = "이글루검색";
+	        	search_method.value = "egloos.channel";
+	    	} else {
+	    		option.innerHTML = "포스트검색";
+	    		search_method.value = "egloos.post";
+	    	}
+		}
+		
+		function handleThumbError(imgElm) {
+			if(imgElm.src.indexOf('_t.') == -1) {
+				imgElm.src = '../md.egloos.com/img/x.gif';
+			}
+			else {
+				imgElm.src = imgElm.src.replace('_t', '');
+			}
+		}
+		
+		function buttonOver(imgElm, imgSrc){
+		    imgElm.src = imgSrc;
+		    imgElm.style.cursor = "pointer"
+		}
+	    
+		function buttonOut(imgElm, imgSrc){
+			imgElm.src = imgSrc;
+		}
+
+        function checkKeyword(form) {
+            var keyword = form.kwd.value;
+            keyword = keyword.replace(/(^\s*)|(\s*$)/gi,"");
+            if(keyword == "") {
+                alert("검색어를 입력해 주세요");
+                return false;
+            }else if(keyword == "검색어를 입력하세요."){
+                alert("검색어를 입력해 주세요");
+                return false;
+            }else {
+                form.kwd.value = keyword;
+                return true;            
+            }
+        }
+        var UI_themeList =
+    	{
+    		el     : null,
+    		target : null, 
+
+    		addEvent : function (element, name, fn, capture)
+    		{
+    			if (typeof element.addEventListener === "function")
+    			{
+    				element.addEventListener(name, fn, capture);
+    			}
+    			else if (element.attachEvent)
+    			{
+    				element.attachEvent("on" + name, fn);
+    			}
+    		},
+
+    		layerOn : function ()
+    		{
+    			//this.el.getElementsByTagName("a")[0].blur();
+
+    			var bOn  = this.target.style.display;
+    			if (bOn === "none")
+    			{
+    				this.el.className = "on";
+    				this.target.style.display = "block";
+
+    				var THIS   = this;
+    				var moveFn = function(e) { THIS.savePointerXY.call(THIS, e); };
+
+    				this.addEvent(document, "mousemove", moveFn, true);
+    			}
+    			else
+    			{
+    				this.layerOff();
+    			}
+
+    			return false;
+    		},
+
+    		layerOff : function ()
+    		{
+    			this.el.className = "";
+    			this.target.style.display = "none";
+    		},
+
+    		getAbsPosAndScale : function (element)
+    		{
+    			var curleft = curtop = curWidth = curHeight = 0;
+    			curWidth = element.offsetWidth;
+    			curHeight = element.offsetHeight;
+    			try {
+    				if (element && element.offsetParent)
+    				{
+    					do {
+    						curleft += element.offsetLeft;
+    						curtop += element.offsetTop;
+    					} while (element = element.offsetParent);
+    				}
+    			} catch(ex) {}
+
+    			return { left: curleft, top: curtop, width: curWidth, height: curHeight };
+    		},
+
+    		getMouseXY : function (e)
+    		{
+    			if (e.pageX || e.pageY)
+    			{
+    				return {x : e.pageX, y : e.pageY};
+    			}
+    			return {
+    				x : e.clientX + document.body.scrollLeft - document.body.clientLeft, 
+    				y : e.clientY + document.body.scrollTop  - document.body.clientTop
+    			};
+    		},
+
+    		chkMouseIn : function(x, y, element)
+    		{
+    			var physicalData = this.getAbsPosAndScale(element);
+    			if (x >= physicalData.left && x <= (physicalData.left + physicalData.width) && y >= physicalData.top && y <= (physicalData.top + physicalData.height))
+    			{
+    				return true;
+    			}
+    			else
+    			{
+    				return false;
+    			}
+    		},
+
+    		savePointerXY : function (e)
+    		{
+    			if (this.target.style.display == "block")
+    			{
+    				e = e || window.event;
+
+    				var mousexy       = this.getMouseXY(e);
+    				var bIsOverTarget = this.chkMouseIn(mousexy["x"], mousexy["y"], this.target);
+    				var bIsOverMenu   = this.chkMouseIn(mousexy["x"], mousexy["y"], this.el.getElementsByTagName("a")[0]);
+
+    				if (bIsOverTarget === false && bIsOverMenu === false)
+    				{
+    					this.layerOff();
+    				}
+    			}
+    		},
+
+    		init : function (option)
+    		{
+    			this.el     = document.getElementById(option.menu);
+    			this.target = document.getElementById(option.target);
+
+    			var THIS = this;
+    			var fn = function (e)
+    			{
+    				THIS.layerOn.call(THIS, e);
+    			};
+
+    			this.addEvent(this.el, "click", fn);
+    		}
+    	};
+
+    	try{
+        	document.execCommand('BackgroundImageCache',false,true);
+        }catch(e){}
+	//-->
+	</script>
+		
+<div id="header">
+        <div class="gnb_sub">
+                    <a href="logina03f.html?returnurl=http://www.egloos.com/myegloo.php">내이글루</a> |
+            <a href="login0011.html?returnurl=http://valley.egloos.com/my/">마이리더</a> |
+            <a href="login202e.html?returnurl=http://www.egloos.com/myegloo.php?gubun=photo">포토로그</a> |
+            <a href="loginfc7d.html?returnurl=http%3A%2F%2Fsec.egloos.com%2Flogin.php" class="last">로그인</a>
+                </div>
+
+        <div class="gnb_wrap">
+            <div class="navigator">
+                <h1><a href="http://www.egloos.com/" title="블로그 전문! 이글루스"><img src="../md.egloos.com/img/www/main_v2011/ico_egloos_logo.gif" alt="egloos" height="41" width="123" /></a></h1>
+                <ul> <!-- 활성화시 li에 on 클래스 -->
+                    <li class=""><a href="http://valley.egloos.com/" class="valley">밸리</a></li>
+                    <li id="gnb_theme" class=""><a href="#n" class="theme">테마목록</a></li> 
+                    <li class=""><a href="http://valley.egloos.com/center" class="skin">스킨&amp;위젯</a></li>
+                    <li class=""><a href="http://valley.egloos.com/center/apps" class="apps">앱스</a></li>
+                </ul>
+            </div>
+        
+            <div id="search_wrap" >
+                <form id="search" name="search" onsubmit="zumSearch(this);return false;">
+                    <div class="s_kind">
+                        <ul class="search_option" >
+                            <li style="cursor:default;" id="selected_search_option">포스트검색</li>
+                            <li>
+                                <ul class="search_option_layer" >
+                                    <li class="first"><a href="#" onclick="setSearchOption('blog'); document.getElementById('query').focus(); return false;">포스트검색</a></li>
+                                    <li><a href="#" onclick="setSearchOption('egloo'); document.getElementById('query').focus(); return false;">이글루검색</a></li>                            
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="s_box">
+                        <fieldset>
+                            <legend>통합검색 입력</legend>
+                            <input type="text" class="search_input" id="query" name="query"  title="검색어 입력" value=""/>
+                            <input type="hidden" id="search_method" name="method" value="egloos.post" />
+                            <button type="submit" class="search_btn" title="검색"><span>검색</span></button>    
+                        </fieldset>
+                    </div>
+                </form>
+                <p class="sign"><a href="http://www.zum.com/" target="_blank"><img src="../md.egloos.com/img/search/txt_power.png" alt=""></a></p>
+            </div>
+            <!-- [E] : 검색창 -->
+        
+            <!-- 테마목록 레이어 -->
+            <div id="gnb_theme_list" class="layer_theme" style="display:none;">
+                <div class="layer_line">
+				
+                	<ul>
+						<li class="viewall"><a href="#n">전체인기글</a></li>
+		    				<li><a href="http://valley.egloos.com/theme/movie">영화</a></li>
+		    				<li><a href="http://valley.egloos.com/theme/entertainment">방송&amp;연예</a></li>
+		    				<li><a href="http://valley.egloos.com/theme/game">게임</a></li>
+		    				<li><a href="http://valley.egloos.com/theme/animation">애니메이션</a></li>
+		    				<li><a href="http://valley.egloos.com/theme/comic">만화</a></li>
+		    				<li><a href="http://valley.egloos.com/theme/book">도서</a></li>
+		    				<li><a href="http://valley.egloos.com/theme/music">음악</a></li>
+		    				<li><a href="http://valley.egloos.com/theme/performance">공연&amp;전시</a></li>
+		    				<li><a href="http://valley.egloos.com/theme/food">음식</a></li>
+					</ul>
+					<ul>
+		    				<li><a href="http://valley.egloos.com/theme/pet">애완반려동물</a></li>
+		    				<li><a href="http://valley.egloos.com/theme/travel">여행</a></li>
+		    				<li><a href="http://valley.egloos.com/theme/photo">사진</a></li>
+		    				<li><a href="http://valley.egloos.com/theme/fashion">패션&amp;뷰티</a></li>
+		    				<li><a href="http://valley.egloos.com/theme/love">연애</a></li>
+		    				<li><a href="http://valley.egloos.com/theme/gag">개그</a></li>
+		    				<li><a href="http://valley.egloos.com/theme/daily">일상</a></li>
+		    				<li><a href="http://valley.egloos.com/theme/baby">육아</a></li>
+		    				<li><a href="http://valley.egloos.com/theme/technology">IT</a></li>
+		    				<li><a href="http://valley.egloos.com/theme/earlyadopter">얼리어답터</a></li>
+					</ul>
+					<ul>
+		    				<li><a href="http://valley.egloos.com/theme/shopping">지름</a></li>
+		    				<li><a href="http://valley.egloos.com/theme/auto">자동차</a></li>
+		    				<li><a href="http://valley.egloos.com/theme/sports">스포츠</a></li>
+		    				<li><a href="http://valley.egloos.com/theme/news">뉴스비평</a></li>
+		    				<li><a href="http://valley.egloos.com/theme/society">인문사회</a></li>
+		    				<li><a href="http://valley.egloos.com/theme/history">역사</a></li>
+		    				<li><a href="http://valley.egloos.com/theme/world">세계</a></li>
+		    				<li><a href="http://valley.egloos.com/theme/science">과학</a></li>
+		    				<li><a href="http://valley.egloos.com/theme/toy">토이</a></li>
+		    				<li><a href="http://valley.egloos.com/theme/creation">창작</a></li>
+					</ul>
+					<ul class="last">
+		    				<li><a href="http://valley.egloos.com/theme/flea">벼룩시장</a></li>
+		    				<li><a href="http://valley.egloos.com/theme/qna">지식Q&amp;A</a></li>
+		    				<li><a href="http://valley.egloos.com/theme/egloos">이글루스</a></li>
+		    				<li><a href="http://valley.egloos.com/theme/sotong">소통밸리</a></li>
+					</ul>        
+                    <p class="txt_help">'밸리리더'를 이용하시면, 창이동 없이 빠르고 가볍게 보실 수 있습니다. <a href="http://valley.egloos.com/reader/">밸리리더열기</a></p>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+			UI_themeList.init({ menu : "gnb_theme", target : "gnb_theme_list" });
+		</script>
+    </div>
+<!-- HEADER END -->
+
+	<!-- 메인 영역 시작 -->
+	<div id="body">
+
+		<div class="signin_login_cont2 f_clear">
+			<div class="bdr_wrap">
+				<p class="wrap1"></p><p class="wrap_top"></p><p class="wrap2"></p>
+			</div>
+			<div class="bdr_body">
+
+				<h2 class="title_login">로그인</h2>
+				<p class="tx_loginInfo">
+					이글루스에 로그인하시면 더욱 막강한 블로그 네트워크 세상이 열립니다.
+					아래에서 로그인하시거나 (egloos.com, nate.com) 아이디가 없으신 경우는 무료회원가입하신 후 이글루스에 접속하세요.
+				</p>
+
+				<ul class="box_login bg_empas">
+					<li class="yes">
+						<h3>이글루스 회원 계정이 있습니다.</h3>
+                        <form name="login" action="https://sec.egloos.com/login/sauthid.php" method="post" onsubmit="return LoginUtil.runAuth(document.login, this)"> 
+                        <input type="hidden" name="returnurl" value="http%3A%2F%2Fwww.egloos.com%2Fmyegloo.php%3Fgubun%3Dphoto">
+                        <input type="hidden" name="vt" value="7JWI65CY6rKg7IaM7I+p7Iuc64uk">
+						<ul class="login_inputArea" id="EKS_LOGIN">
+							<li>
+								<input type="text" id="userid" name="userid" value="" class="input id" tabindex="1" onfocus="this.style.backgroundImage='none';" />
+							</li>
+							<li>
+								<div style="float:left; width:141px;"><input type="password" class="input password" id="userpwd" name="userpwd" tabindex="2" onfocus="this.style.backgroundImage='none';" /></div> 
+                                <button type="submit" name="lbtn" value="로그인" tabindex="3" class="btn_login">로그인</button>
+							</li>
+							<li class="set_login_option">
+                                <div class="txt_wrap" id="findPwd">
+                                <input type="checkbox" id="pcsaveid" name="pcsaveid" tabindex="3" value="1" /><label for="pcsaveid" class="savedid">아이디저장</label> 
+                                <a href="https://sec.egloos.com/member/recovery/identify" class="findid_pwd">아이디 &frasl; 비밀번호 찾기</a>
+							</li>
+						</ul>
+
+                        <ul class="login_inputArea" id="EKS_INFO" style="display:none">
+                            <li class="notice">키보드보안 서비스를 이용하시려면 <br />보안 프로그램을 설치해 주십시오.</li>
+                            <li class="buttons"><a href="#" onclick="keycryptInstall();"><img src="../md.egloos.com/img/www/signin/btn_eks_install.gif" with="68" height="18" alt="설치하기"  /></a><a href="#" onclick="showLoginForm();"> <img src="../md.egloos.com/img/www/signin/btn_eks_cancel.gif" with="35" height="18" alt="취소하기" /></a></li>
+                            <li class="set_login"></li>
+                            <li class="find_idpw"><a href="https://sec.egloos.com/member/recovery/identify">아이디</a> 또는 <a href="https://sec.egloos.com/member/recovery/identify">비밀번호 찾기</a></li>
+                            </ul>
+
+                            <ul class="login_inputArea" id="EKS_NOIE" style="display:none">
+                            <li class="notice">현재 회원님이 사용 중인 브라우저에는<br />키보드 보안을 지원하지 않고 있습니다.</li>
+                            <li class="buttons"><a href="#" onclick="showLoginForm();"><img src="../md.egloos.com/img/www/signin/btn_eks_cancel.gif" width="35" height="18" alt="취소" /></a></li>
+                            <li class="set_login"></li>
+                            <li class="find_idpw"><a href="https://sec.egloos.com/member/recovery/identify">아이디</a> 또는 <a href="https://sec.egloos.com/member/recovery/identify">비밀번호 찾기</a></li>
+                        </ul>
+                        </form>
+
+					</li>
+					<li class="no">
+						<h3>계정이 없습니다.</h3>
+						<p>이글루스, 네이트 계정이 없으세요?</p>
+                        <a href="https://sec.egloos.com/member/signup/request">무료회원가입</a>
+					</li>
+				</ul>
+
+			</div>
+			<div class="bdr_wrap">
+				<p class="wrap3"></p><p class="wrap_btm"></p><p class="wrap4"></p>
+			</div>
+		</div>
+	</div>
+	<!-- 메인 영역 끝 -->
+	
+	<!-- footer -->
+	<div id="footer">
+    <div class="copyright">
+        <ul>
+            <li class="li_start"><a href="http://www.egloos.com/rules/provision.php" target="_blank">이용약관</a></li>
+            <li><a href="http://www.egloos.com/rules/privacy.php" target="_blank"><b>개인정보취급방침</b></a></li>
+            <li><a href="http://www.egloos.com/rules/youthpolicy.php" target="_blank">청소년보호정책</a></li>
+            <li><a href="http://help.egloos.com/5027" target="_blank">이메일 수집거부</a></li>
+            <li><a href="http://apicenter.egloos.com/" target="_blank">API센터</a></li>
+            <li><a href="http://help.zum.com/inquiry/egloos_mail" target="_blank">고객센터</a></li>
+        </ul>
+        <p>Copyright ⓒ <a href="http://www.zuminternet.com/" class="zum" target="_blank">ZUM internet.</a> All rights reserved.</p>
+    </div>
+</div>
+<iframe src="http://statweb.egloos.com/estat/send?bid=&amp;ref=http%3A%2F%2Fsec.egloos.com%2Flogin.php%3Freturnurl%3Dhttp%253A%252F%252Fcalmglow.egloos.com%252Fb0015706_12495348.jpg&amp;uid=&amp;mbid=&amp;openflag=" style="width: 0px; height: 0px; border: 0px solid #fff;"></iframe><!-- 모바일웹 보기 버튼 -->
+	<!-- footer //-->
+	
+</div>
+</body>
+</html>

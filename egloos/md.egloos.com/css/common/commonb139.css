@@ -1,0 +1,134 @@
+﻿@charset "utf-8";
+
+@import url("header4250.css?ver=2.7.0");
+@import url("footer4250.css?ver=2.7.0");
+@import url("../search/main_search4250.css?ver=2.7.0");
+
+/********* GLOBAL **********/
+body {margin:0;padding:0;background:#FFF url(../../img/www/bg_gnb_top.gif) repeat-x;font:9pt '돋움','Dotum','Verdana','Arial','Sans-Serif';color:#333;text-align:left;}
+dl,dt,dd,ul,ol,li,form,fieldset,p,blockquote,fieldset {margin:0;padding:0;list-style:none;}
+fieldset,blockquote,img {border:none;}
+hr,legend {display:none;}
+em, i { font-style:normal; }
+
+input,select {vertical-align:middle;}
+a:link {color:#069;text-decoration:none;}
+a:visited {color:#72c4d0;text-decoration:none;}
+a:hover,a:active {color:#f60;text-decoration:none;}
+
+/* float free */
+.f_clear:after {content:".";height:0;display:block;visibility:hidden;clear:both;} .f_clear {min-height:1px;} * html .f_clear {height:1px;}
+.clear {clear:both;width:0;height:0;font:0/0 arial;margin:0;padding:0;}
+
+/********* LAYOUT **********/
+#wrap { overflow:hidden; height:100%; width:980px; margin:0 auto; padding:0 20px; }/*2011.10 메인개편*/
+#header { position:relative; width:980px; margin:0 auto; height:119px; padding-bottom:12px; background:url('../../img/www/index/bg_header_line.gif') repeat-x bottom; z-index:999; }/*2011.10 메인개편 / 10.24 / vista*/
+#body {width:980px;position:relative;margin:15px auto 0 auto;padding:0 0 30px 0;}
+#content {float:left; width:720px;display:inline; text-align:left; }
+    #content #leftMenu {float:left;width:110px;margin:0;padding:0;}
+    #content #rightMain {float:left;width:599px;margin:0 0 0 11px;padding:0;display:inline;text-align:left; }
+#sidebar {float:right;width:250px; background:#fff; } /* 20131210 수정 */
+#footer {width:980px;margin:0 auto;padding:20px 0;border-top:3px solid #333;text-align:center;} /* 140804 수정 */
+
+/********* BODY : #body **********/
+.bg_gray {background-color:#f6f6f6;}
+.sidebar_gray {background:transparent url('../../img/www/right/bg_right.gif') repeat-y right top;}
+.vertical {margin:0 5px 0 4px;color:#d7d7d7;font-weight:normal;}
+
+
+
+/********* TEMPLATES-PostList : .postList1 **********/
+ul.postList1 {margin:0;padding:0;}
+ul.postList1 li {float:left;text-align:left;margin:0;padding:10px 0;border-top:1px solid #ededed;z-index:2;width:100%;}
+ul.postList1 li.start {border:none;}
+    ul.postList1 .thumb {float:left;display:inline;margin:0 10px 0 0;position:relative;}
+    ul.postList1 .thumb a {display:block;border:1px solid #ddd;}
+    ul.postList1 .thumb img {display:block;}
+        /* Thubmnail Extention */
+        ul.postList1 .thumb img.thumb_arrow {float:left;z-index:310;position:absolute;right:1px;bottom:1px;}
+    /* PostBox의 썸네일에 사용됩니다. */
+    ul.postList1 .thumb .thumbs_panel { position: absolute; background: #fff; border: 1px solid #fff; top:-1px; }
+    ul.postList1 .thumb .thumbs_panel span {border:1px solid #DDDDDD; margin: 0 0 0 4px; float: left; background: #fff;}
+    ul.postList1 dt {font-weight:bold;}
+
+        ul.postList1 dt a { color:#555; }
+        ul.postList1 dt a:hover, a:active { color:#3F9FCF; }
+        ul.postList1 dt a:visited { color:#7095A8; }
+
+        ul.postList1 dt a.in_theme {font-weight:normal;letter-spacing:-1px;}
+        ul.postList1 dt a.in_theme:visited {color:#069;}
+    ul.postList1 dd.content {margin:3px 0 0 0;.margin:5px 0 0 0;font-size:8pt;color:#adadad;overflow:hidden;}
+
+        ul.postList1 dd.content a { color:#908F8F; }
+
+        ul.postList1 dd.content a:hover {text-decoration:underline;}
+        ul.postList1 dd.content i {font-style:normal;}
+        ul.postList1 dd.content a.report {color:#adadad;padding-left:12px;background:url('../../img/www/ico/ico_report.gif') no-repeat left top;}
+        ul.postList1 dd.content a.report:link,ul.postList1 dd.content a.report:visited,ul.postList1 dd.content a.report:hover,ul.postList1 dd.content a.report:active {color:#adadad;}
+        a.recom_gray {padding: 0 0 0 12px;background:url('../../img/www/ico/ico_recom_gray.gif') no-repeat left top;color:#939393;}
+        ul.postList1 .summary {font-size:9pt;color:#666;margin:8px 0 0 0;line-height:1.3em;overflow:hidden;}
+        ul.postList1 .summary a.moreitem:link,ul.postList1 .summary a.moreitem:visited,ul.postList1 .summary a.moreitem:hover,ul.postList1 .summary a.moreitem:active {color:#00729B;}
+        ul.postList1 .taglist {clear:left;float:left;margin:10px 0 0 0;padding-left:32px;background:url('../../img/www/ico/tag_white.gif') no-repeat left top;}
+        /* ul.postList1 .taglist {width:550px;} 사용시에는 width값을 반드시 넣어 주어야 함 */
+/* paging */
+.pagingWrap {width:100%;margin-top:10px;border-top:4px solid #eee;padding-top:6px;position:relative;}
+.btn_recomm {float:right;display:block;}
+.pagingCount {float:left;}
+.pagingCount a {display:block;float:left;height:14px;display:inline;font-size:9pt;line-height:1em;}
+.pagingCount a:link,.pagingCount a:visited {color:#666;}
+.pagingCount a:hover,.pagingCount a:active {color:#f60;}
+    a.page_on,a.page_off {margin:0 0 0 3px;padding:3px 4px 0 3px;border:1px solid #cfcdcd;font-weight:bold;background:#fff;text-align:center;font-family:'Trebuchet MS',sans-serif;}
+    a.page_on:link,a.page_on:visited {color:#f60;}
+    a.page_prev {color:#666;margin:0 4px 0 0;padding:5px 0 0 7px;background:#fff url('../../img/www/ico/ico_darkgray_arrow01.gif') no-repeat left 7px;}
+    a.page_next {color:#666;margin:0 0 0 7px;padding:5px 7px 0 0;background:#fff url('../../img/www/ico/ico_darkgray_arrow.gif') no-repeat right 7px;}
+
+/********* TEMPLATES-PostList : .postList2 **********/
+ul.postList2 {line-height:1.3em;}
+ul.postList2 li {width:100%;float:left;text-align:left;clear:both;margin:0;padding:5px 0 0 11px;background:url('../../img/www/ico/ico_blue_cross.gif') no-repeat 1px 10px;font-weight:bold;position:relative;}
+/* ul.postList2 li {width:550px;} 사용시에는 width값을 반드시 넣어 주어야 함 */
+    ul.postList2 .author {position:absolute;top:5px;right:15px;font-size:8pt;font-weight:normal;color:#adadad;} ul.postList2 .author i {font-style:normal;}
+    ul.postList2 .author a:link,ul.postList2 .author a:visited,ul.postList2 .author a:hover,ul.postList2 .author a:active {color:#adadad;} ul.postList2 .author a:hover {text-decoration:underline;}
+
+    ul.postList2 li a { color:#555; }
+    ul.postList2 li a:hover, ul.postList2 li a:active { color:#3F9FCF; }
+    ul.postList2 li a:visited { color:#7095A8; }
+
+/********* TEMPLATES-SubTitle : .subTitle1 **********/
+h2 {position:relative;margin:7px 0 0 0;padding:0 0 5px 5px;border-bottom:2px solid #49abdb;font-size:12pt;letter-spacing:-1px;color:#333;}
+h2 strong a:link,h2 strong a:visited,h2 strong a:hover,h2 strong a:active {color:#f60;} h2 strong a:hover {text-decoration:underline;}
+h2 i {font-size:9pt;font-weight:normal;font-style:normal;margin:0 0 0 7px;letter-spacing:0;color:#adadad;}
+    .subTitle1_btn {position:absolute;top:1px;} .sit1 {right:0;} .sit2 {right:118px;}
+
+/********* TEMPLATES-SubTitle : .subTitle2 **********/
+h3.subtitle2 {border-bottom:1px solid #ededed;margin:10px 0 0 0;.margin:12px 0 0 0;_margin:10px 0 0 0;  padding-bottom:4px;font-size:11pt;color:#333;font-weight:normal;letter-spacing:-1px;clear:both;}
+h3.subtitle2 strong {font-weight:normal;color:#ed1a33;}
+    h3.subtitle2 .rss {margin-left:7px;}
+    h3.popular {margin-top:0;}
+
+
+/* egloos_review에서 넘어오는 것들 */
+.reviewNewArticle { width:630px; }
+.reviewNewArticle h3 { display:block;float:left;margin:20px 0 5px 0;padding:0;font-size:9pt; }
+span.vertical { margin:0 5px 0 4px;color:#d7d7d7; }
+
+span.writer { color:#939393;font-size:8pt; }
+
+span.writer a { color:#939393;font-size:8pt; }
+
+span.time { margin:0;color:#adadad;font-size:8pt; }
+
+
+
+/********* 마이 프로모션 추가 :: 20081009 **********/
+/* 헤더 영역 */
+#header #GNB dl.gnbMain dd { position:relative; }
+#header #GNB img.new { position:absolute; top:-14px; right:-2px; }
+
+/*테마전체보기*/
+#sidebar .snbLeft { position:absolute; top:3px; right:0; }
+    #sidebar .snbLeft a.snbLeftTitle { width:84px; height:24px; background:url('../../img/www/header/btn_viewall_thema.gif') 0 1px no-repeat; display:block; text-indent:-1000em; overflow:hidden; position:relative; margin-bottom:-4px; }
+    #sidebar .snbLeft .themeLayer { position:absolute; right:0; text-align:left; background-color:#fff; border:1px solid #D0D0D0; padding:15px 30px 5px 15px; width:80px; .margin:4px 0 0 0; }
+    #sidebar .snbLeft .themeLayer .boxMid {  }
+    #sidebar .snbLeft .themeLayer .boxMid ul li { position:relative; background:url('../../img/www/header/bul_dot01.gif') 0 4px no-repeat; margin-bottom:5px; padding-left:8px; }
+    #sidebar .snbLeft .themeLayer .boxMid ul li a{ color:#666; }
+    #sidebar .snbLeft .themeLayer .boxMid ul li a:hover { color:#3F9FCF; }

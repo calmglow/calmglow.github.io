@@ -1,0 +1,527 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv='pragma' content='no-cache' />
+<meta http-equiv='cache-control' content='no-cache' />
+<meta http-equiv='Content-type' content='text/html; charset=utf-8' />
+<meta name="author" content="Calmglow" />
+<meta name="keywords" content="calmglow (최진호)" />
+  <link rel="shortcut icon" href="http://profile.egloos.net/b0015706.ico" />
+
+<link rel="pingback" href="http://rpc.egloos.com/rpc1" />
+<link rel="alternate" type="application/rss+xml" title="calmglow (최진호)" href="http://rss.egloos.com/blog/calmglow" />
+<title>calmglow (최진호) : SOA 거버넌스(Governance)란?</title>
+	<script type="text/javascript" src="../md.egloos.com/js/ap757c.js?ver=1.043"></script>
+	<script type="text/javascript" src="../md.egloos.com/js/gdba6c.js?ver=1.002"></script>
+	<script type="text/javascript" src="../md.egloos.com/js/eg961f.js?ver=1.020"></script>
+	<script type="text/javascript" src="../md.egloos.com/js/eg_new961f.js?ver=1.020"></script>
+	<script type="text/javascript" src="../md.egloos.com/js/crba6c.js?ver=1.002"></script>
+    <script type="text/javascript" src="../md.egloos.com/js/page/insad05.js?ver=1.4"></script>
+
+	<script type="text/javascript" src="../md.egloos.com/js/lib/prototype_v1511.js"></script>
+	<script type="text/javascript" src="../md.egloos.com/js/control/Control.js"></script>
+	<script type="text/javascript" src="../md.egloos.com/js/control/Control.ImgModal4eee.js?ver=1.004"></script>
+	<script type="text/javascript" src="../md.egloos.com/js/page/blog/compatible.js"></script>
+	
+<link type="text/css" rel="stylesheet" href="../logo21.egloos.com/skin/css/b/001/57/b0015706_t.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../md.egloos.com/css/style_comment4963.css?ver=1.1" media="screen" />
+<link type="text/css" rel="stylesheet" href="../md.egloos.com/css/skin2_common.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../logo21.egloos.com/skin/css/b/001/57/b0015706_1_s.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="../md.egloos.com/css/egloo_navibar62ea.css?ver=1.2" media="screen" />
+<link type="text/css" rel="stylesheet" href="../md.egloos.com/css/common/popup34c0.css?ver=2.00" />
+<link type="text/css" rel="stylesheet" href="../md.egloos.com/css/common/button.css" />
+<script type="text/javascript" src="../md.egloos.com/js/modal/Modal.js"></script>
+<script type="text/javascript" src="../md.egloos.com/js/modal/Modal.Center.js"></script>
+<script type="text/javascript" src="../md.egloos.com/js/page/blog/Modal.BookmarkDlgba6c.js?ver=1.002"></script>
+
+<script type="text/javascript">
+//<![CDATA[
+Event.observe(window, 'load', function() {
+    new Modal.BookmarkDlg('egloo_bookmark', {overlay: true,
+                'groupURL'     : "/exec/egloo_bookmark_group.php",
+                'remoteURL'    : "/exec/egloo_insbookmark_exec.php"});
+    if(''==''){
+	    	copy_contents('calmglow.egloos.com','Calmglow','0');
+    }
+    var hash = window.location.hash; 
+    if(!hash.empty() ) {
+        var name  = hash.substr(1, hash.length -1 );
+        var search = $$('[name="'+name+'"]');
+        if(search.length == 0 ) {
+             feedbackview('post_trackback_hash', 'b0015706', 3103454, 0, 0);
+        }
+    }
+
+
+});
+
+      
+//]]>
+</script><script type="text/javascript">
+//<![CDATA[
+// function ndrclick2(pndrpageid, pndrregionid) { 
+// i = new Image(); 
+// i.src = "http://statclick.egloos.com/stat/statclick.tiff?cp_url=[click_ndr.nate.com/??ndrpageid="+pndrpageid+"&ndrregionid="+pndrregionid+"]";
+// }
+//]]>
+</script> 
+</head>
+<body>
+<iframe name="cmtviewfrm" id="cmtviewfrm" src="about:blank" width="0" height="0" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" style="display:block;border:0px;"></iframe>
+<div id="navibar_login"><a href="http://www.egloos.com/">이글루스</a> | <a href="http://sec.egloos.com/login.php?returnurl=http%3A%2F%2Fcalmglow.egloos.com%2F3103454">로그인</a></div>
+<div class="body">
+  <div class="wrap">
+    
+    <div class="header">
+      <h1>
+        <a href="index.html" title="calmglow (최진호)">calmglow (최진호)</a>
+      </h1>
+      <div class="url">
+        <a href="index.html" title="http://calmglow.egloos.com">calmglow.egloos.com</a>
+      </div>
+      <div class="topmenu">
+        <a href="photo/index.html" title="포토로그">포토로그</a> 
+      </div>
+    </div>
+    <hr class="line" />
+    
+    <div class="container f_clear">
+      
+      <div class="content_wrap f_clear">
+        
+        <div id="section_widemenu1" class="widemenu">
+          <div>
+            <div class="widget widget_M00000004">
+   <h3 style="display:none;">adsense(728_90)</h3>
+   <div class="widget_content">
+    <script type="text/javascript">
+google_ad_client = "ca-pub-0991130978851223";
+
+google_ad_slot = "6315573320";
+google_ad_width = 728;
+google_ad_height = 90;
+
+</script>
+<script type="text/javascript"
+src="../pagead2.googlesyndication.com/pagead/f.txt">
+</script>
+    </div>
+</div>
+          </div>
+        </div>
+        <hr class="line" />
+        
+        <div id="section_content" class="content">
+          
+          <div>
+            <div class="post_view">
+              
+                
+                <div class="post_title_area">
+                  <div class="post_title">
+                    <h2 class="entry-title" title="#">
+                      <a href="3103454.html" name="3103454" title="SOA 거버넌스(Governance)란?">SOA 거버넌스(Governance)란?</a> <span class="post_title_category"><a href="category/Enterprise.html">Enterprise</a></span>
+                    </h2>
+                  </div>
+                  <ul class="post_info">
+                    <li class="post_info_author">
+                      <span class="by">by</span> Yozz
+                    </li>
+                    <li class="post_info_date"><abbr class="published" title="2007/04/09 11:30">2007/04/09 11:30</abbr>
+                    </li>
+                    <li class="post_info_link"><a href="3103454.html">calmglow.egloos.com/3103454</a>
+                    </li>
+                    <li class="post_info_cmtcount">
+                      <span class="txt">덧글수 :</span> 3
+                    </li>
+                  </ul>
+                </div>
+                <div class="post_content entry-content">
+                  <div class='hentry'><span class='copyright_entry' style='display:block;' title='SOA 거버넌스(Governance)란?@@**@@http://calmglow.egloos.com/3103454'></span><p>2006년 내가 모 회사 웹서비스 관련 프로젝트를 진행할 때의 이야기이다. 그 회사는 전사적으로 SOA를 적용하기 전에과연 어떠한 것이 자기들의 서비스 자산이 될 수 있으며 그것들이 웹서비스화 되었을 때 장점과 Value는 무엇인지에 대해검증해보기 위해 대고객 서비스 일부에 대해 웹서비스로 통합 프로젝트를 진행하게 되었다. 나는 그 프로젝트에서 초기 단계의웹서비스 기술 컨설팅을 담당하게 되었는데 개발자들과 작업하는 동안 기업이 웹서비스를 구축하고 그것들을 엮어내는 데 있어 기술적인 어려움은 하나도 문제가 되지 않음을 확인하였다. 워낙에나 개발 환경이 좋아지다 보니 기존 레가시 영역들을 웹서비스화하고 그것을 서로 엮는데 개발자들은 거의 반나절만으로 후딱 해치워버리고 말았던 것이다. </p><p>그렇게 효과적으로 웹서비스 기술 검증을 해 나가고 있었지만 문제는 다른 곳에서 불거져가고 있었다. 분명 기업 자산의 웹서비스화를 통해 얻게 되는 Value는 확실했다. 과거에는 Legacy들마다 서로 다른 프로토콜과 데이터 포맷등으로 인해 연계에 많은 시간이 소요되었고 실시간으로 서로 다른 정보를 공유할 수 없었던 한계가 있었던 반면에 웹서비스를 통해서라면 언제든지서로 다른 영역의 정보를 자유로히 접근할 수 있었고 새로운 연계 대상이 생겨나도 어렵지 않게 붙혀가는 것이 가능해졌다.</p><p>그러나 그러한 자유로움 이면에는 또 다른 위험 요소가 존재했다. 과연 이렇게 편리한 웹서비스가 기업내에 산재하게 되었을 경우 그 서비스들을 어떻게 누가 관리하고 책임질 것인가? 만약 이 웹서비스들에 보안 이슈가 발생하여 보안을 강화하게 되었을 경우각 서비스별로 보안 정책은 어떻게 세울 것이며 그 보안 관리에 따라 추가된 인증서 및 관리 체계는 누가 떠안을 것인가? 지금은얼마 되지 않는 영역끼리의 웹서비스 사용 환경이지만 이것의 활용이 높아졌을 때 자원 관리에 대한 문제는 누가 관리하고 누가 책임지고 진두지휘할 것인가?</p><p>SOA는 기업 내의 IT자산들의 연결을 보다 느슨하게 하여(Loosely coupled) 유연하게 만들지만 이러한 유연성이 결국 비즈니스 필요에 의해 자유롭게 연결됨으로 인해 업무적으로는 보다 긴밀하게 연결(Tight coupled) 됨으로 인해서 복잡도를 증가시킨다. 이러한 비즈니스적인 복잡도를 해결하기 위해 요구되었던 아키텍처 구조가 ESB와 서비스 저장및 검색서비스이지만 문제는 SOA가 가지는 이러한 복잡도가 단지 기술적으로만 해결될 수 있는 영역의 것이 아니라는 것이다. 앞서 설명했던 모 회사의 고민은 단지 복잡도를 해결하기 위한 기술 인프라가 아니라 보다 본질적인, 기업 내부에서 그것을 책임지고 관리하고 진두 지휘하는 Role을 가진 조직이 없으며 그것에 대한 정책 역시 마련되지 않았다는 것이다.</p><p>위와 같은 이유때문에 비교적 최근(?)에 SOA 거버넌스가 SOA진영에서 화두에 떠오르고 있다. 내가 굳이 거버넌스를'관리'라고 표현하지 않은 이유는 '관리'의 일반적인 뜻과 이 거버넌스의 의미는 다르고 이 의미를 이해해야 SOA거번넌스를이해할수 있기 때문이다.</p><p>SOA거버넌스가 어느날 갑자기 거버넌스라는 이름을 달고 나온 것은 아니다. ITIL및 ITSM부분과 맞물리면서 기업 내IT환경에 대한 거버넌스의 필요성이 최근 매우 증대되면서 자연스럽게 SOA 거버넌스라는 개념이 탄생하게 된 것이 아닌가 생각한다. 이 글에서 IT 거버넌스를 심도 깊게 거론하기에는 나 역시 내공이 부족하고 주제에 벗어나게 되므로 일단 간단하게 나마 일반적인 의미의 거버넌스와 관리의 차이와 IT거버넌스와 SOA 거버넌스의 관계등에 대해서만 짤막하게 거론하고 SOA 거버넌스에 대해 다뤄보도록 하자. </p><br/><font size="4"><span style="font-weight: bold;">거버넌스와 관리(Maintenence)</span></font><br/><p>내가 가진 Collins 영영 사전에 보니 govern과 management에 대해 다음과 같은 정의를 내리고 있다.</p><blockquote>  <p>To govern a place such as a country, or its people, means to beofficially in charge of the place, and to have responsibility formaking laws....</p>  <p>Management is the control and organizing of a business or other organization.&nbsp;</p></blockquote><p>거버넌스는 사전적인 의미로 국가가 조직에 일정한 룰을 정하고 그것에 따라 책임과 롤을 정하고 그에 따라 일정 지역이나 조직의 부분들의 영역을 공식화하여 전체시스템을 통치하는 것에 초점이 맞추어져 있다면, 관리(Management)는 그렇게 롤과 책임이 정해진 상황에서 각각의 역할에 따라 조직등을 운영하는 것을 의미하는 것이다. 즉 이 글에서 언급하려고 하는 거버넌스라는 개념은 단순히 어느 조직의 구성원과 자원을 지키고 관리하는 개념이 아니라 그러한 관리가 가능하도록 조직 전체의 구성원과 자원들의 역할과 권한 그리고 책임을 명확히 규정하고 그 시스템이 정해진 룰대로 진행되는지 여부를 관장하는 것을 말한다. 이렇게 정의하고 보니 거버넌스와 관리의 개념은 리더와 관리자의 차이와 같은 구분점이 보이는 것 같다. 내가 거버넌스라는 용어를 한글화 하려 하면서 가장 적절한 우리말로 골랐던 것은 경영이었다. 경영이라는 의미에는 거버넌스가 함축하고 있는 조직 그 너머에 있는 시스템과비즈니스에 대한 관점이 잘 녹아있다고 본다. 자 그렇다면 이렇게 거버넌스와 관리의 차이를 구분할 수 있게 되었으니 IT거버넌스란 대체 무엇인지에 대해 알아보자.</p><blockquote><p>"We define IT governance asspecifying the decision rights and accountability framework toencourage desirable behavior in IT" -Harvard Business School.</p><p>"ITgovernance is concerned about two things: IT’s delivery of value to thebusiness and mitigation of IT risks. The first is driven by strategicalignment of IT with the business. The second is driven by embeddingaccountability into the enterprise. Both need to be supported byadequate resources and measured to ensure that the results areobtained." -Board Briefing on IT Governance, IT Governance Institute</p></blockquote><p>IT 거버넌스의 개념은 위에서 설명했던 거버넌스의 개념과 IT를 결합해서 생각하면 크게 무리 없는 개념이다. IT 거버넌스는 기업을 비즈니스관점에서 바라볼 권한과 책임을 가진 사람들이 IT를 보다 효율적으로 통제하고 관리하고 제어하며 그 방향을 제시할수 있는 방법을 나타내는 개념이다. 오늘날처럼 경쟁이 치열하고 복잡한 변화를 감내해야하는 기업환경에서 기업들은 보다 효율적으로 사람과 자원들을 충분히 통제할수 있도록 측정가능하고 관리 가능한 시스템을 원한다. IT가 기업에 있어 점점 중요해질 수 밖에없는 이유가 바로 여기에 있을 것이다. CRM이니 EAI, ERP등이 자꾸 나오면서 IT가 기업 혁신의 선두에 서는 이유가 여기에 있는 것이다. 그런데 이러한 IT가 혁신의 선봉에 설 수도 있지만 때로는 혁신을 가로막는 걸림돌이 되기도 한다. 기업통제를 위해 구축된 IT가 통제불능 상태에 빠질 경우 기업은 거꾸로 IT에 의해 정체되는 상황에 빠질 수도 있을 것이다. 물론 이러한 상황을 막기 위해 기업은 올바른 IT 인프라를 위한 프레임워크즉 아키텍처를 최대한 멋있게(?) 만들려고 노력하고는 있으나 기업이 그동안 간과하고 있었던 것은 그들이 IT자원 자체에만 충실하려 했을 뿐 그것이 운영되고 관리되는 사람과 권한 그리고 정책에는 별다른 관심을 가지지 못했다는 것이다. IT거버넌스는 IT와 관련된 결정을 내릴 수 있는 올바르고 적절한 사람에게 권한을 주고 비즈니스 담당자들이 IT자원과 권한별 결정들의 이행사항을 수치화된 형태로 통제할 수 있게 하는 시스템을 제공한다. IT 거버넌스는 특정 IT 결정을 내리는 것이 아니라 그러한 결정이 내려질 수 있는 구조적인 권한과 역할을 기업 시스템에 제공하고 결정에 따른 결과를 책임지게 하는 것이다.&nbsp; </p><p> </p><br/><p>상당히 어렵게 IT 거버넌스를 설명하고 말았지만 결국 IT 거버넌스는 우리 주위에 있는 것이다. 애플리케이션 운영팀,네트워크팀, 개발팀 등등 기업 IT자산의 목표를 세분화해서 각 팀별로 권한과 권리를 나눠논 것. 그게 바로 전통적인IT거버넌스라고 할 수 있는 것이다. 그렇다면 SOA 거버넌스는 무엇인가?</p><p><font size="4"><br/></font></p><p style="font-weight: bold;"><font size="4">SOA 거버넌스 정의</font></p><p><br/></p><br/>(작성중)<br/>
+       <!--
+       <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+		    xmlns:dc="http://purl.org/dc/elements/1.1/"
+		    xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+       <rdf:Description
+	        rdf:about="http://calmglow.egloos.com/3103454"
+	        dc:identifier="http://calmglow.egloos.com/3103454"
+	        dc:title="SOA 거버넌스(Governance)란?"
+	        trackback:ping="http://calmglow.egloos.com/tb/3103454"/>
+       </rdf:RDF>
+       -->
+</div>  
+                <link href="../csp.cyworld.com/css/sp.css" type="text/css" rel="stylesheet" />
+                <script type="text/javascript">
+                    if(!document.getElementById("empathyButtonJS")) {
+                        strLoginURL = "pop_bridge1682.html?url=http%3A%2F%2Fcalmglow.egloos.com%2F3103454";
+                        window.sp_pop_url = "http://cyxso.cyworld.com/PopUpLogin.sk?loginstr=direct&redirection="+encodeURIComponent(strLoginURL)+"&pop=direct";
+                        var se = document.createElement('script');
+                        se.type = "text/javascript";
+                        se.src = "../csp.cyworld.com/js/sp.js";
+                        se.id = "empathyButtonJS";
+                        document.getElementsByTagName('head')[0].appendChild(se);
+                    }
+                </script>
+            <div class="post_share_area f_clear">
+                <h3>공유하기 버튼</h3>
+                <table class="post_share_button" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td class="button">
+
+                               <div class="post_share_btnitem spready sprecommend" sptype="social_mod_hor" spkey="b49d8689973974bd5496feb790e6c7a0" ckey="" spsvccode="250" spfolderno="" spitemseq="" spurl="http://calmglow.egloos.com/3103454" sptitle="SOA 거버넌스(Governance)란?" spthumbnail="" spsummary="2006년 내가 모 회사 웹서비스 관련 프로젝트를 진행할 때의 이야기이다. 그 회사는 전사적으로 SOA를 적용하기 전에과연 어떠한 것이 자기들의 서비스 자산이 될 수 있으며 그것들이 웹서비스화 되었을 때 장점과 Value는 무엇인지에 대해검증해보기 위해 대고객 서비스 일부에 대해 웹서비스로 통합 프로젝트를 진행하게 되었다. 나는 그 프로젝트에서 초기 단..." spismobile="0" spwritertid="" spwriterbid="" spwriternm="Yozz (이글루스)"  spcategory="Enterprise" sprecommendee_id="" sprecommendee_nm="" sptag1="" sptag2="" sptag3="" sptag4=""></div>
+                               <div class="post_share_btnitem">
+                                    <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://calmglow.egloos.com/3103454" data-count="horizontal" data-via="">Tweet</a><script type="text/javascript" src="../platform.twitter.com/widgets.js"></script>
+                                </div>
+                                <div class="post_share_btnitem">
+                                    <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fcalmglow.egloos.com%2F3103454&amp;layout=button_count&amp;show_faces=false&amp;width=110&amp;action=like&amp;font=trebuchet+ms&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none;overflow:hidden;width:110px;height:21px;" allowTransparency="true"></iframe>
+                                </div>
+                            </td><td class="blank">&nbsp;</td>
+                    </tr>
+                </table>
+            </div>
+		<div class="post_meta_area f_clear">
+		    <h3>포스트 메타 정보</h3>       
+		    <div class="post_meta_menu">       
+			
+		    
+                    <h4 id="tab1_3103454" onclick="PostMeta.show_tab(1,3103454,'b0015706')" class="post_meta_title1_on">퍼블리싱 및 추천</h4>         
+                    <ul id="tab_c1_3103454" class="post_meta_content">      
+                            <li><strong>내보내기</strong>       
+                                <ul><li>밸리 : <a href="http://valley.egloos.com/theme/trackback/technology" target="_blank">IT</a> <em class="date">2007/04/09 11:35</em></li>		           
+                                </ul>
+                            </li></ul>
+		    <h4 id="tab2_3103454" onclick="PostMeta.show_tab(2,3103454,'b0015706',17)" class="post_meta_title2">같은 카테고리의 글</h4>
+        <ul id="tab_c2_3103454" class="post_meta_content" style="display:none;"></ul>
+		    </div>             
+		</div>
+		
+                </div>
+                <div class="post_footer_area f_clear">
+                  <div class="post_tail">
+                    <a href="#trb" onclick="feedbackview('post_trackback', 'b0015706', 3103454, 0, 0);return false;" class="post_tail_trbk">트랙백(<span id="trbcnt3103454" class="count">0</span>)</a><span class="post_tail_cmmt"> 덧글(<span id="cmtcnt3103454" class="count">3</span>)</span>
+                  </div>
+                  <div class="post_admin">
+                    
+                  </div>
+                </div>
+                <hr class="line" />
+                 <div class="post_link">
+            <div class="post_trackback" id="trackback_3103454"></div>  <div class="post_comment" id="comment_3103454">
+            
+            <h3>덧글</h3> 
+            <ul class="comment_list">
+              <li class="comment_item">
+                <h4 class="comment_writer_info">
+                  <span class="comment_gravatar"><img src="../md.egloos.com/img/eg/profile_anonymous.jpg" alt="" /></span> <span class="comment_writer"><a href="http://jimmyz.egloos.com/" title="http://jimmyz.egloos.com" target="_blank">샤도우</a></span> <span class="comment_datetime" title="2007/04/09 11:52">2007/04/09 11:52</span> <span class="comment_link"><a name="9130859" href="3103454.html#9130859" title="#">#</a> </span> <span class="comment_admin"> <a href="#" onclick="replyComment('replyform3103454','3103454','9130859',5,'','http://', '', '3103454.html#cmt','','1'); return false;" title="답글">답글</a> </span> <span class="comment_security"></span>
+                </h4><div id="comment_9130859">좋은글 잘읽고 있습니다. 감사합니다.</div> <div id="reply3103454_9130859" class="comment_write reply_write" style="display:none;"></div>
+              </li><li class="comment_item">
+                <h4 class="comment_writer_info">
+                  <span class="comment_gravatar"><img src="../md.egloos.com/img/eg/profile_anonymous.jpg" alt="" /></span> <span class="comment_writer"><a href="index.html" title="http://calmglow.egloos.com" target="_blank">Yozz</a></span> <span class="comment_datetime" title="2007/04/09 12:16">2007/04/09 12:16</span> <span class="comment_link"><a name="9130959" href="3103454.html#9130959" title="#">#</a> </span> <span class="comment_admin"> <a href="#" onclick="replyComment('replyform3103454','3103454','9130959',5,'','http://', '', '3103454.html#cmt','','1'); return false;" title="답글">답글</a> </span> <span class="comment_security"></span>
+                </h4><div id="comment_9130959">부끄럽습니다 ㅜ,.ㅡ;;;</div> <div id="reply3103454_9130959" class="comment_write reply_write" style="display:none;"></div>
+              </li><li class="comment_item">
+                <h4 class="comment_writer_info">
+                  <span class="comment_gravatar"><img src="../md.egloos.com/img/eg/profile_anonymous.jpg" alt="" /></span> <span class="comment_writer">LaZe</span> <span class="comment_datetime" title="2007/05/10 19:27">2007/05/10 19:27</span> <span class="comment_link"><a name="9323414" href="3103454.html#9323414" title="#">#</a> </span> <span class="comment_admin"> <a href="#" onclick="delComment_view('b0015706','3103454','9323414','','','0'); return false;">삭제</a>  <a href="#" onclick="replyComment('replyform3103454','3103454','9323414',5,'','http://', '', '3103454.html#cmt','','0'); return false;" title="답글">답글</a> </span> <span class="comment_security"></span>
+                </h4><div id="comment_9323414">언제 계속 이어지는 거야 -_- 한달도 지났잖아.</div> <div id="reply3103454_9323414" class="comment_write reply_write" style="display:none;"></div>
+              </li>
+            </ul>
+<div class="comment_write">
+   <fieldset>
+       <legend>댓글 입력 영역</legend>
+   <form id="cmtform3103454" name="cmtform3103454" target="cmtviewfrm" action="http://calmglow.egloos.com/exec/egloo_comment_exec.php" method="post" style="margin:0px;" onsubmit="return runComment(this,5);">
+       <input type="hidden" name="eid" value="b0015706" />
+       <input type="hidden" name="srl" value="3103454" />
+       <input type="hidden" name="tid" value="" />
+       <input type="hidden" name="subject" value="SOA 거버넌스(Governance)란?" />       <input type="hidden" name="cmtsrl" value="" />
+       <input type="hidden" name="xhtml" value="" />
+       <input type="hidden" name="adview" value="" />
+       <input type="hidden" name="ismenu" value="0" />
+       <input type="hidden" name="ismain" value="" />
+
+        <div class="comment_info">
+            <span class="comment_name">
+                <label for="cmt_name">닉네임</label>
+                <input type="text" id="name" name="name" class="name" size="10" maxlength="10" value="" />
+            </span>
+            <span class="comment_passwd">
+                <label for="cmt_passwd">비밀번호</label>
+                <input type="password" id="passwd" name="passwd" class="passwd" size="10" maxlength="10" value="" onfocus="document.cmtform3103454.tid.value='991NxRLVvgHJ1PBihZD-gHP7NaAoIhhDTwuulKLLZJg.'" />
+            </span>
+            <span class="comment_blog">
+                <label for="cmt_blog">블로그</label>
+                <input type="text" id="homepage" name="homepage" class="blog" value="http://" size="20" />
+            </span>
+            <span class="comment_login"> 
+                <a href="http://sec.egloos.com/login.php?returnurl=http://calmglow.egloos.com/3103454#cmt" title="로그인">로그인</a>
+            </span>
+        </div>
+       <textarea id="comment" name="comment" class="comment_field" title="덧글 입력 영역" rows="5" cols="50"></textarea>
+       <div class="comment_btn f_clear">
+           <input type="checkbox" id="no_open" name="security" /> <label for="no_open">비공개</label>
+           <input type="image" value="댓글등록" src="../md.egloos.net/img/eg/btn_comment.gif" class="comment_submit" />
+       </div>
+   </form>
+   <form id="replyform3103454" name="replyform3103454" target="cmtviewfrm" action="http://calmglow.egloos.com/exec/egloo_comment_exec.php" method="post" style="margin:0px;">
+       <input type="hidden" name="eid" value="b0015706" />
+       <input type="hidden" name="srl" value="3103454" />
+       <input type="hidden" name="tid" value="991NxRLVvgHJ1PBihZD-gHP7NaAoIhhDTwuulKLLZJg." />
+       <input type="hidden" name="subject" value="SOA 거버넌스(Governance)란?" />
+       <input type="hidden" name="cmtsrl" value="" />
+       <input type="hidden" name="name" value="" />
+       <input type="hidden" name="homepage" value="" />
+       <input type="hidden" name="passwd" value="" />
+       <input type="checkbox" name="security" value="" style="display:none;" />
+       <input type="hidden" name="comment" value="" />
+       <input type="hidden" name="ismenu" value="0" />
+       <input type="hidden" name="ismain" value="" />
+       <input type="hidden" name="xhtml" value="" />
+       <input type="hidden" name="adview" value="" />
+       <input type="hidden" name="page" id="replyform_page" value="1" />
+   </form>
+   <form id="editform3103454" name="editform3103454" target="cmtviewfrm" action="http://calmglow.egloos.com/exec/egloo_editcomment_exec.php" method="post" style="margin:0px;">
+       <input type="hidden" name="eid" value="b0015706" />
+       <input type="hidden" name="srl" value="3103454" />
+       <input type="hidden" name="tid" value="991NxRLVvgHJ1PBihZD-gHP7NaAoIhhDTwuulKLLZJg." />
+       <input type="hidden" name="subject" value="SOA 거버넌스(Governance)란?" />
+       <input type="hidden" name="cmtsrl" value="" />
+       <input type="hidden" name="writer" value="" />
+       <input type="hidden" name="name" value="" />
+       <input type="hidden" name="homepage" value="" />
+       <input type="hidden" name="passwd" value="" />
+       <input type="checkbox" name="security" value="" style="display:none;" />
+       <input type="hidden" name="comment" value="" />
+       <input type="hidden" name="ismenu" value="0" />
+       <input type="hidden" name="ismain" value="" />
+       <input type="hidden" name="xhtml" value="" />
+       <input type="hidden" name="adview" value="" />
+       <input type="hidden" name="page" id="editform_page" value="1" />
+   </form>
+   </fieldset>
+</div>  
+          </div>
+          </div> 
+              
+              
+              
+              
+            </div>
+          </div>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <div class="post_navi">
+            
+            <div class="prev"><a href="3211122.html"><span class="txt">다음글 : </span>SOA와 REST, ESB 하드웨어</a></div><div class="next"><a href="3044148.html"><span class="txt">이전글 : </span>Composite Business Services(CBS)에 대하여</a></div> 
+          </div>
+          
+        </div>
+        <hr class="line" />
+        
+        <div id="section_widemenu2" class="widemenu"></div>
+        <hr class="line" />
+      </div>
+      
+      <div id="section_sidebar1" class="column">
+        <div class="widget menu_profile">
+          
+          <h3>프로필</h3>
+          <div class="widget_content">
+            <div class="profile_image">
+              <a href="javascript:void(0);" onclick="Control.Modal.openDialog(this, event, '../pds21.egloos.com/logo/201303/15/06/b0015706.png');"><img src="../pds21.egloos.com/logo/201303/15/06/b0015706.png" width="160" height="129" border="0" alt="" /></a>
+            </div>
+            <div class="profile_desc">
+              밥값하는 IT 아키텍트가 되기 위해 노력중입니다.
+연락처: calmglow at gmail.com<span class="profile_usernick fn"><span class="by">by</span> Calmglow</span>
+            </div>
+            <div class="profile_prize">
+               <a href="http://eskimos.egloos.com/3750" title="이글루스 피플"><img src="../md.egloos.net/img/eg/newsletter_user.gif" width="15" height="15" border="0" style="vertical-align: text-bottom;" alt="이글루스 피플" /></a>
+            </div>
+            <div class="bg_profile"></div>
+          </div>
+        </div>
+        <div class="widget menu_category">
+          
+          <h3>카테고리</h3>
+          <ul class="widget_content">
+            <li class=""><a href="category/IT.html">IT</a><span class="count">(109)</span>
+            </li><li class=""><a href="category/Programming.html">Programming</a><span class="count">(16)</span>
+            </li><li class=""><a href="category/%20Open%20and%20Social.html"> Open and Social</a><span class="count">(22)</span>
+            </li><li class=""><a href="category/Enterprise.html">Enterprise</a><span class="count">(136)</span>
+            </li><li class=""><a href="category/Mobile.html">Mobile</a><span class="count">(3)</span>
+            </li><li class=""><a href="category/Art%20and%20Life.html">Art and Life</a><span class="count">(139)</span>
+            </li>
+          </ul>
+        </div>
+        <div class="widget menu_archive" id="widget_menu_archive">
+          
+          <h3>이전글 목록</h3>
+          <div class="widget_content">
+            <ul>
+              <li><a href="archives/2013/05.html">2013년 05월</a><span class="count">(1)</span>
+              </li><li><a href="archives/2013/04.html">2013년 04월</a><span class="count">(1)</span>
+              </li><li><a href="archives/2013/03.html">2013년 03월</a><span class="count">(3)</span>
+              </li><li><a href="archives/2013/02.html">2013년 02월</a><span class="count">(2)</span>
+              </li><li><a href="archives/2012/12.html">2012년 12월</a><span class="count">(2)</span>
+              </li>
+            </ul>
+            <div class="allview">
+              <a href="archives.html">more...</a>
+            </div>
+          </div>
+        </div>
+        <div class="widget menu_comment" id="widget_menu_comment">
+          
+          <h3>최근 덧글</h3>
+          <div class="widget_content">
+            <ul>
+              <li>
+                <span class="desc"><a href="4799567.html#14584932">이 포럼은 굉장합니다. 좋은 해설 모두</a></span><em class="fn">by 苗</em> <em class="date">8/21</em>
+              </li><li>
+                <span class="desc"><a href="4792335.html#14547086">어.....
+
+&lt;다수의 사용자는 10개 이하의 앱만을 사용하고 대부분의..</a></span><em class="fn">by 기보</em> <em class="date">5/7</em>
+              </li><li>
+                <span class="desc"><a href="4786276.html#14433830">저도 구글이 리더 서비스를 포기한다고 했을 때 여러가지 생각을 했..</a></span><em class="fn">by kkamagui</em> <em class="date">8/15</em>
+              </li><li>
+                <span class="desc"><a href="4242652.html#14432226">상당히 늦었지만, 지금은 상당히 리눅스로 대세가 기울었다 볼 수 ..</a></span><em class="fn">by  JR </em> <em class="date">8/12</em>
+              </li><li>
+                <span class="desc"><a href="4792335.html#14404815">통찰력 있는 좋은 글입니다. 잘 봤습니다.</a></span><em class="fn">by 슈니</em> <em class="date">6/25</em>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="widget menu_trackback">
+          
+          <h3>최근 트랙백</h3>
+          <div class="widget_content">
+            <ul>
+              <li>
+                <span class="desc"><a href="4782030.html#3780893">replica Emporio Armani</a></span><em class="fn">http://www.asmallheaven.ne..</em> <em class="date">10/12</em>
+              </li><li>
+                <span class="desc"><a href="4782030.html#3780888">http://www.asmallheaven.net/replica-hublot-disocunt-..</a></span><em class="fn">replica hublot watches Rol..</em> <em class="date">10/12</em>
+              </li><li>
+                <span class="desc"><a href="4782030.html#3780885">replica Corum</a></span><em class="fn">replica breitling Chronomat ..</em> <em class="date">10/12</em>
+              </li><li>
+                <span class="desc"><a href="4078991.html#3331143">fake replica breitling</a></span><em class="fn">CeCe McDonald killing trial ...</em> <em class="date">09/27</em>
+              </li><li>
+                <span class="desc"><a href="4078991.html#3331119">replica tag heuer watches</a></span><em class="fn">Charles Trifilette</em> <em class="date">09/27</em>
+              </li>
+            </ul>
+            <div class="allview"></div>
+          </div>
+        </div>
+        <div class="widget menu_rss">
+          
+          <h3>RSS</h3>
+          <div class="widget_content">
+            <a href="http://rss.egloos.com/blog/calmglow" target="_blank"><img src="../md.egloos.com/skn/tpl/menu_rss/1/rss_practika_64.png" alt="RSS" /></a>
+          </div>
+        </div>
+        <div class="widget menu_tagcloud">
+          
+          <h3>태그</h3>
+          <div class="widget_content">
+            <a href="tag/groovy.html" rel="tag" class="tag_level_1">groovy</a>
+<a href="tag/%eb%aa%a8%eb%b0%94%ec%9d%bc%ec%95%b1%ed%92%88%ec%a7%88%ea%b2%80%ec%a6%9d.html" rel="tag" class="tag_level_1">모바일앱품질검증</a>
+<a href="tag/performance.html" rel="tag" class="tag_level_1">performance</a>
+<a href="tag/Ubuntu.html" rel="tag" class="tag_level_1">Ubuntu</a>
+<a href="tag/%ec%9a%b0%eb%b6%84%ed%88%ac.html" rel="tag" class="tag_level_3">우분투</a>
+<a href="tag/%ec%98%a4%ed%94%88%ec%86%8c%ec%8a%a4.html" rel="tag" class="tag_level_1">오픈소스</a>
+<a href="tag/%ec%9b%b9%ec%95%b1.html" rel="tag" class="tag_level_1">웹앱</a>
+<a href="tag/%ec%9d%b4%eb%b6%81.html" rel="tag" class="tag_level_1">이북</a>
+<a href="tag/%ec%98%81%ec%83%9d.html" rel="tag" class="tag_level_1">영생</a>
+<a href="tag/scratch.html" rel="tag" class="tag_level_1">scratch</a>
+<a href="tag/%ec%b0%bd%ec%9d%98%eb%a0%a5.html" rel="tag" class="tag_level_1">창의력</a>
+<a href="tag/%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c.html" rel="tag" class="tag_level_2">클라우드</a>
+<a href="tag/mwc2013.html" rel="tag" class="tag_level_1">mwc2013</a>
+<a href="tag/webapp.html" rel="tag" class="tag_level_1">webapp</a>
+<a href="tag/%ec%b4%88%eb%93%b1%ea%b5%90%ec%9c%a1.html" rel="tag" class="tag_level_1">초등교육</a>
+<a href="tag/%ec%98%a4%ec%9c%a4.html" rel="tag" class="tag_level_1">오윤</a>
+<a href="tag/REST.html" rel="tag" class="tag_level_2">REST</a>
+<a href="tag/%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8.html" rel="tag" class="tag_level_1">프로젝트</a>
+<a href="tag/clien.html" rel="tag" class="tag_level_1">clien</a>
+<a href="tag/mwc.html" rel="tag" class="tag_level_1">mwc</a>
+<a href="tag/gae.html" rel="tag" class="tag_level_1">gae</a>
+<a href="tag/WAS%ed%8a%9c%eb%8b%9d.html" rel="tag" class="tag_level_1">WAS튜닝</a>
+<a href="tag/%eb%84%a5%ec%84%bc.html" rel="tag" class="tag_level_1">넥센</a>
+<a href="tag/SNS.html" rel="tag" class="tag_level_1">SNS</a>
+<a href="tag/%ed%81%b4%eb%a6%ac%ec%95%99.html" rel="tag" class="tag_level_1">클리앙</a>
+<a href="tag/ebook.html" rel="tag" class="tag_level_1">ebook</a>
+<a href="tag/HUD.html" rel="tag" class="tag_level_1">HUD</a>
+<a href="tag/googleappengine.html" rel="tag" class="tag_level_1">googleappengine</a>
+<a href="tag/html5.html" rel="tag" class="tag_level_1">html5</a>
+<a href="tag/%eb%af%b8%eb%9e%98.html" rel="tag" class="tag_level_1">미래</a>
+
+            <div class="allview">
+              <a href="tag.html">태그 전체보기</a>
+            </div>
+          </div>
+        </div>
+        
+        <div>
+          <div class="widget widget_M00000002" style="margin-top:0;margin-bottom:0;padding-top:0;padding-bottom:0;">
+   <h3 style="display:none;">Google Analytics</h3>
+   <div class="widget_content">
+    <!-- 구글 분석 첫번째 기초 버전 -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17725464-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+    </div>
+</div>
+        </div>
+        <div id="sidebar1_blank" class="blank"></div>
+      </div>
+      <hr class="line" />
+    </div>
+    <hr class="line" />
+    
+    <div class="footer f_clear">
+      <div class="license">
+        <span class="copyright"><a href="index.html" title="powered by egloos.com">calmglow.egloos.com</a> is powered by <a href="http://www.egloos.com/" target="_blank">Egloos</a>.</span> <span class="rss">Subscribe to <a href="http://rss.egloos.com/blog/calmglow" target="_blank" title="RSS">RSS</a>.</span>
+        <span class="skinby">Skin designed by <a href="index.html" target="_blank">calmglow</a>.</span>
+      </div>
+    </div>
+  </div>
+</div><iframe src="http://statweb.egloos.com/estat/send?bid=b0015706&amp;ref=http%253A%252F%252Fcalmglow.egloos.com%252Fcategory%252FEnterprise%252Fpage%252F5&amp;uid=&amp;mbid=&amp;openflag=1" style="width: 0px; height: 0px; border: 0px solid #fff;"></iframe>
+<img width="0" height="0" border="0" src="egloo_pds65b9.html?eid=b0015706" alt="" />
+<form id="trackfrom" name="trackfrom" method="post" action="#">
+<input type="hidden" name="url" value="" />
+<input type="hidden" name="title" value="" />
+<input type="hidden" name="trburl" value="" />
+</form>
+<div style="z-index:9901;top:764px;left:169px;display:none;" id="egloo_bookmark" class="popupWrap">
+    <div class="popupTitle">이글루링크 추가하기</div>
+    <dl class="popupBody">
+        <dt class="no-arrow" style="background:none;font-size:12px;text-align:center;">
+            <span id="egloo-bookmark-url" style="color:#0F71A1;"></span>
+            (<span id="egloo-bookmark-name"></span>)을(를)</dt>
+        <dd class="notice" style="margin:0;padding:0 0 0 8px;line-height:1.8em;color:#000;font-size:12px;text-align:center;">이글루링크로 추가하시겠습니까? 추가하시려면 그룹선택을 하세요.</dd>
+        <dd class="notice weak" style="margin:0;padding:0 0 0 8px;line-height:1.8em;font-size:11px;color:#666666;text-align:center;">(그룹선택 하지 않는 경우, 최상단 목록에 추가됩니다.)</dd>
+        <dd class="egloo-bookmark-group" style="margin:0;padding:10px 0 8px;line-height:1.8em;text-align:center;color:#333;font-size:12px;text-align:center;">그룹선택 :
+            <select name="groupID" id="egloo-bookmark-groupID" style="font-family:'돋움','dotum','Trebuchet MS',Sans-serif;margin-left:10px;"><option value="000">그룹선택없음</option></select></dd>
+        <dd class="buttons">
+            <input type="button" value="지금 확인" onfocus="blur();" onclick="Modal.insertBookmark(true);" class="button btn24 btn_bold"/>
+            <input type="button" value="나중에 확인" onfocus="blur();" onclick="Modal.insertBookmark(false);" class="button btn24 btn_weak"/>
+        </dd>
+        <dd class="close" onclick="Modal.close();"><img src="../md.egloos.com/img/www/btn/button_popup_close.gif" alt="이글루링크 취소" title="이글루링크 취소" /></dd>
+    </dl>
+</div>
+</body>
+</html>

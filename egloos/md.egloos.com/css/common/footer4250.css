@@ -1,0 +1,51 @@
+/********* FOOTER-Copyright : #footer **********/
+#footer{ clear:both; padding:28px 0 30px; text-align:center;width:980px;margin:0 auto}
+#footer ul li{display:inline;margin:0 5px 0 0; padding:0 0 0 7px; background:url('../../img/www/bg_sbar.gif') no-repeat left 2px; }
+#footer ul li.li_start{ display:inline; padding:0; background:none; }
+#footer ul li strong{ font-weight:normal; }
+#footer ul li a{ font:normal 8pt 돋움,dotum,verdana,sans-serif; letter-spacing:-1px; }
+#footer a:link,#footer  a:visited,#footer  a:hover,#footer  a:active{ color:#7c8188; }
+#footer a:hover{ text-decoration:underline; }
+#footer p{font-family:Tahoma;font-size:11px;color:#c6c9cd;font-weight:bold;padding-top:15px;}
+#footer p em{ display:inline; font-style:normal; font-size:9pt; }
+#footer p span.co_sk{ font-weight:bold; color:#e31937;}
+#footer p span.co_comms{ font-weight:bold; color:#f58025; }
+#footer p .zum{color:#c6c9cd}
+/* #footer { width:890px; margin:0 auto; padding:20px 0 30px; border-top:1px solid #EDEDED; text-align:center; } */
+
+/* Footer */
+/*
+.copyright {}
+
+.copyright p { float:right; font:normal 8pt 돋움,dotum,sans-serif; color:#979797; letter-spacing:0; margin:0 190px 0 0; display:inline; }
+.copyright p em { display:inline; font-style:normal; font-size:9pt; }
+.copyright p span.co_sk { font-weight:bold; color:#e31937;}
+.copyright p span.co_comms { font-weight:bold; color:#f58025; }
+
+.copyright ul { float:left; margin:0 0 0 190px; display:inline; }
+.copyright ul li { display:inline; margin:0 5px 0 0; padding:0 0 0 6px; background:url('http://md.egloos.com/img/www/footer/bg_sbar.gif') no-repeat left 2px;.background-position:0 1px; }
+.copyright ul li.li_start { display:inline; padding:0; background:none; }
+    .copyright ul li strong { font-weight:normal; }
+    .copyright ul li a { font:normal 8pt 돋움,dotum,verdana,sans-serif; letter-spacing:-1px; }
+    .copyright a:link,.copyright a:visited,.copyright a:hover,.copyright a:active { color:#666; }
+    .copyright a:hover { text-decoration:underline; }
+
+
+.plus_footer { margin: 60px auto 30px; }
+.plus_footer a.btn {
+    background: url("http://c1img.cyworld.co.kr/img5/clubsection/bg_footer01.gif") repeat-x scroll left top transparent;
+    border: 1px solid #D3D3D3;
+    color: #333333;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 돋움,dotum;
+    font-size: 43px;
+    font-weight: bold;
+    height: 56px;
+    line-height: 16px;
+    padding: 42px 0 0;
+    text-align: center;
+    width: 973px;
+}
+.plus_footer a.btn:hover {text-decoration: none;}
+*/
