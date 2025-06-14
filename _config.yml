@@ -1,0 +1,47 @@
+
+title: 최진호 #Your awesome title
+email: calmglow@gmail.com
+description: > # this means to ignore newlines until "baseurl"
+  엔지니어의 눈으로 바라보는 세상
+
+baseurl: # the subpath of the site
+url: https://calmglow.github.io # the base hostname & protocol for your site
+
+permalink: /:year-:month/:title
+timezone:
+
+favicon: /assets/img/favicon.png
+
+google_analytics: G-6MK29FVKP2
+disqus_shortname: #disqus shortname
+cusdis:
+    app_id: #your cusdis app_id
+
+user:
+  name: 최진호
+  pic: /assets/img/jinho_square.png
+  picAlt: "최진호"
+  job: SW Maker
+  aboutme: true # comment this out if you don't need the 'about' page.
+
+exclude:
+  - README.md
+  - LICENSE
+  - github
+
+defaults:
+  - scope:
+      path: "_posts"
+      type: posts
+    values:
+      layout: post
+      comment: true   
+
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+markdown: kramdown 
+
+# Filtering Content
+show_drafts: null
+limit_posts: 0
+future:      false
+unpublished: false
