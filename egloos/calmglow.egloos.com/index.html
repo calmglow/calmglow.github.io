@@ -6,6 +6,15 @@
 	<meta http-equiv='Content-type' content='text/html; charset=utf-8' />
 	<meta name="author" content="Calmglow" />
 	<meta name="keywords" content="calmglow (최진호)" />
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}최진호의 블로그 - 소프트웨어 개발, 운영, 책, 음악, 시사, 역사 등 다양한 주제의 이야기{% endif %}">
+  <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}소프트웨어 개발, 운영, 책, 음악, 시사, 역사, 블로그{% endif %}">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}최진호의 블로그 - 소프트웨어 개발, 운영, 책, 음악, 시사, 역사 등 다양한 주제의 이야기{% endif %}">
+  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+  <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}최진호의 블로그 - 소프트웨어 개발, 운영, 책, 음악, 시사, 역사 등 다양한 주제의 이야기{% endif %}">
 	
 	<meta http-equiv="X-XRDS-Location" content="http://calmglow.myid.net/xrds" />
 	<link rel="openid.server" href="http://www.myid.net/server" />
