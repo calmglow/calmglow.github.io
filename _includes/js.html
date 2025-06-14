@@ -41,18 +41,21 @@
         const html = document.documentElement;
 
         const setTheme = () => {
-            switch (userThemePreference.theme) {
-                case 'dark':
-                    toggle.checked = true;
-                    html.classList.add('dark');
-                    html.classList.remove('light');
-                    break;
-                case 'light':
-                    toggle.checked = false;
-                    html.classList.remove('dark');
-                    html.classList.add('light');
-                    break;
-            }
+            toggle.checked = true;
+            html.classList.add('dark');
+            html.classList.remove('light');
+            // switch (userThemePreference.theme) {
+            //     case 'dark':
+            //         toggle.checked = true;
+            //         html.classList.add('dark');
+            //         html.classList.remove('light');
+            //         break;
+            //     case 'light':
+            //         toggle.checked = false;
+            //         html.classList.remove('dark');
+            //         html.classList.add('light');
+            //         break;
+            // }
         }
         setTheme();
         toggle.addEventListener('click', e => {
