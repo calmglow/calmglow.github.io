@@ -21,7 +21,7 @@ user:
   name: 최진호
   pic: /assets/img/jinho_square.png
   picAlt: "최진호"
-  job: SW Maker
+  job: Geek
   aboutme: true # comment this out if you don't need the 'about' page.
 
 exclude:
