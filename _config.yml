@@ -38,7 +38,14 @@ defaults:
       comment: true   
 
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-markdown: kramdown 
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: "highlight"
+    line_numbers: true
 
 # Filtering Content
 show_drafts: null
