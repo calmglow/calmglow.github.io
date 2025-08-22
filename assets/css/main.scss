@@ -577,7 +577,9 @@ img {
     }
 
     p {
-        max-width: 49rem;
+        max-width: 55rem;
+        vertical-align: middle;
+        display: inline-block;
     }
 
     a {
@@ -619,6 +621,8 @@ img {
 
     img {
         border-radius: 5px;
+        float:left;
+        margin-right: 10px;
     }
 
     hr {
