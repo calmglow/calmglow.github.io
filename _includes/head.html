@@ -24,6 +24,47 @@
   <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}최진호의 블로그 - 소프트웨어 개발, 운영, 책, 음악, 시사, 역사 등 다양한 주제의 이야기{% endif %}">
   <meta property="og:image" content="{% if page.image %}{{ page.image }}{% else %}https://calmglow.github.io/assets/img/jinho_square.png{% endif %}"">
 
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "{% if page.layout == 'post' %}BlogPosting{% else %}WebSite{% endif %}",
+    {% if page.layout == 'post' %}
+    "headline": "{{ page.title }}",
+    "description": "{% if page.description %}{{ page.description }}{% else %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% endif %}",
+    "image": "{% if page.image %}{{ page.image }}{% else %}{{ site.url }}/assets/img/jinho_square.png{% endif %}",
+    "datePublished": "{{ page.date | date_to_xmlschema }}",
+    "dateModified": "{% if page.last_modified_at %}{{ page.last_modified_at | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}",
+    "author": {
+      "@type": "Person",
+      "name": "{{ site.user.name }}",
+      "url": "{{ site.url }}"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "{{ site.title }}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ site.url }}/assets/img/jinho_square.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ page.url | prepend: site.url }}"
+    },
+    "keywords": "{% if page.keywords %}{{ page.keywords }}{% else %}소프트웨어 개발, 운영, 책, 음악, 시사, 역사{% endif %}"
+    {% else %}
+    "name": "{{ site.title }}",
+    "url": "{{ site.url }}",
+    "description": "최진호의 블로그 - 소프트웨어 개발, 운영, 책, 음악, 시사, 역사 등 다양한 주제의 이야기",
+    "author": {
+      "@type": "Person",
+      "name": "{{ site.user.name }}"
+    }
+    {% endif %}
+  }
+  </script>
+
   <link rel="stylesheet" href="{{ 'assets/css/main.css' | relative_url }}" media="all">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}"
