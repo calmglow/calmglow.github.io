@@ -22,6 +22,7 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="{{ title }}">
   <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}최진호의 블로그 - 소프트웨어 개발, 운영, 책, 음악, 시사, 역사 등 다양한 주제의 이야기{% endif %}">
+  <meta property="og:image" content="{% if page.image %}{{ page.image }}{% else %}https://calmglow.github.io/assets/img/jinho_square.png{% endif %}"">
 
   <link rel="stylesheet" href="{{ 'assets/css/main.css' | relative_url }}" media="all">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
