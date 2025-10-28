@@ -17,6 +17,7 @@ image: https://calmglow.github.io/assets/img/omarchy_logo.png
 - win+x는 창 닫는 것이고, win+왼쪽 win+오른쪽 등으로 창 간 이동도 직관적임.
 - win+enter 가 터미널 실행. 보통 우분투는 win+t 였는데 한참 헷갈림. 그 외에 win+shift+b가 브라우저
 - 창을 겹쳐서 배치하는게 어려워서 한 공간에 여러 창을 배치하는 게 어려울 것 같음. 따라서 여러 space간 이동을 하게 될 듯. win+숫자로 space간 이동을 해야한다.
+- 의외로 리눅스 환경에 익숙하지 않은 분들을 위해, 터미널에서 마우스로 선택해서 복사하거나 브라우저에서 복사한 것을 복붙하고 싶다면 ctrl+shift+c (복사), ctrl+shift+v(붙이기)를 알고 있으면 편하다.
 - 자연스럽게 단축키를 많이 쓰게 하는 UX. [단축키페이지](https://learn.omacom.io/2/the-omarchy-manual/53/hotkeys)를 상당히 자주 들어가서 숙지해야할듯.
 
 ## 개발환경 설정
@@ -27,3 +28,6 @@ image: https://calmglow.github.io/assets/img/omarchy_logo.png
 
 ## 한글 설정
 - 당근의 이경원님이라는 분의 [블로그](https://kyoungwon.me/development/2025/07/08/hyprland-korean-keyboard/)가 가장 잘 나와있다. 
+
+----
+- 이 글은 계속 업데이트됩니다. 마지막 업데이트 2025-10-28
