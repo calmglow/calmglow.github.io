@@ -69,6 +69,19 @@
                 localStorage.setItem('theme', 'light');
             }
         }, false);
+
+        // Open external links in new tab
+        const postContent = document.querySelector('.post_content');
+        if (postContent) {
+            const links = postContent.querySelectorAll('a');
+            links.forEach(link => {
+                // Only process external links
+                if (link.hostname && link.hostname !== window.location.hostname) {
+                    link.setAttribute('target', '_blank');
+                    link.setAttribute('rel', 'noopener noreferrer');
+                }
+            });
+        }
     }, false);
 // @license-end
 </script>
