@@ -11,6 +11,11 @@ image: https://calmglow.github.io/assets/img/omarchy_logo.png
 ## 기본 설정
 - 해상도 설정: ~/.config/hypr/monitors.conf 파일을 수정하면 되는데, 나는 일단 scale을 1로 설정하고 각 도구별로 font 크기등을 키우면서 사용한다. 터미널의 폰트크기 설정은 ~/.config/alacritty/alacritty.toml을 수정하면 된다.
 - 설치한 지 하루 밖에 안지났는데 다음 날 'sudo pacman -Syu' 실행했더니 업그레이드 양이 장난이 아님. 그나마 이 PC가 Toy용이라서 다행이다. 아무리 봐도 이러다가 한번 갈아엎지 싶다.
+- 하드웨어 가속이 잘 되는지 체크 필요하다. 
+  - `lspci -k |grep -EA3 'VGA|3D`
+  - opengl 가속 체크: `glxinfo | grep "direct rendering"`
+  - vulkan 가속 체크: `vulkaninfo | grep "deviceName"`
+  - 참고로 vulkan 드라이버 설치가 안되어 있어서 [link](https://www.siberoloji.com/arch-linux-howtos-install-and-configure-vulkan/) 보고 해결함.
 
 ## 단축키
 - win+space와 win+alt+space로 앱 실행이나 os 메뉴 불러온다.
