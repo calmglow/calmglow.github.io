@@ -160,6 +160,14 @@ img {
         min-height: 75%;
         max-width: 92%;
     }
+    a {
+        color: var(--post_link);
+
+        &:hover,
+        &:focus {
+            color: var(--post_link_hover);
+        }
+    }
 }
 
 .main {
