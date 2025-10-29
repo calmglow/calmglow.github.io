@@ -1,8 +1,9 @@
 
-title: 최진호 #Your awesome title
+title: 연쇄창업긱의 블로그 #Your awesome title
 email: calmglow@gmail.com
 description: > # this means to ignore newlines until "baseurl"
-  엔지니어의 눈으로 바라보는 세상
+  연쇄창업을 준비중인 긱의 기술블로그입니다.
+  개발, 스타트업, IT 관련 글들을 주로 다룹니다.
 
 baseurl: # the subpath of the site
 url: https://calmglow.github.io # the base hostname & protocol for your site
