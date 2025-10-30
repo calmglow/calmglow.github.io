@@ -26,6 +26,7 @@ image: https://calmglow.github.io/assets/img/omarchy_logo.png
 - 창을 겹쳐서 배치하는게 어려워서 한 공간에 여러 창을 배치하는 게 어려울 것 같음. 따라서 여러 space간 이동을 하게 될 듯. win+숫자로 space간 이동을 해야한다.
 - 의외로 리눅스 환경에 익숙하지 않은 분들을 위해, 터미널에서 마우스로 선택해서 복사하거나 브라우저에서 복사한 것을 복붙하고 싶다면 ctrl+shift+c (복사), ctrl+shift+v(붙이기)를 알고 있으면 편하다.
 - 자연스럽게 단축키를 많이 쓰게 하는 UX. [단축키페이지](https://learn.omacom.io/2/the-omarchy-manual/53/hotkeys)를 상당히 자주 들어가서 숙지해야할듯.
+- ~/.local/share/omarchy/default/bash 디렉토리에 alias나 shell 관련 기본 설정이 가득하다. 이대로 쓸 것인지는 사용하는 개발자 스스로 꼭 확인하고 넘어가야할것 같다. 이 OS를 기획한 사람의 취향이 참 많이 반영된다.
 
 ## 개발환경 설정
 - 일단 기본적으로 nvm과 uv는 설치해야하는데 pacman으로 nvm을 설치했더니 path가 제대로 설정이 안되서 실패. [nvm 사이트](https://github.com/nvm-sh/nvm)가서 스크립트로 직접 실행하는 것이 빠르다.
