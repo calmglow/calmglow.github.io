@@ -32,6 +32,7 @@ image: https://calmglow.github.io/assets/img/omarchy_logo.png
 - 힙한 리눅스라서 당연히 최소한 zsh일 줄 알고 신나게 .zshrc에 alias 등을 설정했는데 omarchy는 bash가 국룰. 바꾸는 것도 매우 어려움. 전체를 바꾸는 건 아니고 터미널 설정으로만 zsh로 변경 가능은 하나 굳이 zsh를 꼭 써야하는 건 아닌지라 국룰을 따르기로 함.
 - vim은 없어도 neovim은 이미 설치가 되어있고 웬만한 plugin들도 설치가 되어 있어서 거의 그냥 쓰면 되는 수준인데 의외로 vscode는 안 깔려있다. sudo pacman -S vscode 로 설치하거나 Install 도구에서 설치하면 된다.
 - claude-code 설치는 터미널에서 npm i -g @anthropic-ai/claude-code 실행하면 된다. 물론 nvm으로 미리 node설치는 완료해야겠지.
+- docker는 달리 뭘 할게 없을 정도로 이미 구성이 완료되어있다.
 
 ## 한글 설정
 - 당근의 이경원님이라는 분의 [블로그](https://kyoungwon.me/development/2025/07/08/hyprland-korean-keyboard/)가 가장 잘 나와있다. 
