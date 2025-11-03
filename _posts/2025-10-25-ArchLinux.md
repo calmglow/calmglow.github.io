@@ -1,6 +1,6 @@
 ---
 title: 21세기에 ArchLinux라니
-categories: [dev]
+categories: [tech]
 comments: true
 description: ArchLinux를 설치해보니 이건 불편하더라도 빈 부분을 채우는 걸 좋아하는 긱을 위한 리눅스다
 ---

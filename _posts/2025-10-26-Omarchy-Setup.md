@@ -1,6 +1,6 @@
 ---
 title: Omarchy 설정 로그
-categories: [dev]
+categories: [tech]
 comments: true
 description: 너무나 초기 버전인 Omarchy 과연 지치지 않고 내 품에 안을 수 있을까?
 image: https://calmglow.github.io/assets/img/omarchy_logo.png
