@@ -20,7 +20,7 @@ cusdis:
 
 user:
   name: 최진호
-  pic: /assets/img/jinho_square.png
+  pic: /assets/img/jinho_square_mini.png
   picAlt: "최진호"
   job: Geek
   aboutme: true # comment this out if you don't need the 'about' page.
