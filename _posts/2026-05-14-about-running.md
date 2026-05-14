@@ -3,7 +3,7 @@ title: "평생 기분좋게 느리게 달리기"
 categories: [life]
 comments: true
 description: "경쟁이 아니라 천천히 오래 달리는 즐거움을 위해"
-date: 2026-04-15 21:00
+date: 2026-05-14 21:00
 ---
 
 # 내가 예전엔 말야
