@@ -1,6 +1,8 @@
-
-
-----
+---
+layout: page
+title: about me
+categories: [life]
+---
 # 최진호
 - 연쇄사업마를 꿈꾸는 Geek
 - 최근 작업 중인 프로젝트: [봄데이](https://bomday.kr), [VibeRun](https://viberun.run)
