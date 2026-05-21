@@ -6,7 +6,7 @@ description: > # this means to ignore newlines until "baseurl"
   개발, 스타트업, IT 관련 글들을 주로 다룹니다.
 
 baseurl: # the subpath of the site
-url: https://calmglow.github.io # the base hostname & protocol for your site
+url: https://blog.jinhoc.dev # the base hostname & protocol for your site
 
 permalink: /:year-:month/:title
 timezone: Asia/Seoul
